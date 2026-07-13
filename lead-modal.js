@@ -145,11 +145,32 @@
     const email = form.elements.Email;
     const address = form.elements.Address;
     const property = form.elements.Location;
-    const digits = phone.value.replace(/\D/g, "");
+    const phoneVal = phone.value.trim();
+    let phoneOkay = false;
+    if (/^\+?[0-9\s\-()]+$/.test(phoneVal)) {
+      const normalized = phoneVal.replace(/\D/g, "");
+      const isInternational = phoneVal.startsWith("+");
+      if (isInternational) {
+        if (normalized.startsWith("61")) {
+          phoneOkay = /^614\d{8}$/.test(normalized) || /^61[2378]\d{8}$/.test(normalized);
+        } else {
+          phoneOkay = normalized.length >= 8 && normalized.length <= 15;
+        }
+      } else {
+        if (normalized.startsWith("0")) {
+          phoneOkay = /^04\d{8}$/.test(normalized) || /^0[2378]\d{8}$/.test(normalized);
+        } else if (normalized.startsWith("1300") || normalized.startsWith("1800")) {
+          phoneOkay = normalized.length === 10;
+        } else if (normalized.startsWith("13")) {
+          phoneOkay = normalized.length === 6;
+        }
+      }
+    }
+
     const emailOkay = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
 
     setError(name, name.value.trim() ? "" : "Please enter your full name.");
-    setError(phone, digits.length >= 7 ? "" : "Please enter a valid phone number.");
+    setError(phone, phoneOkay ? "" : "Please enter a valid phone number.");
     setError(email, emailOkay ? "" : "Please enter a valid email address.");
     setError(address, address.value.trim() ? "" : "Please enter your property address or area.");
     setError(property, property.value ? "" : "Please select a property type.");

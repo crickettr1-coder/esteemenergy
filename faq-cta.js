@@ -15,11 +15,14 @@
     });
   };
 
-  const setItemState = (item, open) => {
+  const setItemState = (item, open, questionText) => {
     const trigger = item.querySelector(".framer-kiabgh");
     item.classList.toggle("is-open", open);
     item.setAttribute("data-framer-name", open ? "Open" : "Closed");
     trigger?.setAttribute("aria-expanded", String(open));
+    if (trigger && questionText) {
+      trigger.setAttribute("aria-label", `${open ? "Hide" : "Show"} answer: ${questionText}`);
+    }
   };
 
   const initializeAccordion = (accordion) => {
@@ -50,25 +53,33 @@
 
       const toggle = () => {
         const willOpen = !item.classList.contains("is-open");
-        items.forEach((other) => setItemState(other, other === item && willOpen));
-        trigger.setAttribute("aria-label", `${willOpen ? "Hide" : "Show"} answer: ${question.textContent.trim()}`);
+        items.forEach((other) => {
+          const otherQuestion = other.querySelector(".framer-m1lqsr p")?.textContent.trim() || "";
+          setItemState(other, other === item && willOpen, otherQuestion);
+        });
       };
 
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        toggle();
-      }, true);
+      const isSemantic = trigger.tagName === "BUTTON" || trigger.tagName === "A";
+      if (!isSemantic) {
+        trigger.setAttribute("role", "button");
+        if (!trigger.hasAttribute("tabindex")) {
+          trigger.setAttribute("tabindex", "0");
+        }
 
-      trigger.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter" && event.key !== " ") return;
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        toggle();
-      }, true);
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggle();
+          }
+        });
+      }
 
-      setItemState(item, index === 0);
-      if (index === 0) trigger.setAttribute("aria-label", `Hide answer: ${question.textContent.trim()}`);
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        toggle();
+      });
+
+      setItemState(item, index === 0, question.textContent.trim());
     });
   };
 
