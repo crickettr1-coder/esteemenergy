@@ -1,10 +1,13 @@
 :root {
   --esteem-cta-lime: #c8ff3d;
+  --esteem-cta-ink: #111;
+  --esteem-cta-radius: 16px;
+  --esteem-cta-arrow-size: 38px;
   --esteem-cta-duration: 300ms;
   --esteem-cta-ease: cubic-bezier(.2, .8, .2, 1);
 }
 
-/* Shared non-layout-changing hover layer for the site's primary CTA variants. */
+/* About-page CTA design shared by the site's primary action variants. */
 :where(
   a.framer-WMYoJ.framer-v-j15i3q,
   a.framer-WMYoJ.framer-v-11jj171,
@@ -13,11 +16,65 @@
   .solar-lead-submit,
   form[data-framer-name="Contact Form"] button[type="submit"]
 ) {
+  box-sizing: border-box;
   position: relative;
   isolation: isolate;
+  min-height: 52px;
   overflow: hidden;
+  border: 1px solid var(--esteem-cta-ink) !important;
+  border-radius: var(--esteem-cta-radius) !important;
+  font-family: "Geist", "Geist Placeholder", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: -.01em !important;
+  line-height: 1 !important;
   transition: color var(--esteem-cta-duration) ease,
-    border-color var(--esteem-cta-duration) ease !important;
+    border-color var(--esteem-cta-duration) ease,
+    background-color var(--esteem-cta-duration) ease !important;
+}
+
+:where(
+  a.framer-WMYoJ.framer-v-j15i3q,
+  a.framer-WMYoJ.framer-v-11jj171,
+  .solar-lead-submit,
+  form[data-framer-name="Contact Form"] button[type="submit"]
+) {
+  padding: 7px 7px 7px 20px !important;
+  background: var(--esteem-cta-ink) !important;
+  color: #fff !important;
+}
+
+:where(
+  a.framer-WMYoJ.framer-v-j15i3q,
+  a.framer-WMYoJ.framer-v-11jj171
+) {
+  gap: 16px !important;
+  justify-content: space-between !important;
+  text-decoration: none !important;
+}
+
+:where(
+  a.framer-WMYoJ.framer-v-j15i3q,
+  a.framer-WMYoJ.framer-v-11jj171
+) p {
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+
+:where(
+  a.framer-WMYoJ.framer-v-j15i3q,
+  a.framer-WMYoJ.framer-v-11jj171
+) .framer-11rp8ru {
+  position: relative !important;
+  display: grid !important;
+  flex: 0 0 var(--esteem-cta-arrow-size) !important;
+  width: var(--esteem-cta-arrow-size) !important;
+  height: var(--esteem-cta-arrow-size) !important;
+  place-items: center !important;
+  overflow: hidden !important;
+  border-radius: 11px !important;
+  background: var(--esteem-cta-lime) !important;
+  color: var(--esteem-cta-ink) !important;
 }
 
 :where(
@@ -79,6 +136,7 @@ a.framer-WMYoJ.framer-v-11jj171::before {
   }
 
   a.framer-WMYoJ.framer-v-j15i3q:hover p,
+  a.framer-WMYoJ.framer-v-11jj171:hover p,
   .solar-lead-submit:hover .solar-lead-submit-label,
   form[data-framer-name="Contact Form"] button[type="submit"]:hover p {
     color: #111 !important;
@@ -105,6 +163,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible {
 }
 
 a.framer-WMYoJ.framer-v-j15i3q:focus-visible p,
+a.framer-WMYoJ.framer-v-11jj171:focus-visible p,
 .solar-lead-submit:focus-visible .solar-lead-submit-label,
 form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible p {
   color: #111 !important;
@@ -197,13 +256,35 @@ form[data-framer-name="Contact Form"] button[type="submit"]::after {
   position: absolute;
   z-index: 1;
   top: 50%;
-  right: 16px;
-  color: currentColor;
+  right: 7px;
+  display: grid;
+  width: var(--esteem-cta-arrow-size);
+  height: var(--esteem-cta-arrow-size);
+  place-items: center;
+  border-radius: 11px;
+  background: var(--esteem-cta-lime);
+  color: var(--esteem-cta-ink);
   font: 500 17px/1 "Geist", "Geist Placeholder", sans-serif;
   pointer-events: none;
   transform: translate(-2px, -50%);
   transition: transform var(--esteem-cta-duration) var(--esteem-cta-ease),
+    background-color var(--esteem-cta-duration) ease,
     opacity 180ms ease;
+}
+
+.solar-lead-submit,
+form[data-framer-name="Contact Form"] button[type="submit"] {
+  padding-right: 54px !important;
+  text-align: left !important;
+  transform: none !important;
+}
+
+.solar-lead-submit:hover,
+.solar-lead-submit:focus-visible,
+form[data-framer-name="Contact Form"] button[type="submit"]:hover,
+form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible {
+  background: var(--esteem-cta-ink) !important;
+  transform: none !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
