@@ -1,0 +1,51 @@
+.esteem-energy-logo-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  overflow: visible !important;
+}
+
+.esteem-energy-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 464 / 216;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+.esteem-energy-logo--header { width: 140px; }
+.esteem-energy-logo--footer { width: 160px; }
+
+.solaris-brand {
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.solaris-brand .esteem-energy-logo-link {
+  pointer-events: auto;
+}
+
+@media (max-width: 620px) {
+  .esteem-energy-logo--header { width: 112px; }
+  .esteem-energy-logo--footer { width: 132px; }
+
+  .solaris-brand .framer-yi202p-container {
+    width: auto !important;
+    transform: none !important;
+  }
+}
