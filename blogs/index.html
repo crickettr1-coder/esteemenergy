@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solar Blog and Energy Guides | Esteem Energy</title>
+  <meta name="description" content="Explore solar system guides, installation advice, energy-saving insights and practical information for Australian homeowners from Esteem Energy.">
+  <link rel="canonical" href="http://localhost:3000/blogs/">
+  <link rel="icon" href="../assests/esteem%20energy%20logo.png">
+
+  <!-- Shared stylesheets -->
+  <link rel="stylesheet" href="../header-nav.css">
+  <link rel="stylesheet" href="../logo-swap.css">
+  <link rel="stylesheet" href="../contact-data.css">
+  <link rel="stylesheet" href="../lead-modal.css">
+  <link rel="stylesheet" href="../cta-hover.css">
+  <!-- Custom Blog stylesheet -->
+  <link rel="stylesheet" href="./blog.css">
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "http://localhost:3000/blogs/#webpage",
+        "url": "http://localhost:3000/blogs/",
+        "name": "Solar Blog and Energy Guides | Esteem Energy",
+        "description": "Explore solar system guides, installation advice, energy-saving insights and practical information for Australian homeowners from Esteem Energy.",
+        "breadcrumb": {
+          "@id": "http://localhost:3000/blogs/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "http://localhost:3000/blogs/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "http://localhost:3000/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blogs",
+            "item": "http://localhost:3000/blogs/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Cloned logo header helper -->
+  <div class="framer-efto20-container about-header-source" aria-hidden="true">
+    <div class="framer-yi202p-container"><a href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div>
+  </div>
+
+  <main id="main">
+    <!-- Breadcrumbs -->
+    <nav class="blog-container" aria-label="Breadcrumb" style="padding-top: 100px; margin-bottom: -70px; font-family: var(--blog-ui-font); font-size: 13px;">
+      <ol style="display: flex; list-style: none; padding: 0; margin: 0; gap: 8px;">
+        <li><a href="/" style="color: var(--blog-muted); text-decoration: none;">Home</a></li>
+        <li style="color: var(--blog-muted);" aria-hidden="true">/</li>
+        <li><span style="color: var(--blog-ink); font-weight: 500;">Blogs</span></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Blog Hero Section -->
+    <section class="blog-hero" aria-labelledby="blog-hero-title">
+      <div class="blog-container">
+        <div class="blog-hero-content" data-reveal>
+          <p class="blog-eyebrow">SOLAR INSIGHTS</p>
+          <h1 id="blog-hero-title">Solar Advice, Guides and <span>Energy Insights</span></h1>
+          <p class="blog-hero-lead">Practical information to help Australian homeowners understand solar systems, installation, energy savings and renewable energy options.</p>
+          
+          <!-- Search input with icon and clear trigger -->
+          <div class="blog-search-wrap">
+            <label for="blog-search" class="blog-search-label">Search solar guides and articles</label>
+            <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" id="blog-search" class="blog-search-input" placeholder="Search solar guides and articles" autocomplete="off">
+            <button type="button" id="blog-search-clear" class="blog-search-clear" aria-label="Clear search input">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Featured Article Section -->
+    <section class="blog-featured" aria-labelledby="featured-article-title">
+      <div class="blog-container">
+        <div class="blog-featured-card" data-reveal>
+          <div class="blog-featured-visual blog-parallax">
+            <img src="../assests/about/modern-home-solar-panels.webp" alt="Modern residential home equipped with rooftop solar panels" fetchpriority="high">
+          </div>
+          <div class="blog-featured-copy">
+            <div class="blog-featured-meta">
+              <span class="blog-tag">Solar Systems</span>
+              <span>•</span>
+              <span>6 min read</span>
+              <span>•</span>
+              <span>October 24, 2025</span>
+            </div>
+            <h2 id="featured-article-title">
+              <a href="./how-to-choose-the-right-solar-system-size/">How to Choose the Right Solar System Size for Your Home</a>
+            </h2>
+            <p class="blog-featured-excerpt">Learn how household energy use, roof space, location and future electricity needs influence the right solar system size.</p>
+            <a class="blog-read-link" href="./how-to-choose-the-right-solar-system-size/">
+              <span>Read Article</span>
+              <span class="blog-read-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Category Filters Section -->
+    <section class="blog-filters-section" aria-label="Filter articles by category">
+      <div class="blog-container">
+        <div class="blog-filters-scroll" data-reveal>
+          <button type="button" class="blog-filter-btn is-active" data-category-filter="All Articles">All Articles</button>
+          <button type="button" class="blog-filter-btn" data-category-filter="Solar Systems">Solar Systems</button>
+          <button type="button" class="blog-filter-btn" data-category-filter="Installation">Installation</button>
+          <button type="button" class="blog-filter-btn" data-category-filter="Solar Savings">Solar Savings</button>
+          <button type="button" class="blog-filter-btn" data-category-filter="Panels and Inverters">Panels and Inverters</button>
+          <button type="button" class="blog-filter-btn" data-category-filter="Maintenance">Maintenance</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Articles Grid Section -->
+    <section class="blog-section" aria-label="Articles grid">
+      <div class="blog-container">
+        <div class="blog-grid">
+          
+          <!-- Empty State (Hidden by default) -->
+          <div id="blog-empty-state" class="blog-empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M15 8l-8 8M7 8l8 8"/>
+            </svg>
+            <h3>No articles found</h3>
+            <p>We couldn't find any guides matching your search query. Try typing something else.</p>
+          </div>
+
+          <!-- Card 1 -->
+          <article class="blog-card" data-category="Solar Systems" data-title="How to Choose the Right Solar System Size for Your Home" data-summary="Learn how household energy use, roof space, location and future electricity needs influence the right solar system size." data-reveal>
+            <div class="blog-card-visual">
+              <img src="../assests/about/modern-home-solar-panels.webp" alt="Rooftop solar panel installation on home" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Solar Systems</span>
+                <span>6 min read</span>
+              </div>
+              <h3>
+                <a href="./how-to-choose-the-right-solar-system-size/">How to Choose the Right Solar System Size for Your Home</a>
+              </h3>
+              <p class="blog-card-excerpt">Learn how household energy use, roof space, location and future electricity needs influence the right solar system size.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Oct 24, 2025</span>
+                <a class="blog-read-link" href="./how-to-choose-the-right-solar-system-size/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card" data-category="Solar Systems" data-title="How Much Electricity Can a 6.6 kW Solar System Produce?" data-summary="Explore the expected output ranges, seasonal generation variations, and geographic performance factors of a 6.6 kW system in Australia." data-reveal data-reveal-delay="1">
+            <div class="blog-card-visual">
+              <img src="../assests/blogs/solar-panel-closeup.jpg" alt="Close-up of clean premium solar panels" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Solar Systems</span>
+                <span>5 min read</span>
+              </div>
+              <h3>
+                <a href="./how-much-electricity-can-a-6-6-kw-solar-system-produce/">How Much Electricity Can a 6.6 kW Solar System Produce?</a>
+              </h3>
+              <p class="blog-card-excerpt">Explore the expected output ranges, seasonal generation variations, and geographic performance factors of a 6.6 kW system in Australia.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Oct 12, 2025</span>
+                <a class="blog-read-link" href="./how-much-electricity-can-a-6-6-kw-solar-system-produce/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="blog-card" data-category="Installation" data-title="Solar Panel Installation: What Homeowners Should Expect" data-summary="A complete walkthrough of the residential installation process, from initial site inspection to final grid connection and paperwork." data-reveal data-reveal-delay="2">
+            <div class="blog-card-visual">
+              <img src="../assests/about/solar-installers-at-work.webp" alt="Solar panel installers fitting panels securely" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Installation</span>
+                <span>7 min read</span>
+              </div>
+              <h3>
+                <a href="./solar-panel-installation-guide/">Solar Panel Installation: What Homeowners Should Expect</a>
+              </h3>
+              <p class="blog-card-excerpt">A complete walkthrough of the residential installation process, from initial site inspection to final grid connection and paperwork.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Sep 28, 2025</span>
+                <a class="blog-read-link" href="./solar-panel-installation-guide/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="blog-card" data-category="Solar Savings" data-title="Solar Panels vs Electricity Bills: Understanding Potential Savings" data-summary="How solar displacement reduces your quarterly bills, how feed-in tariffs work, and key factors that maximize your financial return." data-reveal>
+            <div class="blog-card-visual">
+              <img src="../assests/blogs/energy-monitoring.jpg" alt="Customer using smartphone smart solar dashboard" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Solar Savings</span>
+                <span>5 min read</span>
+              </div>
+              <h3>
+                <a href="./solar-panels-vs-electricity-bills-savings/">Solar Panels vs Electricity Bills: Understanding Potential Savings</a>
+              </h3>
+              <p class="blog-card-excerpt">How solar displacement reduces your quarterly bills, how feed-in tariffs work, and key factors that maximize your financial return.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Sep 15, 2025</span>
+                <a class="blog-read-link" href="./solar-panels-vs-electricity-bills-savings/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="blog-card" data-category="Maintenance" data-title="How to Maintain Your Residential Solar System" data-summary="Simple, practical maintenance guidelines to keep your system performing at peak efficiency, including cleaning tips and safety checks." data-reveal data-reveal-delay="1">
+            <div class="blog-card-visual">
+              <img src="../assests/about/solar-consultation-support.webp" alt="Clean solar installation maintenance and support" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Maintenance</span>
+                <span>4 min read</span>
+              </div>
+              <h3>
+                <a href="./how-to-maintain-your-residential-solar-system/">How to Maintain Your Residential Solar System</a>
+              </h3>
+              <p class="blog-card-excerpt">Simple, practical maintenance guidelines to keep your system performing at peak efficiency, including cleaning tips and safety checks.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Aug 30, 2025</span>
+                <a class="blog-read-link" href="./how-to-maintain-your-residential-solar-system/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="blog-card" data-category="Panels and Inverters" data-title="Solar Inverters Explained: What They Do and Why They Matter" data-summary="What a solar inverter is, the difference between string and micro-inverters, and how smart monitoring helps track energy production." data-reveal data-reveal-delay="2">
+            <div class="blog-card-visual">
+              <img src="../assests/blogs/solar-inverters.jpg" alt="Sleek modern solar inverter mounted on wall" loading="lazy">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-tag">Panels and Inverters</span>
+                <span>6 min read</span>
+              </div>
+              <h3>
+                <a href="./solar-inverters-explained/">Solar Inverters Explained: What They Do and Why They Matter</a>
+              </h3>
+              <p class="blog-card-excerpt">What a solar inverter is, the difference between string and micro-inverters, and how smart monitoring helps track energy production.</p>
+              <div class="blog-card-footer">
+                <span style="font-size: 12px; color: var(--blog-muted);">Aug 14, 2025</span>
+                <a class="blog-read-link" href="./solar-inverters-explained/">
+                  <span>Read Article</span>
+                  <span class="blog-read-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Popular Guides Section -->
+    <section class="blog-guides-section" aria-labelledby="guides-title">
+      <div class="blog-guides-container">
+        <div class="blog-guides-header" data-reveal>
+          <p class="blog-eyebrow" style="color: var(--blog-lime);">RECOMMENDED READING</p>
+          <h2 id="guides-title" style="margin: 0; font-family: var(--blog-heading-font); font-size: 36px; font-weight: 500; letter-spacing: -0.03em;">Popular Solar Guides</h2>
+        </div>
+        <div class="blog-guides-grid">
+          
+          <!-- Guide 1 -->
+          <a class="blog-guide-card" href="./how-much-electricity-can-a-6-6-kw-solar-system-produce/" data-reveal>
+            <span class="blog-guide-num">01</span>
+            <span class="blog-guide-category">Solar Systems</span>
+            <h3>Understanding Solar System Output &amp; Generation</h3>
+            <div class="blog-guide-footer">
+              <span>5 min read</span>
+              <span class="blog-read-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <!-- Guide 2 -->
+          <a class="blog-guide-card" href="./how-to-choose-the-right-solar-system-size/" data-reveal data-reveal-delay="1">
+            <span class="blog-guide-num">02</span>
+            <span class="blog-guide-category">Solar Systems</span>
+            <h3>How Roof Orientation Affects Solar Performance</h3>
+            <div class="blog-guide-footer">
+              <span>6 min read</span>
+              <span class="blog-read-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <!-- Guide 3 -->
+          <a class="blog-guide-card" href="./solar-panel-installation-guide/" data-reveal data-reveal-delay="2">
+            <span class="blog-guide-num">03</span>
+            <span class="blog-guide-category">Installation</span>
+            <h3>Essential Questions to Ask Before Installing Solar</h3>
+            <div class="blog-guide-footer">
+              <span>7 min read</span>
+              <span class="blog-read-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Solar Consultation Lead CTA -->
+    <section class="blog-final-wrap">
+      <div class="blog-container">
+        <div class="blog-final" data-reveal>
+          <div>
+            <p class="blog-eyebrow">GUIDANCE &amp; SUPPORT</p>
+            <h2>Need Help Choosing a Solar System?</h2>
+            <p>Speak with the Esteem Energy team for guidance based on your home, energy usage and roof conditions.</p>
+          </div>
+          <div class="blog-final-actions">
+            <button class="esteem-primary-cta esteem-primary-cta--dark" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+              <span class="esteem-cta-label">Get a Free Quote</span><span class="esteem-cta-arrow" aria-hidden="true">→</span>
+            </button>
+            <a class="esteem-secondary-cta esteem-secondary-cta--dark" href="tel:1300220354">
+              <span>Call 1300 220 354</span><span class="esteem-cta-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Site Footer -->
+  <footer class="framer-UEkM5" aria-label="Site footer">
+    <div class="framer-1i9yief">
+      <div class="framer-4ecdkv">
+        <div class="framer-jeyeg9">
+          <div class="framer-1c3gdfr"><a name="Company Logo" href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div>
+          <div class="framer-1fujns7"><p>Helping Australian homes and businesses reduce electricity bills with premium solar panel systems, battery storage solutions, and professional installations nationwide.</p></div>
+          <div class="framer-wjogf9" aria-label="Social media">
+            <a href="https://x.com/" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 4 14 16M19 4 5 20"/></svg></a>
+            <a href="https://facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-4H14V7c0-1 .5-2 2-2h2V1h-3c-3.7 0-5 2.2-5 5v3H7v4h3v8"/></svg></a>
+            <a href="https://instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="framer-1rsz38m">
+          <div class="framer-32fdza">
+            <h2>Quick Links</h2>
+            <nav class="framer-by8pig" aria-label="Footer navigation">
+              <a href="/">Home</a>
+              <a href="/about">About Us</a>
+              <a href="/packages">Pricing</a>
+              <a href="/#solution">Solutions</a>
+              <a href="/#projects">Projects</a>
+              <a href="/contact/">Contact</a>
+            </nav>
+          </div>
+          <div class="framer-166c3sd">
+            <h2>Contact Us</h2>
+            <div class="framer-vm55zi">
+              <div class="framer-n9us4s"><span class="about-contact-icon" aria-hidden="true">@</span><div class="framer-1yowo8r"><p class="framer-text framer-styles-preset-1oj9t8m"><span class="esteem-footer-contact-label">Email Us</span><a class="framer-text framer-styles-preset-3jgbai" href="mailto:info@esteemenergy.com.au">info@esteemenergy.com.au</a></p></div></div>
+              <div class="framer-1top3uf"><span class="about-contact-icon" aria-hidden="true">☎</span><div class="framer-18bz7kj"><p class="framer-text framer-styles-preset-1oj9t8m"><span class="esteem-footer-contact-label">Call Us</span><a class="framer-text framer-styles-preset-3jgbai" href="tel:1300220354">1300 220 354</a></p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="framer-c5fo9j"><div class="framer-vixlb5"></div></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../header-nav.js" defer></script>
+  <script src="../logo-swap.js" defer></script>
+  <script src="../contact-data.js" defer></script>
+  <script src="../lead-modal.js" defer></script>
+  <script src="./blog.js" defer></script>
+</body>
+</html>
