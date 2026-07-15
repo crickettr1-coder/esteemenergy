@@ -227,11 +227,17 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
     position: absolute;
     z-index: 2001;
     top: calc(100% + 8px);
-    right: 0;
+    left: 0;
+    right: auto;
     display: grid;
     align-content: start;
+    align-items: start;
+    grid-auto-rows: max-content;
     gap: 2px;
-    width: min(calc(100vw - 32px), 440px);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
     max-height: calc(100vh - 86px);
     max-height: calc(100dvh - 86px);
     padding: 9px;
@@ -247,6 +253,7 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
     transform-origin: top right;
     transition: opacity .24s ease, visibility .24s ease, transform .24s ease;
     overflow-y: auto;
+    overflow-x: hidden;
     overscroll-behavior: contain;
     scrollbar-width: none;
   }
@@ -271,7 +278,12 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   .solaris-nav-dropdown--mobile .solaris-mobile-nav-item { width: 100%; }
   .solaris-nav-dropdown--mobile .solaris-products-menu {
     position: static;
+    left: auto;
+    right: auto;
     min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     max-height: 0;
     margin: 0;
     padding: 0 0 0 14px;
@@ -292,6 +304,7 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   .solaris-nav-dropdown--mobile.is-open > .solaris-mobile-nav-item .solaris-chevron { transform: rotate(180deg); }
   .solaris-nav-dropdown--mobile .solaris-products-menu a { white-space: normal; overflow-wrap: anywhere; }
   .solaris-mobile-quote { width: 100%; margin-top: 7px; }
+  body.solaris-mobile-menu-open { overflow: hidden; }
 }
 
 @media (max-width: 767px) {
@@ -302,7 +315,10 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   .solaris-quote-cta { height: 44px; gap: 8px; padding: 4px 5px 4px 14px; font-size: 13px; border-radius: 14px; }
   .solaris-quote-arrow { width: 34px; height: 34px; flex-basis: 34px; border-radius: 10px; }
   .solaris-menu-toggle { width: 46px; height: 46px; }
-  .solaris-mobile-menu { width: min(calc(100vw - 28px), 440px); }
+  .solaris-mobile-menu {
+    width: 100%;
+    max-width: 100%;
+  }
   .solaris-mobile-quote { height: 46px; font-size: 14px; }
 }
 

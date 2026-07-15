@@ -191,6 +191,7 @@
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open menu");
       mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("solaris-mobile-menu-open");
       closeProducts();
     };
 
@@ -199,6 +200,7 @@
       toggle.setAttribute("aria-expanded", String(willOpen));
       toggle.setAttribute("aria-label", willOpen ? "Close menu" : "Open menu");
       mobileMenu.classList.toggle("is-open", willOpen);
+      document.body.classList.toggle("solaris-mobile-menu-open", willOpen);
     });
 
     mobileMenu.querySelector("[data-open-quote-modal]").addEventListener("click", closeMenu);
