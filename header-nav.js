@@ -4,8 +4,15 @@
     "Gallery", "Blogs", "Reviews", "Contact",
   ];
 
+  const mobileMenuLabels = [
+    "Home", "About", "Packages", "Products",
+    "Gallery", "Blogs", "Reviews", "Contact",
+  ];
+
   const menuRoutes = Object.freeze({
+    Home: "/",
     About: "/about",
+    Packages: "/packages",
     Pricing: "/pricing",
     Blogs: "/blogs",
     Contact: "/contact",
@@ -42,9 +49,13 @@
       item.type = "button";
       item.classList.add(mobile ? "solaris-mobile-nav-item" : "solaris-nav-item");
       item.setAttribute("aria-expanded", "false");
+      const menuId = `${mobile ? "mobile" : "desktop"}-products-menu`;
+      item.setAttribute("aria-controls", menuId);
       item.innerHTML = `<span>${label}</span>${chevron}`;
       const submenu = document.createElement("div");
       submenu.className = "solaris-products-menu";
+      submenu.id = menuId;
+      submenu.setAttribute("aria-label", "Solar products");
       submenu.innerHTML = productLinks.map(([productLabel, productRoute]) =>
         `<a href="${productRoute}">${productLabel}</a>`).join("");
       const submenuLink = [...submenu.querySelectorAll("a")]
@@ -159,18 +170,28 @@
     toggle.className = "solaris-menu-toggle";
     toggle.setAttribute("aria-label", "Open menu");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", "solaris-mobile-menu");
     toggle.innerHTML = "<span></span><span></span>";
 
     const mobileMenu = document.createElement("nav");
     mobileMenu.className = "solaris-mobile-menu";
+    mobileMenu.id = "solaris-mobile-menu";
     mobileMenu.setAttribute("aria-label", "Mobile visual menu options");
-    menuLabels.forEach((label) => mobileMenu.append(makeItem(label, true)));
+    mobileMenuLabels.forEach((label) => mobileMenu.append(makeItem(label, true)));
     mobileMenu.append(makeQuoteButton("solaris-mobile-quote"));
+
+    const closeProducts = () => {
+      mobileMenu.querySelectorAll(".solaris-nav-dropdown.is-open").forEach((dropdown) => {
+        dropdown.classList.remove("is-open");
+        dropdown.querySelector(".solaris-mobile-nav-item")?.setAttribute("aria-expanded", "false");
+      });
+    };
 
     const closeMenu = () => {
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open menu");
       mobileMenu.classList.remove("is-open");
+      closeProducts();
     };
 
     toggle.addEventListener("click", () => {
@@ -181,12 +202,18 @@
     });
 
     mobileMenu.querySelector("[data-open-quote-modal]").addEventListener("click", closeMenu);
-    mobileMenu.querySelectorAll('a[href="/about"], a[href="/pricing"], .solaris-products-menu a')
-      .forEach((link) => link.addEventListener("click", closeMenu));
+    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
     });
+
+    const desktopViewport = window.matchMedia("(min-width: 1025px)");
+    const closeOnDesktop = (event) => {
+      if (event.matches) closeMenu();
+    };
+    if (typeof desktopViewport.addEventListener === "function") desktopViewport.addEventListener("change", closeOnDesktop);
+    else desktopViewport.addListener(closeOnDesktop);
 
     inner.append(brand, desktopNav, cta, toggle, mobileMenu);
     header.append(inner);
