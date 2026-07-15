@@ -11,6 +11,16 @@
     Contact: "/contact",
   });
 
+  const productLinks = Object.freeze([
+    ["6.6kW Solar System", "/6-6-kw-solar-system/"],
+    ["10.5kW Solar System", "/10-5-kw-solar-system/"],
+    ["13.2kW Solar System", "/13-2-kw-solar-system/"],
+    ["19.5kW Solar System", "/19-5-kw-solar-system/"],
+    ["Battery Storage", "/battery-storage/"],
+    ["Residential Solar", "/residential-solar/"],
+    ["Installation", "/installation/"],
+  ]);
+
   const chevron = `
     <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
       <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -25,6 +35,32 @@
 
   const makeItem = (label, mobile = false) => {
     const route = menuRoutes[label];
+    if (label === "Products") {
+      const wrapper = document.createElement("div");
+      wrapper.className = `solaris-nav-dropdown${mobile ? " solaris-nav-dropdown--mobile" : ""}`;
+      const item = document.createElement("button");
+      item.type = "button";
+      item.classList.add(mobile ? "solaris-mobile-nav-item" : "solaris-nav-item");
+      item.setAttribute("aria-expanded", "false");
+      item.innerHTML = `<span>${label}</span>${chevron}`;
+      const submenu = document.createElement("div");
+      submenu.className = "solaris-products-menu";
+      submenu.innerHTML = productLinks.map(([productLabel, productRoute]) =>
+        `<a href="${productRoute}">${productLabel}</a>`).join("");
+      const submenuLink = [...submenu.querySelectorAll("a")]
+        .find((link) => currentPath() === link.getAttribute("href").replace(/\/+$/, ""));
+      if (submenuLink) {
+        item.classList.add("is-active");
+        item.setAttribute("aria-current", "page");
+        submenuLink.setAttribute("aria-current", "page");
+      }
+      item.addEventListener("click", () => {
+        const isOpen = wrapper.classList.toggle("is-open");
+        item.setAttribute("aria-expanded", String(isOpen));
+      });
+      wrapper.append(item, submenu);
+      return wrapper;
+    }
     const item = document.createElement(route ? "a" : "button");
     if (route) {
       item.href = route;
@@ -145,7 +181,7 @@
     });
 
     mobileMenu.querySelector("[data-open-quote-modal]").addEventListener("click", closeMenu);
-    mobileMenu.querySelectorAll('a[href="/about"], a[href="/pricing"]')
+    mobileMenu.querySelectorAll('a[href="/about"], a[href="/pricing"], .solaris-products-menu a')
       .forEach((link) => link.addEventListener("click", closeMenu));
 
     document.addEventListener("keydown", (event) => {
