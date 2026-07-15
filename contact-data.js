@@ -27,6 +27,63 @@
 
   window.ESTEEM_CONTACT_DATA = CONTACT;
 
+  const footerLogoUrl = new URL("./assests/esteem%20energy%20logo.png", document.currentScript?.src || window.location.href).href;
+
+  const icon = (name) => {
+    const paths = {
+      mail: '<path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+      phone: '<path d="M7 3h3l1.5 4-2 1.5a13 13 0 0 0 6 6l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C11.3 19 5 12.7 5 5c0-1.1.9-2 2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>',
+      pin: '<path d="M12 21s6-5.15 6-11a6 6 0 1 0-12 0c0 5.85 6 11 6 11Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.1" fill="none" stroke="currentColor" stroke-width="1.7"/>',
+      arrow: '<path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>',
+    };
+    return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name]}</svg>`;
+  };
+
+  const footerLink = (href, label) => `<li><a href="${href}">${label}<span aria-hidden="true">${icon("arrow")}</span></a></li>`;
+
+  const renderFooter = (footer) => {
+    if (!footer || footer.dataset.esteemFooterVersion === "premium-1") return;
+    footer.dataset.esteemFooterVersion = "premium-1";
+    footer.innerHTML = `
+      <div class="esteem-footer-shell">
+        <div class="esteem-footer-grid">
+          <section class="esteem-footer-brand" aria-labelledby="footer-brand-title">
+            <a class="esteem-footer-logo" href="/" aria-label="Esteem Energy home"><img src="${footerLogoUrl}" alt="Esteem Energy"></a>
+            <h2 id="footer-brand-title">Smarter energy for the places you call home.</h2>
+            <p>${CONTACT.description}</p>
+            <div class="esteem-footer-social" aria-label="Social media">
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+            </div>
+          </section>
+          <nav class="esteem-footer-column" aria-labelledby="footer-company-title">
+            <h2 id="footer-company-title">Company</h2>
+            <ul>${footerLink("/about/", "About Us")}${footerLink("/contact/", "Contact Us")}${footerLink("/about/#choose-title", "Why Choose Us")}</ul>
+          </nav>
+          <nav class="esteem-footer-column" aria-labelledby="footer-services-title">
+            <h2 id="footer-services-title">Solar services</h2>
+            <ul>${footerLink("/products/6-6-kw-solar-system/", "Solar Panels")}${footerLink("/products/6-6-kw-solar-system/", "Solar Batteries")}${footerLink("/products/6-6-kw-solar-system/", "Solar Inverters")}${footerLink("/packages/", "Residential Solar")}${footerLink("/pricing/", "Solar Installation")}</ul>
+          </nav>
+          <nav class="esteem-footer-column" aria-labelledby="footer-help-title">
+            <h2 id="footer-help-title">Helpful links</h2>
+            <ul>${footerLink("/pricing/", "Solar Rebates")}${footerLink("/#faqs", "FAQs")}${footerLink("/blogs/", "Blog")}${footerLink("/contact/", "Get a quote")}</ul>
+          </nav>
+          <section class="esteem-footer-contact" aria-labelledby="footer-contact-title">
+            <h2 id="footer-contact-title">Contact us</h2>
+            <a class="esteem-footer-contact-link" href="${CONTACT.phoneHref}"><span class="esteem-footer-contact-icon">${icon("phone")}</span><span>${CONTACT.phone}</span></a>
+            <a class="esteem-footer-contact-link" href="${CONTACT.emailHref}"><span class="esteem-footer-contact-icon">${icon("mail")}</span><span>${CONTACT.email}</span></a>
+            <p class="esteem-footer-address"><span class="esteem-footer-contact-icon">${icon("pin")}</span><span>${CONTACT.offices.nsw.lines.join("<br>")}</span></p>
+            <a class="esteem-footer-cta" href="/contact/">Talk to our team <span aria-hidden="true">${icon("arrow")}</span></a>
+          </section>
+        </div>
+        <div class="esteem-footer-bottom">
+          <p>© ${new Date().getFullYear()} Esteem Energy. All rights reserved.</p>
+          <p>ABN: ${CONTACT.abn} · ACN: ${CONTACT.acn} · ${CONTACT.ecl}</p>
+        </div>
+      </div>`;
+  };
+
   const mapsUrl = (address) =>
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
@@ -145,7 +202,7 @@
   };
 
   const applyContactData = () => {
-    document.querySelectorAll("footer").forEach(updateFooter);
+    document.querySelectorAll("footer").forEach(renderFooter);
     updateContactPage();
   };
 
