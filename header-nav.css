@@ -87,6 +87,18 @@
 .solaris-nav-item:hover .solaris-chevron { transform: translateY(1px); }
 
 .solaris-nav-dropdown { position: relative; }
+.solaris-nav-dropdown:not(.solaris-nav-dropdown--mobile) {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+}
+.solaris-products-link { position: relative; z-index: 2; padding-right: 2px; border-radius: 999px 0 0 999px; pointer-events: auto; }
+.solaris-products-chevron { display: inline-flex; align-items: center; padding: 10px 9px 10px 2px; pointer-events: none; }
+.solaris-products-chevron .solaris-chevron { pointer-events: none; }
+.solaris-nav-dropdown:not(.solaris-nav-dropdown--mobile):hover > .solaris-products-link,
+.solaris-nav-dropdown:not(.solaris-nav-dropdown--mobile):focus-within > .solaris-products-link {
+  background: rgba(255, 255, 255, .66);
+}
 .solaris-products-menu {
   position: absolute;
   top: calc(100% + 8px);
@@ -100,14 +112,23 @@
   box-shadow: 0 14px 32px rgba(17,17,17,.12);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translate(-50%, -6px);
   transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
+.solaris-products-menu::before {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  height: 9px;
+  content: "";
+}
 .solaris-nav-dropdown:hover .solaris-products-menu,
 .solaris-nav-dropdown:focus-within .solaris-products-menu,
-.solaris-nav-dropdown.is-open .solaris-products-menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.solaris-nav-dropdown.is-open .solaris-products-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
 .solaris-products-menu a { padding: 11px 12px; border-radius: 10px; color: #111; font: 14px/1.2 "Geist", "Geist Placeholder", sans-serif; text-decoration: none; white-space: nowrap; }
 .solaris-products-menu a:hover, .solaris-products-menu a:focus-visible { background: rgba(200,255,61,.35); outline: none; }
 
@@ -229,11 +250,7 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
     top: calc(100% + 8px);
     left: 0;
     right: auto;
-    display: grid;
-    align-content: start;
-    align-items: start;
-    grid-auto-rows: max-content;
-    gap: 2px;
+    display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -256,11 +273,15 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
     overflow-x: hidden;
     overscroll-behavior: contain;
     scrollbar-width: none;
+    box-sizing: border-box;
   }
 
   .solaris-mobile-menu::-webkit-scrollbar { display: none; }
 
   .solaris-mobile-menu.is-open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+  .solaris-mobile-menu .solaris-mobile-nav-item,
+  .solaris-mobile-menu .solaris-mobile-quote,
+  .solaris-mobile-menu .solaris-products-menu a { box-sizing: border-box; }
   .solaris-mobile-nav-item {
     display: flex;
     align-items: center;
@@ -274,7 +295,7 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   .solaris-mobile-nav-item:hover,
   .solaris-mobile-nav-item:focus-visible,
   .solaris-mobile-nav-item.is-active { background: rgba(200,255,61,.3); outline: none; }
-  .solaris-nav-dropdown--mobile { display: grid; }
+  .solaris-nav-dropdown--mobile { display: block; }
   .solaris-nav-dropdown--mobile .solaris-mobile-nav-item { width: 100%; }
   .solaris-nav-dropdown--mobile .solaris-products-menu {
     position: static;
@@ -284,22 +305,19 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    max-height: 0;
+    display: none;
+    max-height: none;
     margin: 0;
     padding: 0 0 0 14px;
     border: 0;
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-    opacity: 0;
-    visibility: hidden;
     transform: none;
-    overflow: hidden;
-    transition: max-height .22s ease, opacity .18s ease, visibility .18s ease;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-  .solaris-nav-dropdown--mobile.is-open .solaris-products-menu { max-height: 600px; opacity: 1; visibility: visible; }
+  .solaris-nav-dropdown--mobile.is-open .solaris-products-menu { display: grid; gap: 2px; }
   .solaris-nav-dropdown--mobile .solaris-products-menu a { display: block; padding: 11px 15px; }
   .solaris-nav-dropdown--mobile.is-open > .solaris-mobile-nav-item .solaris-chevron { transform: rotate(180deg); }
   .solaris-nav-dropdown--mobile .solaris-products-menu a { white-space: normal; overflow-wrap: anywhere; }

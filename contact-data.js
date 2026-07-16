@@ -63,11 +63,11 @@
           </nav>
           <nav class="esteem-footer-column" aria-labelledby="footer-services-title">
             <h2 id="footer-services-title">Solar services</h2>
-            <ul>${footerLink("/products/6-6-kw-solar-system/", "Solar Panels")}${footerLink("/products/6-6-kw-solar-system/", "Solar Batteries")}${footerLink("/products/6-6-kw-solar-system/", "Solar Inverters")}${footerLink("/packages/", "Residential Solar")}${footerLink("/pricing/", "Solar Installation")}</ul>
+            <ul>${footerLink("/products/#solar-equipment", "Solar Panels")}${footerLink("/battery-storage/", "Solar Batteries")}${footerLink("/products/#solar-equipment", "Solar Inverters")}${footerLink("/residential-solar/", "Residential Solar")}${footerLink("/installation/", "Solar Installation")}</ul>
           </nav>
           <nav class="esteem-footer-column" aria-labelledby="footer-help-title">
             <h2 id="footer-help-title">Helpful links</h2>
-            <ul>${footerLink("/pricing/", "Solar Rebates")}${footerLink("/#faqs", "FAQs")}${footerLink("/blogs/", "Blog")}${footerLink("/contact/", "Get a quote")}</ul>
+            <ul>${footerLink("/pricing/", "Solar Rebates")}${footerLink("/#faqs", "FAQs")}${footerLink("/blogs/", "Blog")}${footerLink("/contact/", "Get a Quote")}</ul>
           </nav>
           <section class="esteem-footer-contact" aria-labelledby="footer-contact-title">
             <h2 id="footer-contact-title">Contact us</h2>

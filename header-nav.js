@@ -45,31 +45,60 @@
     if (label === "Products") {
       const wrapper = document.createElement("div");
       wrapper.className = `solaris-nav-dropdown${mobile ? " solaris-nav-dropdown--mobile" : ""}`;
-      const item = document.createElement("button");
-      item.type = "button";
-      item.classList.add(mobile ? "solaris-mobile-nav-item" : "solaris-nav-item");
-      item.setAttribute("aria-expanded", "false");
       const menuId = `${mobile ? "mobile" : "desktop"}-products-menu`;
-      item.setAttribute("aria-controls", menuId);
-      item.innerHTML = `<span>${label}</span>${chevron}`;
       const submenu = document.createElement("div");
       submenu.className = "solaris-products-menu";
       submenu.id = menuId;
       submenu.setAttribute("aria-label", "Solar products");
-      submenu.innerHTML = productLinks.map(([productLabel, productRoute]) =>
+      const submenuLinks = mobile
+        ? [["View All Products", "/products/"], ...productLinks]
+        : productLinks;
+      submenu.innerHTML = submenuLinks.map(([productLabel, productRoute]) =>
         `<a href="${productRoute}">${productLabel}</a>`).join("");
       const submenuLink = [...submenu.querySelectorAll("a")]
         .find((link) => currentPath() === link.getAttribute("href").replace(/\/+$/, ""));
-      if (submenuLink) {
-        item.classList.add("is-active");
-        item.setAttribute("aria-current", "page");
-        submenuLink.setAttribute("aria-current", "page");
+      if (submenuLink) submenuLink.setAttribute("aria-current", "page");
+
+      if (mobile) {
+        const toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-controls", menuId);
+        toggle.setAttribute("aria-label", "Toggle Products menu");
+        toggle.className = "solaris-mobile-nav-item";
+        toggle.innerHTML = `<span>${label}</span>${chevron}`;
+        if (submenuLink) toggle.classList.add("is-active");
+        toggle.addEventListener("click", () => {
+          const isOpen = wrapper.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+        wrapper.addEventListener("keydown", (event) => {
+          if (event.key !== "Escape") return;
+          wrapper.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.focus();
+        });
+        wrapper.append(toggle, submenu);
+      } else {
+        const productsLink = document.createElement("a");
+        productsLink.className = "solaris-nav-item solaris-products-link";
+        productsLink.href = "/products/";
+        productsLink.textContent = label;
+        productsLink.addEventListener("click", (event) => {
+          event.stopPropagation();
+        });
+        if (currentPath() === "/products") {
+          productsLink.classList.add("is-active");
+          productsLink.setAttribute("aria-current", "page");
+        } else if (submenuLink) {
+          productsLink.classList.add("is-active");
+        }
+        const productsChevron = document.createElement("span");
+        productsChevron.className = "solaris-products-chevron";
+        productsChevron.setAttribute("aria-hidden", "true");
+        productsChevron.innerHTML = chevron;
+        wrapper.append(productsLink, productsChevron, submenu);
       }
-      item.addEventListener("click", () => {
-        const isOpen = wrapper.classList.toggle("is-open");
-        item.setAttribute("aria-expanded", String(isOpen));
-      });
-      wrapper.append(item, submenu);
       return wrapper;
     }
     const item = document.createElement(route ? "a" : "button");
