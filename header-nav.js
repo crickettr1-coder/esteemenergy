@@ -14,7 +14,9 @@
     About: "/about",
     Packages: "/packages",
     Pricing: "/pricing",
+    Gallery: "/our-gallery/",
     Blogs: "/blogs",
+    Reviews: "/reviews/",
     Contact: "/contact",
   });
 
@@ -104,7 +106,7 @@
     const item = document.createElement(route ? "a" : "button");
     if (route) {
       item.href = route;
-      if (currentPath() === route) {
+      if (currentPath() === route.replace(/\/+$/, "")) {
         item.classList.add("is-active");
         item.setAttribute("aria-current", "page");
       }

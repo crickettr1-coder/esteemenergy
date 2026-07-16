@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+/* Site-wide typography: keep the existing layout and visual system, but use one readable family. */
+html body,
+html body *:not(.fa):not(.fas):not(.far):not(.fab):not(.material-icons):not(.material-symbols-rounded) {
+  font-family: "Quicksand", sans-serif !important;
+}
+html body ::placeholder,
+html body ::file-selector-button {
+  font-family: "Quicksand", sans-serif !important;
+}
+
 .solaris-site-header {
   --header-ink: #111111;
   --header-lime: #c8ff3d;
