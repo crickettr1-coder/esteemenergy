@@ -1,0 +1,9 @@
+old_url,new_url,required_301,internal_links_to_change,canonical_update,sitemap_update,status,reason
+https://esteemenergy.com.au/about-us-3/,https://esteemenergy.com.au/about/,Yes,Header/footer links,Yes,Yes,Proposed only,Local route differs; preserve old URL preferred.
+https://esteemenergy.com.au/packages/,https://esteemenergy.com.au/pricing/,Yes,Header/footer/package CTAs,Yes,Yes,Proposed only,Local packages page is redirect shell to pricing.
+https://esteemenergy.com.au/13-3-kw-solar-system/,https://esteemenergy.com.au/13-2-kw-solar-system/,Not yet,All system-size links,Not yet,Not yet,Blocked pending content decision,Live and local capacities differ; do not redirect automatically.
+https://esteemenergy.com.au/residential-solar-panel-system/,https://esteemenergy.com.au/residential-solar/,Yes,Header/footer/blog related links,Yes,Yes,Proposed only,Slug differs; preserve original preferred.
+https://esteemenergy.com.au/solar-panel-installation/,https://esteemenergy.com.au/installation/,Yes,Header/footer/service links,Yes,Yes,Proposed only,Slug differs; preserve original preferred.
+https://esteemenergy.com.au/our-gallery/,https://esteemenergy.com.au/our-gallery/,No,None,No,No,No redirect,Exact local purpose route.
+https://esteemenergy.com.au/contact-us/,https://esteemenergy.com.au/contact/,Yes,Header/footer/CTA links,Yes,Yes,Proposed only,Slug differs and local content is incomplete.
+https://esteemenergy.com.au/how-much-does-electricity-cost-australia/,https://esteemenergy.com.au/how-much-does-electricity-cost-australia/,No,None,No,No,Existing live redirect,Live browser result reported 301 to top-level URL.

@@ -1,0 +1,25 @@
+asset_url_or_local_path,asset_type,source_page_or_folder,exists_locally,old_domain_reference,download_required,duplicate_or_variant,alt_text_present,broken_or_missing,notes
+https://esteemenergy.com.au/wp-content/uploads/2021/10/EE-PNG.png,Logo,old-site HTML,Yes,Yes,No,No,Unknown,No,Archived media reference.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-Ashby-Western-Australia.jpg,Gallery image,our-gallery,Yes,Yes,No,No,Unknown,No,Local archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-Blacktown-NSW.jpg,Gallery image,our-gallery,Yes,Yes,No,No,Unknown,No,Local archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-Blacktown-new-south-wales.jpg,Gallery image,our-gallery,Yes,Yes,No,Yes,Unknown,No,Likely duplicate location variant.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-cabramatta-new-south-wales.jpg,Gallery image,our-gallery,Yes,Yes,No,No,Unknown,No,Local archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-melonba-NSW.jpg,Gallery image,our-gallery,Yes,Yes,No,Yes,Unknown,No,Likely duplicate location variant.
+https://esteemenergy.com.au/wp-content/uploads/2023/08/Best-Solar-Installation-melonba-new-south-wales.jpg,Gallery image,our-gallery,Yes,Yes,No,Yes,Unknown,No,Likely duplicate location variant.
+https://esteemenergy.com.au/wp-content/uploads/2023/07/Jinko.webp,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2023/07/Trina-solar.webp,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/01/ht-panels-415w.webp,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/01/fronius-inverter.webp,Inverter image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/09/Eging-Panel.jpg,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/09/Tongwei-.jpg,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/09/Risen-.jpg,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2024/09/Panel-Brand.jpg,Solar-panel image,product page,Yes,Yes,No,No,Unknown,No,Brand composite or placeholder; verify.
+https://esteemenergy.com.au/wp-content/uploads/2025/01/The-Solar-Installation-Process_-What-to-Expect-from-Start-to-Finish-1.png,Blog image,blog,Yes,Yes,No,No,Unknown,No,Archived old-site asset.
+https://esteemenergy.com.au/wp-content/uploads/2025/07/Featurs.png,Infographic,6.6kW page,Yes,Yes,No,Yes,Unknown,No,Multiple resized variants present locally.
+https://esteemenergy.com.au/wp-content/uploads/2025/07/What.png,Infographic,6.6kW page,Yes,Yes,No,Yes,Unknown,No,Multiple resized variants present locally.
+https://esteemenergy.com.au/wp-content/uploads/2026/07/BEST-DEALS-on-Solar-systems.jpg,Blog/hero image,live current site,No,Yes,Yes,Yes,Unknown,No,Current 2026 media not present in local project.
+https://esteemenergy.com.au/wp-content/uploads/2026/01/logo.png,Logo,live current site,No,Yes,Yes,Yes,Unknown,No,Current logo variant not present in local project.
+local:assests/blogs/solar-panel-closeup.jpg,Blog image,local project,Yes,No,No,No,Unknown,No,Local-only asset; compare against live featured images.
+local:assests/blogs/solar-inverters.jpg,Blog image,local project,Yes,No,No,No,Unknown,No,Local-only asset.
+local:assests/blogs/energy-monitoring.jpg,Blog image,local project,Yes,No,No,No,Unknown,No,Local-only asset.
+local:Solaris Energy - Smart Solar Solutions for Homes_files/*,Site media capture,local project,Yes,No,No,Unknown,Unknown,No,Framer reference assets; not assumed to match live WordPress media.
