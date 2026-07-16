@@ -416,6 +416,9 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     width: 100%;
     justify-content: space-between;
   }
+
+  .esteem-primary-cta > span:first-child,
+  .esteem-secondary-cta > span:first-child { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
 }
 
 /* Extremely narrow viewport font wrapping fallback */

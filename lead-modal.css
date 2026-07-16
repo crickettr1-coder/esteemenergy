@@ -347,3 +347,12 @@
   .solar-lead-dialog,
   .solar-lead-submit { transition: none; }
 }
+
+@media (max-width: 420px) {
+  .solar-lead-overlay { padding: 4px; }
+  .solar-lead-dialog { max-height: calc(100dvh - 8px); }
+  .solar-lead-intro, .solar-lead-form-panel { padding-inline: 16px; }
+  .solar-lead-form { grid-template-columns: minmax(0, 1fr); }
+  .solar-lead-field.is-wide { grid-column: auto; }
+  .solar-lead-submit, .solar-lead-submit-label { min-width: 0; white-space: normal; }
+}

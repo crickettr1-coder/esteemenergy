@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
+/* Responsive foundation shared by every active page. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, picture, video, canvas, svg { max-width: 100%; height: auto; }
+iframe { max-width: 100%; }
+button, input, textarea, select { max-width: 100%; }
+
 /* Site-wide typography: keep the existing layout and visual system, but use one readable family. */
 html body,
 html body *:not(.fa):not(.fas):not(.far):not(.fab):not(.material-icons):not(.material-symbols-rounded) {
@@ -361,7 +368,36 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   .solaris-mobile-quote .solaris-quote-label { display: inline; }
 }
 
+@media (max-width: 767px) {
+  /* Prevent grid/flex min-content sizing from creating a second layout width. */
+  main,
+  section,
+  article,
+  footer,
+  header,
+  form,
+  [class*="container"],
+  [class*="grid"] { min-width: 0; max-width: 100%; }
+
+  .solaris-brand,
+  .solaris-brand .framer-yi202p-container,
+  .solaris-brand a { min-width: 0; max-width: 100%; }
+
+  .solaris-brand a { overflow-wrap: anywhere; }
+
+  .solaris-mobile-menu { left: 0; right: 0; width: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .solaris-nav, .solaris-nav-item, .solaris-mobile-menu, .solaris-menu-toggle span,
   .solaris-quote-fill, .solaris-quote-arrow, .solaris-quote-label { transition: none; }
+}
+
+@media (max-width: 767px) {
+  main, section, article, footer, header, form,
+  [class*="container"], [class*="grid"] { min-width: 0; max-width: 100%; }
+  .solaris-brand, .solaris-brand .framer-yi202p-container,
+  .solaris-brand a { min-width: 0; max-width: 100%; }
+  .solaris-brand a { overflow-wrap: anywhere; }
+  .solaris-mobile-menu { left: 0; right: 0; width: 100%; }
 }

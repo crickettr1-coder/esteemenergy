@@ -168,3 +168,37 @@
   .product-runtime .runtime-illustration { min-height: 340px; padding: 25px; }
   .product-runtime .runtime-benefit-visual { min-height: 300px; }
 }
+
+@media (max-width: 767px) {
+  .product-landing .prod-container,
+  .product-runtime .prod-container { width: min(calc(100% - 32px), 640px); }
+
+  .product-landing .prod-hero-grid,
+  .product-runtime .prod-hero-grid,
+  .product-landing .prod-split,
+  .product-runtime .prod-split { min-width: 0; }
+
+  .product-landing .prod-hero-copy,
+  .product-runtime .prod-hero-copy,
+  .product-landing .prod-hero-copy h1,
+  .product-runtime .prod-hero-copy h1,
+  .product-landing .prod-lead,
+  .product-runtime .prod-lead { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+
+  .product-landing .prod-actions,
+  .product-runtime .prod-actions { width: 100%; min-width: 0; }
+
+  .product-landing .prod-hero-visual,
+  .product-runtime .prod-hero-visual { width: 100%; min-width: 0; }
+
+  .product-landing .prod-spec-card,
+  .product-runtime .prod-spec-card { min-width: 0; max-width: calc(100% - 32px); }
+
+  .product-landing .prod-compare-table-wrap { max-width: 100%; overflow-x: auto; }
+}
+
+@media (max-width: 359px) {
+  .product-landing .prod-container,
+  .product-runtime .prod-container { width: calc(100% - 24px); }
+  .product-landing .prod-final { padding-inline: 18px; }
+}
