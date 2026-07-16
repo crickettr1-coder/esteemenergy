@@ -1,0 +1,6 @@
+.blog-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 42px 0 10px; }
+.blog-pagination button { min-width: 40px; height: 40px; padding: 0 13px; border: 1px solid var(--blog-line); border-radius: 999px; background: #fff; color: var(--blog-ink); font: 500 13px/1 var(--blog-ui-font); cursor: pointer; transition: .2s ease; }
+.blog-pagination button:hover:not(:disabled), .blog-pagination button.is-active { border-color: var(--blog-ink); background: var(--blog-ink); color: #fff; }
+.blog-pagination button:disabled { cursor: not-allowed; opacity: .35; }
+.blog-pagination-status { margin: 0 0 20px; color: var(--blog-muted); font: 13px/1.4 var(--blog-ui-font); text-align: center; }
+.blog-import-note { margin: 0 0 24px; color: var(--blog-muted); font: 12px/1.5 var(--blog-ui-font); text-align: center; }
