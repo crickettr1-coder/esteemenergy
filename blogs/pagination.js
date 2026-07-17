@@ -25,10 +25,11 @@
   };
   const card = (post, index) => {
     const article = document.createElement('article');
-    article.className = 'blog-card';
+    article.className = 'blog-card is-visible';
     article.dataset.reveal = '';
     article.dataset.revealDelay = String(index % 3);
-    article.innerHTML = `<div class="blog-card-visual"><img src="${post.image || '/assests/blogs/solar-panel-closeup.jpg'}" alt="Solar image for ${post.title.replace(/"/g, '&quot;')}" loading="lazy" ${post.temporaryImage ? 'data-temporary-image="true"' : ''}></div><div class="blog-card-content"><div class="blog-card-meta"><span class="blog-tag">${post.category || 'Solar Systems'}</span><span>${dateLabel(post.date)}</span></div><h3><a href="${post.url}">${post.title}</a></h3><p class="blog-card-excerpt">${post.excerpt || 'Explore practical solar guidance from Esteem Energy.'}</p><div class="blog-card-footer"><span style="font-size:12px;color:var(--blog-muted);">${post.author || 'Esteem Energy'}</span><a class="blog-read-link" href="${post.url}"><span>Read Article</span><span class="blog-read-arrow" aria-hidden="true">→</span></a></div></div>`;
+    const title = typeof post.title === 'string' && post.title.trim() ? post.title : 'Solar energy guide';
+    article.innerHTML = `<div class="blog-card-visual"><img src="${post.image || '/assests/blogs/solar-panel-closeup.jpg'}" alt="Solar image for ${title.replace(/"/g, '&quot;')}" loading="lazy" ${post.temporaryImage ? 'data-temporary-image="true"' : ''}></div><div class="blog-card-content"><div class="blog-card-meta"><span class="blog-tag">${post.category || 'Solar Systems'}</span><span>${dateLabel(post.date)}</span></div><h3><a href="${post.url}">${title}</a></h3><p class="blog-card-excerpt">${post.excerpt || 'Explore practical solar guidance from Esteem Energy.'}</p><div class="blog-card-footer"><span style="font-size:12px;color:var(--blog-muted);">${post.author || 'Esteem Energy'}</span><a class="blog-read-link" href="${post.url}"><span>Read Article</span><span class="blog-read-arrow" aria-hidden="true">→</span></a></div></div>`;
     return article;
   };
   const render = () => {
