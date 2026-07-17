@@ -1,4 +1,14 @@
 {
   "trailingSlash": true,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    { "source": "/contact/", "destination": "/contact-us/", "permanent": true },
+    { "source": "/about-us-3/", "destination": "/about/", "permanent": true },
+    { "source": "/packages/", "destination": "/pricing/", "permanent": true },
+    { "source": "/solar-panel-installation/", "destination": "/installation/", "permanent": true },
+    { "source": "/residential-solar-panel-system/", "destination": "/residential-solar/", "permanent": true },
+    { "source": "/13-3-kw-solar-system/", "destination": "/13-2-kw-solar-system/", "permanent": true },
+    { "source": "/blog/:slug/", "destination": "/:slug/", "permanent": true },
+    { "source": "/blogs/:slug/", "destination": "/:slug/", "permanent": true }
+  ]
 }

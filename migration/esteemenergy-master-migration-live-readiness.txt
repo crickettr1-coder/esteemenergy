@@ -1,0 +1,388 @@
+MASTER MIGRATION + PRE-LAUNCH SEO AUDIT
+
+PROJECT
+C:\Users\admin\Desktop\vscode\vscode\solar
+
+OLD LIVE SITE
+https://esteemenergy.com.au/
+
+MIGRATION DATA
+C:\Users\admin\Desktop\vscode\vscode\solar\migration\wordpress\page-migration.csv
+C:\Users\admin\Desktop\vscode\vscode\solar\migration\source\esteemenergy.WordPress.2026-07-17.xml
+C:\Users\admin\Desktop\vscode\vscode\solar\migration\uploads
+
+OBJECTIVE
+Complete the remaining migration from the old WordPress site into the new static website, repair anything already migrated incorrectly, preserve SEO, and prepare the project for a safe production launch.
+
+IMPORTANT
+- Work only inside the new local project.
+- Do not change the old live WordPress site.
+- Do not deploy or push until the final audit is complete.
+- Existing correct pages must not be recreated.
+- Compare by exact old URL and final local route, not only by title or folder name.
+- Preserve every valuable old public URL exactly unless the old URL already redirects to another canonical URL.
+- Never create duplicate indexable pages.
+
+PHASE 1 — COMPLETE INVENTORY
+Read the WordPress XML and page-migration.csv.
+
+Build a complete inventory of:
+- Published pages
+- Published posts
+- Attachments
+- Categories
+- Tags
+- Menus
+- Parent/child pages
+- Old URLs
+- Slugs
+- Publish and modified dates
+- Page/post content
+- Excerpts
+- Featured-image IDs
+- Inline image URLs
+- SEO metadata
+- Canonical URLs
+- Open Graph images
+- Internal links
+
+Scan the new project and classify each old URL as:
+- already correct
+- present but wrong placement
+- present but incomplete
+- present with wrong URL
+- duplicate
+- missing
+- broken
+- needs redirect
+- needs image repair
+- needs SEO repair
+
+Update:
+migration/wordpress/page-migration.csv
+
+Add or maintain:
+old_url, final_route, local_file, type, content_status, image_status, seo_status, duplicate_status, redirect_status, validation_status, notes
+
+PHASE 2 — URL AND ROUTE PRESERVATION
+For every old public URL:
+- Keep the same route and trailing slash.
+- Use a top-level folder with index.html when that matches the old route.
+- Do not move posts under /blogs/ unless the old URL contained /blogs/.
+- Keep /blogs/ only as the blog archive where appropriate.
+- Do not rename old spelling, numbers, hyphens, singular/plural terms, or legacy slugs.
+- Update menu, footer, cards, related posts, breadcrumbs, schema, canonical and sitemap links to the preserved route.
+- Detect duplicate local routes such as /contact/ and /contact-us/.
+- Keep the exact old canonical route.
+- Preserve unique form logic or assets before removing duplicate pages.
+
+Create:
+migration/wordpress/redirect-map.csv
+
+Columns:
+source_url,destination_url,reason,status,loop_checked
+
+Use 301 redirects only where necessary.
+Do not create redirect chains or loops.
+
+PHASE 3 — PAGE AND POST MIGRATION
+Migrate only missing or incomplete content.
+
+For content already present:
+- Compare it with the exact old URL.
+- Keep the current new-site design where correct.
+- Fill missing text, sections, images, metadata and links.
+- Fix incorrect placement.
+- Do not overwrite good new-site sections unnecessarily.
+
+Preserve:
+- Page title
+- H1 and meaningful H2/H3 content
+- Body content
+- Tables
+- FAQs
+- Lists
+- Useful buttons and internal links
+- Dates for posts
+- Categories where useful
+- Contact details
+- Legal content
+
+Do not copy:
+- Elementor wrappers
+- WordPress theme CSS
+- Plugin scripts
+- Shortcodes
+- Tracking scripts
+- Admin markup
+- AMP validation data
+- Duplicate meta charset tags
+- Obsolete builder classes
+
+Keep:
+- Current website header
+- Current website footer
+- Quicksand font
+- Existing theme colours
+- Existing button design
+- Existing responsive system
+
+PHASE 4 — MEDIA AND IMAGE MIGRATION
+Audit all:
+- Hero images
+- Featured images
+- Inline post images
+- Product images
+- Gallery images
+- Logos
+- Icons
+- Open Graph images
+- Schema images
+
+Image matching order:
+1. Exact local image referenced by the XML
+2. Exact attachment ID or _wp_attached_file
+3. Exact filename in migration/uploads
+4. Exact image shown on the matching old live URL
+5. Relevant existing local image
+6. Licensed temporary stock image only as the final fallback
+
+Rules:
+- Do not hotlink old-site images.
+- Download an old Esteem Energy image only when it is missing locally.
+- Store browser-facing assets outside migration/.
+- Prefer clean paths such as /assets/blog-images/<slug>/featured.webp.
+- Do not expose C:\ paths, migration/uploads paths or wp-content URLs.
+- Use the best large image variant, not tiny thumbnails.
+- Avoid repeated generic images across unrelated articles.
+- Keep reusable logos, icons and decorative assets where appropriate.
+- Do not present stock images as actual Esteem Energy projects or staff.
+- Optimise to WebP where suitable without visible quality loss.
+- Preserve transparency when needed.
+- Add width, height, responsive sizing and meaningful alt text.
+- Add loading=lazy to below-the-fold/card images.
+- Do not lazy-load the primary LCP hero image.
+- Ensure filenames and references match case exactly for Vercel.
+
+Create:
+migration/wordpress/image-map.csv
+
+Columns:
+content_title,old_url,image_type,old_image_url,attachment_id,local_source,new_path,match_method,confidence,duplicate_count,status,notes
+
+PHASE 5 — DUPLICATE IMAGE REPAIR
+Find identical featured images by:
+- Exact path
+- Filename
+- File hash
+- Visual duplicate where tools allow
+
+Classify:
+- acceptable shared asset
+- related-topic reuse
+- generic fallback duplicate
+- incorrect duplicate featured image
+
+Replace incorrect duplicate featured images with the exact original image where available.
+Do not assign a different but unrelated image merely to make cards unique.
+
+Ensure the blog card, article hero, og:image and Article schema image all reference the same correct featured image.
+
+PHASE 6 — ENCODING AND CONTENT CLEANUP
+Ensure every HTML page has one valid:
+<meta charset="UTF-8">
+
+Fix confirmed mojibake such as:
+ðŸ
+â€“
+â€”
+â€™
+â€œ
+â€
+â€¢
+Â
+ï¿½
+�
+
+Do not use blind global replacements.
+Correct only confirmed encoding errors.
+Save files as UTF-8.
+Preserve valid Unicode.
+
+Remove:
+- Broken shortcodes
+- Empty Elementor containers
+- Excess empty paragraphs
+- Duplicate headings introduced by migration
+- Broken old-domain asset references
+
+Do not rewrite articles or alter their meaning.
+
+PHASE 7 — SEO PRESERVATION
+For every indexable page:
+- One clear H1
+- Correct title tag
+- Correct meta description
+- Self-referencing canonical using the final old-site URL
+- Correct og:title
+- Correct og:description
+- Correct og:url
+- Correct og:image
+- Twitter metadata where used
+- Descriptive alt text
+- Correct Article schema for posts
+- Breadcrumb schema where supported
+- ContactPage/LocalBusiness schema only with verified details
+- No fake reviews, ratings, awards, offices or guarantees
+- No localhost or Vercel-preview canonical URLs
+- No duplicate titles/canonicals caused by duplicate pages
+- No accidental noindex on production pages
+- No indexable search, test, migration or duplicate routes
+
+Generate or repair:
+- sitemap.xml
+- robots.txt
+- 404 page
+- redirects
+
+Sitemap rules:
+- Include only canonical HTTP 200 pages.
+- Exclude duplicates, redirects, staging, migration, test and noindex pages.
+- Use the production domain.
+- Preserve old URLs.
+
+PHASE 8 — INTERNAL LINKS AND NAVIGATION
+Check all:
+- Desktop menu
+- Mobile menu
+- Footer
+- Buttons
+- Blog cards
+- Related posts
+- Breadcrumbs
+- Product cards
+- CTA links
+- Image links
+
+Fix:
+- 404 links
+- Old wp-content links
+- Old WordPress internal URLs that should now point locally
+- Wrong /blogs/<slug>/ routes
+- Duplicate Contact routes
+- Incorrect case
+- Missing trailing slash where required
+
+Do not change external links unless broken or unsafe.
+
+PHASE 9 — PERFORMANCE AND ACCESSIBILITY
+Verify:
+- No image 404s
+- No CSS/JS 404s
+- No major console errors
+- No horizontal overflow
+- Fixed header does not cover page headings
+- Correct mobile spacing
+- Forms have labels
+- Buttons and links are keyboard accessible
+- Images have alt text
+- Colour contrast remains readable
+- Mobile menu works
+- Main hero image is not unnecessarily huge
+- Image dimensions reduce layout shift
+- No duplicate JavaScript libraries introduced
+- No WordPress/plugin assets loaded unnecessarily
+
+Test:
+320px, 375px, 414px, 768px, 1024px and large desktop.
+
+PHASE 10 — FORMS AND BUSINESS DATA
+Reuse existing working form logic.
+Do not create a fake backend.
+Preserve field names, validation, CRM/API integration and submission destination unless repairing an existing broken connection.
+
+Verify contact information against the old page and current shared contact data.
+Do not invent details.
+
+PHASE 11 — PRE-LAUNCH VALIDATION
+Start the local server and crawl every final route.
+
+For every old URL verify:
+- final local route exists
+- HTTP 200 or intentional 301
+- correct canonical
+- no redirect loop
+- no duplicate indexable route
+- title and H1 are present
+- content is not empty
+- images load
+- internal links work
+- mobile layout works
+
+Run:
+- HTML/static validation available in the project
+- JavaScript syntax checks
+- broken-link scan
+- image 404 scan
+- canonical audit
+- duplicate title audit
+- duplicate meta description audit
+- duplicate H1 audit
+- sitemap audit
+- robots audit
+- encoding scan
+- old-domain asset scan
+- wp-content URL scan
+- Windows-path scan
+- case-sensitive path scan
+
+Do not mark ready until all critical errors are fixed.
+
+PHASE 12 — SAFE RELEASE PREPARATION
+Before deployment:
+- Create a Git checkpoint commit.
+- Produce a final redirect map.
+- Produce a final URL comparison.
+- Produce a final missing-content report.
+- Do not remove the old site before verifying the new production deployment.
+- After deployment, verify production URLs and redirects before DNS/cutover decisions.
+- Never force-push.
+
+FINAL REPORT
+Report:
+- published pages discovered
+- published posts discovered
+- attachments discovered
+- old URLs audited
+- already-correct pages skipped
+- missing pages migrated
+- incomplete pages repaired
+- wrong placements fixed
+- duplicates removed
+- redirects created
+- images matched locally
+- images obtained from old site
+- duplicate featured images replaced
+- stock images still remaining
+- broken image paths fixed
+- encoding issues fixed
+- metadata repaired
+- internal links fixed
+- forms tested
+- sitemap and robots status
+- desktop/mobile widths tested
+- unresolved issues
+- exact files created
+- exact files modified
+- confirmation that no old public URL was changed without a redirect
+- confirmation that no deployment or push occurred
+
+EXECUTION ORDER
+1. Audit everything first.
+2. Show the proposed migration/fix plan.
+3. Create a Git checkpoint.
+4. Work in batches of 10 pages/posts.
+5. Validate each batch.
+6. Continue until all inventory rows are resolved.
+7. Run the complete pre-launch audit.
+8. Stop before deployment and provide the final report.
