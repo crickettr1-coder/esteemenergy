@@ -17,7 +17,7 @@
     Gallery: "/our-gallery/",
     Blogs: "/blogs",
     Reviews: "/reviews/",
-    Contact: "/contact",
+    Contact: "/contact-us/",
   });
 
   const productLinks = Object.freeze([

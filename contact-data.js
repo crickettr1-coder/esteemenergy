@@ -51,15 +51,10 @@
             <a class="esteem-footer-logo" href="/" aria-label="Esteem Energy home"><img src="${footerLogoUrl}" alt="Esteem Energy"></a>
             <h2 id="footer-brand-title">Smarter energy for the places you call home.</h2>
             <p>${CONTACT.description}</p>
-            <div class="esteem-footer-social" aria-label="Social media">
-              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-            </div>
           </section>
           <nav class="esteem-footer-column" aria-labelledby="footer-company-title">
             <h2 id="footer-company-title">Company</h2>
-            <ul>${footerLink("/about/", "About Us")}${footerLink("/contact/", "Contact Us")}${footerLink("/about/#choose-title", "Why Choose Us")}</ul>
+            <ul>${footerLink("/about/", "About Us")}${footerLink("/contact-us/", "Contact Us")}${footerLink("/about/#choose-title", "Why Choose Us")}</ul>
           </nav>
           <nav class="esteem-footer-column" aria-labelledby="footer-services-title">
             <h2 id="footer-services-title">Solar services</h2>
@@ -67,14 +62,14 @@
           </nav>
           <nav class="esteem-footer-column" aria-labelledby="footer-help-title">
             <h2 id="footer-help-title">Helpful links</h2>
-            <ul>${footerLink("/pricing/", "Solar Rebates")}${footerLink("/#faqs", "FAQs")}${footerLink("/blogs/", "Blog")}${footerLink("/contact/", "Get a Quote")}</ul>
+            <ul>${footerLink("/pricing/", "Solar Rebates")}${footerLink("/#faqs", "FAQs")}${footerLink("/blogs/", "Blog")}${footerLink("/contact-us/", "Get a Quote")}</ul>
           </nav>
           <section class="esteem-footer-contact" aria-labelledby="footer-contact-title">
             <h2 id="footer-contact-title">Contact us</h2>
             <a class="esteem-footer-contact-link" href="${CONTACT.phoneHref}"><span class="esteem-footer-contact-icon">${icon("phone")}</span><span>${CONTACT.phone}</span></a>
             <a class="esteem-footer-contact-link" href="${CONTACT.emailHref}"><span class="esteem-footer-contact-icon">${icon("mail")}</span><span>${CONTACT.email}</span></a>
             <p class="esteem-footer-address"><span class="esteem-footer-contact-icon">${icon("pin")}</span><span>${CONTACT.offices.nsw.lines.join("<br>")}</span></p>
-            <a class="esteem-footer-cta" href="/contact/">Talk to our team <span aria-hidden="true">${icon("arrow")}</span></a>
+            <a class="esteem-footer-cta" href="/contact-us/">Talk to our team <span aria-hidden="true">${icon("arrow")}</span></a>
           </section>
         </div>
         <div class="esteem-footer-bottom">
