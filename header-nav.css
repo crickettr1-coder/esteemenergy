@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
+/* The optional Framer promotion is not part of the Esteem Energy site UI. */
+#__framer-badge-container,
+.__framer-badge {
+  display: none !important;
+}
+
 /* Responsive foundation shared by every active page. */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { max-width: 100%; overflow-x: hidden; }

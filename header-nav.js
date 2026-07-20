@@ -5,17 +5,17 @@
   ];
 
   const mobileMenuLabels = [
-    "Home", "About", "Packages", "Products",
+    "Home", "About", "Pricing", "Products",
     "Gallery", "Blogs", "Reviews", "Contact",
   ];
 
   const menuRoutes = Object.freeze({
     Home: "/",
-    About: "/about",
-    Packages: "/packages",
-    Pricing: "/pricing",
+    About: "/about/",
+    Packages: "/packages/",
+    Pricing: "/pricing/",
     Gallery: "/our-gallery/",
-    Blogs: "/blogs",
+    Blogs: "/blogs/",
     Reviews: "/reviews/",
     Contact: "/contact-us/",
   });
@@ -126,7 +126,7 @@
 
       list.querySelectorAll("a").forEach((link) => {
         if (!/^about(?: us)?$/i.test(link.textContent.trim())) return;
-        link.href = "/about";
+        link.href = "/about/";
         const label = link.querySelector("p") || link;
         if (label.textContent.trim() !== "About Us") label.textContent = "About Us";
         if (currentPath() === "/about") link.setAttribute("aria-current", "page");
@@ -144,12 +144,96 @@
         else list.append(pricingLink);
       }
 
-      pricingLink.href = "/pricing";
+      pricingLink.href = "/pricing/";
       const pricingLabel = pricingLink.querySelector("p") || pricingLink;
       if (pricingLabel.textContent.trim() !== "Pricing") pricingLabel.textContent = "Pricing";
       if (currentPath() === "/pricing") pricingLink.setAttribute("aria-current", "page");
       else pricingLink.removeAttribute("aria-current");
     });
+  };
+
+  const genuineTestimonials = Object.freeze([
+    ["D Mann", "Very professional and friendly. Excellent quality product and great workmanship. The team was prompt and handled everything perfectly."],
+    ["Singh I.", "Very professional work done by Esteem Energy. Overall was happy with the timely and efficient installation of solar panels and inverter."],
+    ["Joma", "Clean work. Very helpful app to follow my usage. The team arrived exactly when verified and finished the job without any mess."],
+    ["Nathan M.", "I couldn't be happier with the results. Even on cloudy days, the system is still generating a surprising amount of energy."],
+  ]);
+
+  const replaceExactText = (from, to) => {
+    document.querySelectorAll("p,h1,h2,h3,h4,h5,h6,span,li").forEach((element) => {
+      if (element.textContent.trim() === from) element.textContent = to;
+    });
+  };
+
+  const replaceContainingText = (from, to) => {
+    document.querySelectorAll("p,h1,h2,h3,h4,h5,h6,span,li").forEach((element) => {
+      if (element.children.length === 0 && element.textContent.includes(from)) {
+        element.textContent = element.textContent.replace(from, to);
+      }
+    });
+  };
+
+  const normalizeLegacyPageLinks = () => {
+    const routeByHash = Object.freeze({
+      "#about": "/about/",
+      "#solution": "/products/",
+      "#projects": "/our-gallery/",
+      "#packages": "/pricing/",
+      "#contact": "/contact-us/",
+    });
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const hash = href.match(/#(?:about|solution|projects|packages|contact)$/i)?.[0]?.toLowerCase();
+      if (!hash || !routeByHash[hash]) return;
+      link.href = routeByHash[hash];
+    });
+  };
+
+  const normalizeCanonicalUrl = () => {
+    const path = currentPath() === "/" ? "/" : `${currentPath()}/`;
+    const canonical = new URL(path, window.location.origin).href;
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonical);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonical);
+  };
+
+  const cleanupTemplateContent = () => {
+    document.querySelectorAll('[data-framer-name="Review Quote Text"] p').forEach((element, index) => {
+      element.textContent = `“${genuineTestimonials[index % genuineTestimonials.length][1]}”`;
+    });
+    document.querySelectorAll('[data-framer-name="User Name Label"] p').forEach((element, index) => {
+      element.textContent = genuineTestimonials[index % genuineTestimonials.length][0];
+    });
+
+    replaceExactText("Have questions about Salesflow?", "Have questions about solar panels, batteries, installation or system sizing?");
+    replaceExactText("Here are some of the most common queries to help you get started.", "Here are answers to common questions from Australian homeowners.");
+    replaceExactText("by 500+ Homeowners", "for Australian homeowners");
+    replaceExactText("10+", "—");
+    replaceExactText("500+", "—");
+    replaceExactText("20 Years", "—");
+    replaceExactText("0+", "—");
+    replaceExactText("0 Years", "—");
+    replaceExactText("Solar Industry Experience", "Solar experience");
+    replaceExactText("Solar Projects Installed", "Australian solar projects");
+    replaceExactText("Panel Performance Warranty", "Panel warranty");
+    replaceExactText("Delivering reliable solar energy solutions with years of expertise in residential and commercial installations.", "Advice and installation planning for residential and commercial solar projects.");
+    replaceExactText("Successfully installed solar systems powering homes and businesses with clean renewable energy solutions worldwide.", "Solar systems planned for Australian homes and businesses, subject to property and network requirements.");
+    replaceExactText("High-quality solar panels designed to deliver long-term performance and sustainable energy production.", "Warranty terms depend on the selected equipment and quotation.");
+    replaceExactText("Enjoy up to 70% savings on energy bills with solar panels and smart storage.", "Understand your potential energy savings with solar panels and smart storage.");
+    replaceExactText("Professional installation completed by certified technicians.", "Professional installation planned around your property and system requirements.");
+    replaceExactText("Certified solar technicians", "Professional solar installation");
+
+    replaceExactText("Let’s Talk About Your Health Needs", "Let’s Talk About Your Solar Plans");
+    replaceExactText("Contact us for appointments, inquiries, or support - our team is here to guide you every step of the way.", "Contact us about solar panels, battery storage, installation or support.");
+    replaceContainingText("Health Needs", "Solar Plans");
+    replaceContainingText("appointments, inquiries, or support", "solar panels, battery storage, installation or support");
+    document.querySelectorAll('input[placeholder="John Carter"]').forEach((element) => { element.placeholder = "Your name"; });
+    document.querySelectorAll('input[placeholder="+1 (555) 234-5678"]').forEach((element) => { element.placeholder = "Your phone number"; });
+    document.querySelectorAll("input,textarea").forEach((element) => {
+      if (!element.placeholder.includes("framer.com")) return;
+      element.placeholder = element.tagName === "TEXTAREA" ? "Tell us about your solar plans" : "name@example.com";
+    });
+
+    document.querySelectorAll("#__framer-badge-container, .__framer-badge").forEach((element) => element.remove());
   };
 
   const makeQuoteButton = (extraClass = "") => {
@@ -253,6 +337,8 @@
     document.body.prepend(header);
     document.body.classList.add("header-upgraded");
     updateFooterNavigationLinks();
+    normalizeLegacyPageLinks();
+    normalizeCanonicalUrl();
 
     const updateScrollState = () => {
       header.classList.toggle("is-scrolled", window.scrollY > 28);
@@ -261,10 +347,27 @@
     window.addEventListener("scroll", updateScrollState, { passive: true });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initHeader, { once: true });
-  } else {
+  let enhancementTimer;
+  const runEnhancements = () => {
     initHeader();
-  }
-  document.addEventListener("framer:pageview", updateFooterNavigationLinks);
+    if (!document.querySelector(".solaris-site-header")) {
+      enhancementTimer = window.setTimeout(runEnhancements, 500);
+      return;
+    }
+    updateFooterNavigationLinks();
+    normalizeLegacyPageLinks();
+    normalizeCanonicalUrl();
+    cleanupTemplateContent();
+    window.setTimeout(cleanupTemplateContent, 3000);
+  };
+  const scheduleEnhancements = () => {
+    window.clearTimeout(enhancementTimer);
+    enhancementTimer = window.setTimeout(runEnhancements, 10000);
+  };
+
+  if (document.readyState === "complete") scheduleEnhancements();
+  else window.addEventListener("load", scheduleEnhancements, { once: true });
+  document.addEventListener("framer:pageview", () => {
+    if (document.readyState === "complete") scheduleEnhancements();
+  });
 })();
