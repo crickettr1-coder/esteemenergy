@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /migration/
+Disallow: /Old%20website/
 
 Sitemap: https://esteemenergy.com.au/sitemap.xml

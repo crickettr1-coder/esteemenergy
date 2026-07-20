@@ -1,0 +1,17 @@
+# Migration/source material is not part of the public static site.
+migration/
+Old website/
+*.zip
+*view-source*.html
+*.log
+server.log
+
+# Framer editor-only helpers; live page images/runtime assets remain deployable.
+Solaris Energy - Smart Solar Solutions for Homes_files/edit.html
+Solaris Energy - Smart Solar Solutions for Homes_files/editorbar*.mjs
+Solaris Energy - Smart Solar Solutions for Homes_files/bootstrap*.js
+
+# Local audit and development artifacts.
+*.report
+*.audit
+_audit.ps1

@@ -1,1 +1,4 @@
 server.log
+migration/uploads/
+migration/uploads.zip
+*.log
