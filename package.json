@@ -4,7 +4,7 @@
   "private": true,
   "description": "Pixel-faithful local clone of the Solaris Energy landing page.",
   "scripts": {
-    "dev": "npx -y http-server . -p 3000 -a 127.0.0.1 -c-1 --cors",
-    "start": "npx -y http-server . -p 3000 -a 127.0.0.1 -c-1 --cors"
+    "dev": "node local-server.js",
+    "start": "node local-server.js"
   }
 }
