@@ -243,8 +243,6 @@ html body ::file-selector-button {
 .solaris-menu-toggle[aria-expanded="true"] span:last-child { top: 22px; transform: rotate(-45deg); }
 .solaris-mobile-menu { display: none; }
 
-body.header-upgraded .framer-efto20-container { display: none !important; }
-
 footer .esteem-footer-pricing-link {
   display: block;
   color: inherit;

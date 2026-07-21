@@ -5,7 +5,7 @@
   ];
 
   const mobileMenuLabels = [
-    "Home", "About", "Pricing", "Products",
+    "About", "Pricing", "Products",
     "Gallery", "Blogs", "Reviews", "Contact",
   ];
 
@@ -206,7 +206,7 @@
 
     replaceExactText("Have questions about Salesflow?", "Have questions about solar panels, batteries, installation or system sizing?");
     replaceExactText("Here are some of the most common queries to help you get started.", "Here are answers to common questions from Australian homeowners.");
-    replaceExactText("by 500+ Homeowners", "for Australian homeowners");
+    if (currentPath() !== "/") replaceExactText("by 500+ Homeowners", "for Australian homeowners");
     replaceExactText("10+", "—");
     replaceExactText("500+", "—");
     replaceExactText("20 Years", "—");
@@ -236,6 +236,106 @@
     document.querySelectorAll("#__framer-badge-container, .__framer-badge").forEach((element) => element.remove());
   };
 
+  const stabilizeHomepageHero = () => {
+    if (currentPath() !== "/") return;
+
+    const badge = document.querySelector('#hero .framer-wz7pp6 p');
+    if (badge) badge.textContent = "by Australian homeowners";
+
+    const paragraph = document.querySelector('#hero .framer-cokco8 p');
+    if (paragraph) paragraph.textContent = "Powering Australian homes and businesses with reliable solar solutions designed to reduce energy costs and support a cleaner future.";
+
+    document.querySelectorAll('#hero .esteem-cta-arrow').forEach((arrowElement) => {
+      arrowElement.textContent = "→";
+      arrowElement.setAttribute("aria-hidden", "true");
+    });
+  };
+
+  const initHomepageTestimonials = () => {
+    if (currentPath() !== "/" || document.documentElement.dataset.testimonialsReady) return;
+
+    const carousel = Array.from(document.querySelectorAll('[data-framer-name="Testimonials Carousel"]'))
+      .find((element) => Array.from(element.querySelectorAll("div")).some((node) => /rotateY\(/.test(node.style.transform)));
+    if (!carousel) return;
+
+    const ring = Array.from(carousel.querySelectorAll("div"))
+      .find((node) => /rotateY\(/.test(node.style.transform));
+    if (!ring) return;
+
+    document.documentElement.dataset.testimonialsReady = "true";
+    carousel.classList.add("esteem-testimonial-autoplay");
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const cards = carousel.querySelectorAll('[data-framer-name="Review Card"]');
+    const stepAngle = 360 / Math.max(cards.length, 1);
+    const initialMatch = ring.style.transform.match(/rotateY\((-?[\d.]+)deg\)/);
+    let angle = initialMatch ? Number(initialMatch[1]) : 0;
+    let paused = false;
+    let dragging = false;
+    let lastX = 0;
+    let resumeTimer = 0;
+    let autoplayTimer = 0;
+
+    const setAngle = (animate) => {
+      ring.classList.toggle("is-testimonial-animating", animate && !reducedMotion.matches);
+      ring.style.transform = `rotateY(${angle}deg)`;
+    };
+
+    const pause = () => {
+      paused = true;
+      window.clearTimeout(resumeTimer);
+    };
+
+    const resume = (delay = 900) => {
+      window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(() => {
+        paused = false;
+      }, delay);
+    };
+
+    const advance = () => {
+      if (paused || dragging || reducedMotion.matches) return;
+      angle -= stepAngle;
+      setAngle(true);
+    };
+
+    carousel.addEventListener("mouseenter", pause, { passive: true });
+    carousel.addEventListener("mouseleave", () => resume(0), { passive: true });
+    carousel.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      dragging = true;
+      pause();
+      lastX = event.clientX;
+      ring.classList.remove("is-testimonial-animating");
+      carousel.setPointerCapture?.(event.pointerId);
+    }, { passive: true });
+    carousel.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      const delta = event.clientX - lastX;
+      if (Math.abs(delta) > 0) {
+        angle += delta * 0.45;
+        setAngle(false);
+        lastX = event.clientX;
+      }
+    }, { passive: true });
+    const finishDrag = (event) => {
+      if (!dragging) return;
+      dragging = false;
+      if (event?.pointerId !== undefined) carousel.releasePointerCapture?.(event.pointerId);
+      resume(1200);
+    };
+    carousel.addEventListener("pointerup", finishDrag, { passive: true });
+    carousel.addEventListener("pointercancel", finishDrag, { passive: true });
+    carousel.addEventListener("touchstart", pause, { passive: true });
+    carousel.addEventListener("touchend", () => resume(1200), { passive: true });
+
+    autoplayTimer = window.setInterval(advance, 4000);
+    window.addEventListener("pagehide", () => {
+      window.clearInterval(autoplayTimer);
+      window.clearTimeout(resumeTimer);
+    }, { once: true, passive: true });
+  };
+
   const makeQuoteButton = (extraClass = "") => {
     const button = document.createElement("button");
     button.type = "button";
@@ -252,8 +352,9 @@
 
   const initHeader = () => {
     const originalHeader = document.querySelector(".framer-efto20-container");
-    const originalLogo = originalHeader?.querySelector(".framer-yi202p-container");
-    if (!originalHeader || !originalLogo || document.querySelector(".solaris-site-header")) return;
+    const originalLogo = originalHeader?.querySelector(".framer-yi202p-container")
+      || document.querySelector(".framer-yi202p-container");
+    if (document.querySelector(".solaris-site-header")) return;
 
     const header = document.createElement("header");
     header.className = "solaris-site-header";
@@ -264,7 +365,11 @@
 
     const brand = document.createElement("div");
     brand.className = "solaris-brand";
-    brand.append(originalLogo.cloneNode(true));
+    if (originalLogo) {
+      brand.append(originalLogo.cloneNode(true));
+    } else {
+      brand.innerHTML = '<a href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a>';
+    }
     const brandLink = brand.querySelector("a");
     if (brandLink) {
       brandLink.href = "/";
@@ -292,7 +397,7 @@
     mobileMenu.className = "solaris-mobile-menu";
     mobileMenu.id = "solaris-mobile-menu";
     mobileMenu.setAttribute("aria-label", "Mobile visual menu options");
-    mobileMenuLabels.forEach((label) => mobileMenu.append(makeItem(label, true)));
+    (currentPath() === "/" ? menuLabels : mobileMenuLabels).forEach((label) => mobileMenu.append(makeItem(label, true)));
     mobileMenu.append(makeQuoteButton("solaris-mobile-quote"));
 
     const closeProducts = () => {
@@ -335,7 +440,7 @@
     inner.append(brand, desktopNav, cta, toggle, mobileMenu);
     header.append(inner);
     document.body.prepend(header);
-    document.body.classList.add("header-upgraded");
+    originalHeader?.remove();
     updateFooterNavigationLinks();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();
@@ -351,22 +456,27 @@
   const runEnhancements = () => {
     initHeader();
     if (!document.querySelector(".solaris-site-header")) {
-      enhancementTimer = window.setTimeout(runEnhancements, 500);
+      enhancementTimer = window.setTimeout(runEnhancements, 50);
       return;
     }
     updateFooterNavigationLinks();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();
+    stabilizeHomepageHero();
+    initHomepageTestimonials();
     cleanupTemplateContent();
     window.setTimeout(cleanupTemplateContent, 3000);
   };
   const scheduleEnhancements = () => {
     window.clearTimeout(enhancementTimer);
-    enhancementTimer = window.setTimeout(runEnhancements, 10000);
+    enhancementTimer = window.setTimeout(runEnhancements, 0);
   };
 
-  if (document.readyState === "complete") scheduleEnhancements();
-  else window.addEventListener("load", scheduleEnhancements, { once: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scheduleEnhancements, { once: true });
+  } else {
+    scheduleEnhancements();
+  }
   document.addEventListener("framer:pageview", () => {
     if (document.readyState === "complete") scheduleEnhancements();
   });

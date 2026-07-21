@@ -453,3 +453,107 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     transition: none !important;
   }
 }
+
+/* Keep only the homepage hero in its final, sharp visual state. */
+#hero [style*="filter"],
+#hero [style*="backdrop-filter"],
+#hero [data-framer-appear-id],
+#hero img,
+#hero [data-framer-background-image-wrapper="true"] {
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#hero .framer-bcxrl8-container,
+#hero .framer-bcxrl8-container * {
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+#hero .framer-bcxrl8-container > div {
+  opacity: .04 !important;
+}
+
+@media (max-width: 809px) {
+  #hero,
+  #hero.framer-WiXf4,
+  #hero.framer-WiXf4.framer-72rtr7 {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #hero .framer-9onuti,
+  #hero .framer-wfzur6,
+  #hero .framer-1nvzpyf,
+  #hero .framer-cokco8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #hero .framer-9onuti {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #hero .framer-1nvzpyf h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 38px !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  #hero .framer-1nvzpyf h1 > span {
+    display: inline !important;
+  }
+
+  .framer-WiXf4.framer-72rtr7 {
+    width: 100% !important;
+  }
+
+  .framer-WiXf4 .framer-1nvzpyf h1 {
+    width: min(100%, 343px) !important;
+    max-width: 343px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .framer-WiXf4 .framer-pvrod3 {
+    width: 100% !important;
+    max-width: 343px !important;
+  }
+
+  #hero .framer-pvrod3 {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  #hero .esteem-primary-cta,
+  #hero .esteem-secondary-cta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Keep the existing Framer testimonial ring and card geometry; only add motion. */
+[data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay {
+  overflow: hidden;
+}
+
+[data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay .is-testimonial-animating {
+  transition: transform 900ms cubic-bezier(.22, .61, .36, 1) !important;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay .is-testimonial-animating {
+    transition: none !important;
+  }
+}

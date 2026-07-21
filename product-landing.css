@@ -25,10 +25,10 @@
 .product-landing .prod-icon-list li::before { width: 9px; height: 9px; flex: 0 0 9px; border-radius: 50%; background: var(--prod-lime); content: ""; }
 .product-landing .prod-final-wrap { padding-bottom: 72px; }
 
-.products-breadcrumb { position: relative; z-index: 1; padding-top: 100px; margin-bottom: -72px; color: var(--prod-muted); font-family: var(--prod-ui-font); font-size: 13px; }
-.products-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.products-breadcrumb a { color: var(--prod-muted); text-decoration: none; }
-.products-breadcrumb a:hover, .products-breadcrumb a:focus-visible { color: var(--prod-ink); text-decoration: underline; text-underline-offset: 4px; }
+
+
+
+
 .products-hero { min-height: 680px; }
 .products-hero-visual { min-height: 520px; }
 .products-hero-card { min-width: 270px; }
@@ -93,7 +93,7 @@
   .products-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
-  .products-breadcrumb { padding-top: 90px; margin-bottom: -54px; }
+  
   .products-hero { min-height: auto; }
   .products-hero-visual { min-height: 380px; }
   .products-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -114,10 +114,10 @@
 }
 
 /* Shared runtime styles for the remaining product pages. */
-.product-runtime .runtime-breadcrumb { padding-top: 100px; margin-bottom: -70px; font-family: var(--prod-ui-font); font-size: 13px; }
-.product-runtime .runtime-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.product-runtime .runtime-breadcrumb a, .product-runtime .runtime-breadcrumb span, .product-runtime .runtime-breadcrumb li { color: var(--prod-muted); text-decoration: none; }
-.product-runtime .runtime-breadcrumb li[aria-current="page"] { color: var(--prod-ink); font-weight: 500; }
+
+
+
+
 .product-runtime .prod-hero { min-height: 700px; }
 .product-runtime .prod-hero-copy h1 { max-width: 680px; }
 .product-runtime .prod-hero-visual, .product-runtime .prod-hero-visual img { min-height: 520px; }
@@ -159,7 +159,7 @@
   .product-runtime .runtime-list-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 767px) {
-  .product-runtime .runtime-breadcrumb { padding-top: 90px; margin-bottom: -54px; }
+  
   .product-runtime .prod-hero { padding-top: 120px; }
   .product-runtime .prod-hero-visual, .product-runtime .prod-hero-visual img { min-height: 380px; }
   .product-runtime .prod-highlight-grid { grid-template-columns: 1fr; }
