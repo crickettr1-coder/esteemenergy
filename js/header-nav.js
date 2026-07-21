@@ -152,6 +152,28 @@
     });
   };
 
+  const ensureSiteFooter = () => {
+    if (document.querySelector("footer, .esteem-legacy-footer")) return;
+
+    const footer = document.createElement("footer");
+    footer.className = "esteem-legacy-footer";
+    footer.innerHTML = `
+      <div class="esteem-legacy-footer-brand">
+        <a href="/" aria-label="Esteem Energy home">Esteem Energy</a>
+        <p>Smarter energy for a brighter future.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/products/">Products</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/blogs/">Blogs</a>
+        <a href="/contact-us/">Contact</a>
+      </nav>
+      <p class="esteem-legacy-footer-copyright">© Esteem Energy</p>`;
+    document.body.append(footer);
+  };
+
   const genuineTestimonials = Object.freeze([
     ["D Mann", "Very professional and friendly. Excellent quality product and great workmanship. The team was prompt and handled everything perfectly."],
     ["Singh I.", "Very professional work done by Esteem Energy. Overall was happy with the timely and efficient installation of solar panels and inverter."],
@@ -470,6 +492,7 @@
   let enhancementTimer;
   const runEnhancements = () => {
     initHeader();
+    ensureSiteFooter();
     if (!document.querySelector(".solaris-site-header")) {
       enhancementTimer = window.setTimeout(runEnhancements, 50);
       return;

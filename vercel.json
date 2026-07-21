@@ -1,1492 +1,1477 @@
 {
     "trailingSlash": true,
-    "cleanUrls":  false,
-    "redirects":  [
-                      {
-                          "source":  "/contact/",
-                          "destination":  "/contact-us/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/about-us-3/",
-                          "destination":  "/about/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/packages/",
-                          "destination":  "/pricing/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/solar-panel-installation/",
-                          "destination":  "/installation/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/residential-solar-panel-system/",
-                          "destination":  "/residential-solar/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/13-3-kw-solar-system/",
-                          "destination":  "/13-2-kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-rebate-nsw-2026-update/",
-                          "destination":  "/blogs/solar-rebate-nsw-2026-update/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-quotes-sydney-nsw/",
-                          "destination":  "/blogs/solar-quotes-sydney-nsw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-battery-cost-in-australia-2026/",
-                          "destination":  "/blogs/solar-battery-cost-in-australia-2026/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/fox-ess-battery-review/",
-                          "destination":  "/blogs/fox-ess-battery-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-battery-storage-2026/",
-                          "destination":  "/blogs/best-solar-battery-storage-2026/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/determining-the-ideal-solar-system-size-for-your-australian-home-in-2026/",
-                          "destination":  "/blogs/determining-the-ideal-solar-system-size-for-your-australian-home-in-2026/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-are-solar-panel-batteries-and-what-are-they-used-for/",
-                          "destination":  "/blogs/what-are-solar-panel-batteries-and-what-are-they-used-for/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/maximizing-your-savings-the-ultimate-guide-to-2026-solar-panel-rebates/",
-                          "destination":  "/blogs/maximizing-your-savings-the-ultimate-guide-to-2026-solar-panel-rebates/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-clean-solar-panels-on-roof/",
-                          "destination":  "/blogs/how-to-clean-solar-panels-on-roof/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-will-a-6-6kw-solar-system-save-me-2/",
-                          "destination":  "/blogs/how-much-will-a-6-6kw-solar-system-save-me-2/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-do-solar-panels-work-with-your-electric-bill/",
-                          "destination":  "/blogs/how-do-solar-panels-work-with-your-electric-bill/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-are-the-best-solar-panels-in-australia/",
-                          "destination":  "/blogs/what-are-the-best-solar-panels-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-solar-system-with-battery-price/",
-                          "destination":  "/blogs/10kw-solar-system-with-battery-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/australian-solar-battery-rebate/",
-                          "destination":  "/australian-solar-battery-rebate/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/australian-solar-battery-rebate/",
-                          "destination":  "/australian-solar-battery-rebate/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-do-commercial-solar-panels-cost/",
-                          "destination":  "/blogs/how-much-do-commercial-solar-panels-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-do-solar-panels-cost-adelaide/",
-                          "destination":  "/blogs/how-much-do-solar-panels-cost-adelaide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-are-solar-batteries/",
-                          "destination":  "/blogs/how-much-are-solar-batteries/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/best-10kw-solar-battery-price-australia/",
-                          "destination":  "/best-10kw-solar-battery-price-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-10kw-solar-battery-price-australia/",
-                          "destination":  "/best-10kw-solar-battery-price-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-rebate-qld/",
-                          "destination":  "/blogs/solar-panel-rebate-qld/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-solar-panels-for-4-bedroom-house/",
-                          "destination":  "/blogs/cost-of-solar-panels-for-4-bedroom-house/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-panels-in-australia/",
-                          "destination":  "/blogs/best-solar-panels-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-do-solar-panels-cost-sydney/",
-                          "destination":  "/blogs/how-much-do-solar-panels-cost-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-will-a-10kw-solar-system-save-me/",
-                          "destination":  "/blogs/how-much-will-a-10kw-solar-system-save-me/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cryptoslots-canada-guide-for-secure-crypto-play/",
-                          "destination":  "/blogs/cryptoslots-canada-guide-for-secure-crypto-play/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-and-battery/",
-                          "destination":  "/blogs/solar-panel-and-battery/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-panels-sydney/",
-                          "destination":  "/blogs/best-solar-panels-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-cost-to-install-solar-panels/",
-                          "destination":  "/blogs/how-much-cost-to-install-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-battery-cost/",
-                          "destination":  "/blogs/solar-battery-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/loan-for-solar-panels/",
-                          "destination":  "/blogs/loan-for-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-subsidy/",
-                          "destination":  "/blogs/solar-panel-subsidy/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-13kw-solar-system/",
-                          "destination":  "/blogs/cost-of-13kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-efficiency/",
-                          "destination":  "/blogs/solar-panel-efficiency/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-cost/",
-                          "destination":  "/blogs/solar-panel-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6kw-solar-system-price-nsw/",
-                          "destination":  "/6-6kw-solar-system-price-nsw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6kw-solar-system-price-nsw/",
-                          "destination":  "/6-6kw-solar-system-price-nsw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-vs-13kw-solar-system/",
-                          "destination":  "/blogs/10kw-vs-13kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-solar-inverter/",
-                          "destination":  "/blogs/10kw-solar-inverter/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6kw-vs-10kw-solar-system/",
-                          "destination":  "/6-6kw-vs-10kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6kw-vs-10kw-solar-system/",
-                          "destination":  "/6-6kw-vs-10kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-do-you-connect-a-solar-panel-to-a-battery/",
-                          "destination":  "/blogs/how-do-you-connect-a-solar-panel-to-a-battery/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/5kw-solar-inverter-price-australia/",
-                          "destination":  "/5kw-solar-inverter-price-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/5kw-solar-inverter-price-australia/",
-                          "destination":  "/5kw-solar-inverter-price-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-replacement/",
-                          "destination":  "/blogs/solar-panel-replacement/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-check-solar-panel-output-2/",
-                          "destination":  "/blogs/how-to-check-solar-panel-output-2/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-disadvantages/",
-                          "destination":  "/blogs/solar-panel-disadvantages/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/govt-rebate-solar-panels/",
-                          "destination":  "/blogs/govt-rebate-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-solar-panels-on-a-home/",
-                          "destination":  "/blogs/cost-of-solar-panels-on-a-home/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/5kw-off-grid-solar-system/",
-                          "destination":  "/blogs/5kw-off-grid-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-power-does-5kw-system-produce/",
-                          "destination":  "/blogs/how-much-power-does-5kw-system-produce/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-panels-in-a-5kw-system/",
-                          "destination":  "/blogs/how-many-panels-in-a-5kw-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-power-does-a-10kw-system-produce/",
-                          "destination":  "/blogs/how-much-power-does-a-10kw-system-produce/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-a-10kw-solar-system/",
-                          "destination":  "/blogs/what-is-a-10kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-install-a-10kw-solar-system/",
-                          "destination":  "/blogs/how-to-install-a-10kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-panels-for-10kw-system/",
-                          "destination":  "/blogs/how-many-panels-for-10kw-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/govt-subsidies-for-10kw-system-australia/",
-                          "destination":  "/blogs/govt-subsidies-for-10kw-system-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-inverter-for-10kw-solar-system/",
-                          "destination":  "/blogs/best-inverter-for-10kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/enphase-vs-fronius/",
-                          "destination":  "/blogs/enphase-vs-fronius/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solaredge-vs-fronius/",
-                          "destination":  "/blogs/solaredge-vs-fronius/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solaredge-vs-enphase/",
-                          "destination":  "/blogs/solaredge-vs-enphase/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-increase-solar-panel-efficiency/",
-                          "destination":  "/blogs/how-to-increase-solar-panel-efficiency/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-not-charging-battery/",
-                          "destination":  "/blogs/solar-panel-not-charging-battery/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solaredge-battery-vs-tesla-powerwall/",
-                          "destination":  "/blogs/solaredge-battery-vs-tesla-powerwall/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/shingled-vs-monocrystalline-panels/",
-                          "destination":  "/blogs/shingled-vs-monocrystalline-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/best-home-batteries-australia/",
-                          "destination":  "/best-home-batteries-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-home-batteries-australia/",
-                          "destination":  "/best-home-batteries-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/can-you-add-solar-panels-to-existing-system/",
-                          "destination":  "/blogs/can-you-add-solar-panels-to-existing-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/longi-vs-jinko-solar-panels/",
-                          "destination":  "/blogs/longi-vs-jinko-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/are-trina-solar-panels-any-good/",
-                          "destination":  "/are-trina-solar-panels-any-good/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/are-trina-solar-panels-any-good/",
-                          "destination":  "/are-trina-solar-panels-any-good/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solis-inverter-vs-fronius/",
-                          "destination":  "/blogs/solis-inverter-vs-fronius/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-check-solar-panel-output/",
-                          "destination":  "/blogs/how-to-check-solar-panel-output/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-not-working/",
-                          "destination":  "/blogs/solar-panels-not-working/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-size-battery-for-a-10kw-system/",
-                          "destination":  "/blogs/what-size-battery-for-a-10kw-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/trina-solar-panels-vs-jinko/",
-                          "destination":  "/blogs/trina-solar-panels-vs-jinko/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/5kw-solar-battery-price/",
-                          "destination":  "/5kw-solar-battery-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/5kw-solar-battery-price/",
-                          "destination":  "/5kw-solar-battery-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/seraphim-solar-panels-review/",
-                          "destination":  "/blogs/seraphim-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/bird-proofing-solar-panels/",
-                          "destination":  "/blogs/bird-proofing-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-size-battery-do-i-need-for-a-6-6kw-solar-system/",
-                          "destination":  "/blogs/what-size-battery-do-i-need-for-a-6-6kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-financing-is-a-good-idea-different-options-for-solar-loan/",
-                          "destination":  "/blogs/solar-financing-is-a-good-idea-different-options-for-solar-loan/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-monitor-your-solar-systems-performance-with-a-wifi-app/",
-                          "destination":  "/blogs/how-to-monitor-your-solar-systems-performance-with-a-wifi-app/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-do-tesla-solar-panels-cost/",
-                          "destination":  "/blogs/how-much-do-tesla-solar-panels-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability-2/",
-                          "destination":  "/blogs/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability-2/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/does-your-solar-system-need-maintenance/",
-                          "destination":  "/blogs/does-your-solar-system-need-maintenance/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/calculate-the-cost-of-installing-a-solar-panel/",
-                          "destination":  "/blogs/calculate-the-cost-of-installing-a-solar-panel/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/advantages-of-solar-system-installed-in-three-phase-power/",
-                          "destination":  "/advantages-of-solar-system-installed-in-three-phase-power/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/advantages-of-solar-system-installed-in-three-phase-power/",
-                          "destination":  "/advantages-of-solar-system-installed-in-three-phase-power/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-do-solar-inverters-work/",
-                          "destination":  "/blogs/how-do-solar-inverters-work/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-panels-in-a-3kw-solar-system/",
-                          "destination":  "/blogs/how-many-panels-in-a-3kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/commercial-solar-panel-installation-cost/",
-                          "destination":  "/blogs/commercial-solar-panel-installation-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-quality-solar-panels-in-australia/",
-                          "destination":  "/blogs/best-quality-solar-panels-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-will-a-5kw-solar-system-save-me/",
-                          "destination":  "/blogs/how-much-will-a-5kw-solar-system-save-me/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/risen-solar-panels-vs-jinko/",
-                          "destination":  "/blogs/risen-solar-panels-vs-jinko/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sungrow-vs-goodwe/",
-                          "destination":  "/blogs/sungrow-vs-goodwe/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/do-solar-panels-need-direct-sunlight/",
-                          "destination":  "/blogs/do-solar-panels-need-direct-sunlight/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6kw-solar-battery-cost-in-australia/",
-                          "destination":  "/6kw-solar-battery-cost-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6kw-solar-battery-cost-in-australia/",
-                          "destination":  "/6kw-solar-battery-cost-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/best-angle-for-solar-panels/",
-                          "destination":  "/best-angle-for-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-angle-for-solar-panels/",
-                          "destination":  "/best-angle-for-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/home-battery-scheme-south-australia/",
-                          "destination":  "/blogs/home-battery-scheme-south-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/off-grid-solar-inverter/",
-                          "destination":  "/blogs/off-grid-solar-inverter/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-inverter-repairs-perth/",
-                          "destination":  "/blogs/solar-inverter-repairs-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/electricity-prices-in-south-australia/",
-                          "destination":  "/blogs/electricity-prices-in-south-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-a-hybrid-inverter/",
-                          "destination":  "/blogs/what-is-a-hybrid-inverter/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/13-2kw-solar-system-price/",
-                          "destination":  "/blogs/13-2kw-solar-system-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-10-solar-companies-in-sydney/",
-                          "destination":  "/blogs/top-10-solar-companies-in-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/commercial-solar-companies/",
-                          "destination":  "/blogs/commercial-solar-companies/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/perth-solar-force-reviews/",
-                          "destination":  "/blogs/perth-solar-force-reviews/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-batteries-australia/",
-                          "destination":  "/blogs/best-solar-batteries-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6kw-solar-system-with-5kw-inverter-price/",
-                          "destination":  "/6-6kw-solar-system-with-5kw-inverter-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6kw-solar-system-with-5kw-inverter-price/",
-                          "destination":  "/6-6kw-solar-system-with-5kw-inverter-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/ev-charger-installation-cost/",
-                          "destination":  "/blogs/ev-charger-installation-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/disadvantages-of-solar-energy/",
-                          "destination":  "/blogs/disadvantages-of-solar-energy/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6kw-solar-battery-cost/",
-                          "destination":  "/6kw-solar-battery-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6kw-solar-battery-cost/",
-                          "destination":  "/6kw-solar-battery-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability/",
-                          "destination":  "/blogs/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6kw-solar-system-price-adelaide/",
-                          "destination":  "/6-6kw-solar-system-price-adelaide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6kw-solar-system-price-adelaide/",
-                          "destination":  "/6-6kw-solar-system-price-adelaide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/astronergy-solar-panels-review/",
-                          "destination":  "/astronergy-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/astronergy-solar-panels-review/",
-                          "destination":  "/astronergy-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/risen-solar-panel-review/",
-                          "destination":  "/blogs/risen-solar-panel-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/5kw-solar-system-battery-backup/",
-                          "destination":  "/5kw-solar-system-battery-backup/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/5kw-solar-system-battery-backup/",
-                          "destination":  "/5kw-solar-system-battery-backup/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-power-does-a-5kw-solar-system-generate/",
-                          "destination":  "/blogs/how-much-power-does-a-5kw-solar-system-generate/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-solar-system-cost/",
-                          "destination":  "/blogs/10kw-solar-system-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-solar-panels-brisbane/",
-                          "destination":  "/blogs/cost-of-solar-panels-brisbane/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-solar-panels-perth/",
-                          "destination":  "/blogs/cost-of-solar-panels-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-feed-in-tariff-brisbane/",
-                          "destination":  "/blogs/best-solar-feed-in-tariff-brisbane/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-installer-brisbane/",
-                          "destination":  "/blogs/best-solar-installer-brisbane/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-system-for-home/",
-                          "destination":  "/blogs/best-solar-system-for-home/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/discovering-constraints-in-best-online-casino-australia/",
-                          "destination":  "/blogs/discovering-constraints-in-best-online-casino-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-battery-price-perth/",
-                          "destination":  "/blogs/solar-battery-price-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/average-electricity-bill-perth/",
-                          "destination":  "/average-electricity-bill-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/average-electricity-bill-perth/",
-                          "destination":  "/average-electricity-bill-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-sunshine-coast/",
-                          "destination":  "/blogs/solar-panels-sunshine-coast/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/average-electricity-bill-brisbane/",
-                          "destination":  "/average-electricity-bill-brisbane/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/average-electricity-bill-brisbane/",
-                          "destination":  "/average-electricity-bill-brisbane/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sunpower-solar-panels/",
-                          "destination":  "/blogs/sunpower-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-solar-panels-for-10kw-2/",
-                          "destination":  "/blogs/how-many-solar-panels-for-10kw-2/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/government-incentives-6-6-kw-solar-australia/",
-                          "destination":  "/blogs/government-incentives-6-6-kw-solar-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-solar-panel-brands-6-6-kw-australia/",
-                          "destination":  "/blogs/top-solar-panel-brands-6-6-kw-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6-kw-solar-system-power-output/",
-                          "destination":  "/6-6-kw-solar-system-power-output/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6-kw-solar-system-power-output/",
-                          "destination":  "/6-6-kw-solar-system-power-output/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/6-6-kw-solar-system-cost-australia/",
-                          "destination":  "/6-6-kw-solar-system-cost-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/6-6-kw-solar-system-cost-australia/",
-                          "destination":  "/6-6-kw-solar-system-cost-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/benefits-of-6-6-kw-solar-system-australia/",
-                          "destination":  "/blogs/benefits-of-6-6-kw-solar-system-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-does-a-6-6-kw-solar-system-cost-in-australia/",
-                          "destination":  "/blogs/how-much-does-a-6-6-kw-solar-system-cost-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/benefits-of-a-6-6-kw-solar-system-in-australia/",
-                          "destination":  "/benefits-of-a-6-6-kw-solar-system-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/benefits-of-a-6-6-kw-solar-system-in-australia/",
-                          "destination":  "/benefits-of-a-6-6-kw-solar-system-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/byd-battery-vs-tesla-battery/",
-                          "destination":  "/blogs/byd-battery-vs-tesla-battery/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-companies-gold-coast/",
-                          "destination":  "/blogs/solar-companies-gold-coast/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/do-solar-panels-work-at-night/",
-                          "destination":  "/blogs/do-solar-panels-work-at-night/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sungrow-vs-fronius/",
-                          "destination":  "/blogs/sungrow-vs-fronius/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/suntech-solar-panels-review/",
-                          "destination":  "/blogs/suntech-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/tindo-solar-reviews/",
-                          "destination":  "/blogs/tindo-solar-reviews/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/das-solar-panels-review/",
-                          "destination":  "/blogs/das-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-feed-in-tariff-nsw/",
-                          "destination":  "/blogs/best-solar-feed-in-tariff-nsw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-battery-adelaide/",
-                          "destination":  "/blogs/solar-battery-adelaide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/origin-solar-feed-in-tariff/",
-                          "destination":  "/blogs/origin-solar-feed-in-tariff/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-does-solar-energy-work/",
-                          "destination":  "/blogs/how-does-solar-energy-work/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/is-a-solar-battery-worth-it/",
-                          "destination":  "/blogs/is-a-solar-battery-worth-it/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-the-solar-rebate-in-australia/",
-                          "destination":  "/blogs/what-is-the-solar-rebate-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/single-phase-vs-three-phase-solar-systems/",
-                          "destination":  "/blogs/single-phase-vs-three-phase-solar-systems/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sofar-inverter-review/",
-                          "destination":  "/blogs/sofar-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/alpha-ess-battery-vs-tesla/",
-                          "destination":  "/alpha-ess-battery-vs-tesla/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/alpha-ess-battery-vs-tesla/",
-                          "destination":  "/alpha-ess-battery-vs-tesla/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sungrow-battery-vs-tesla/",
-                          "destination":  "/blogs/sungrow-battery-vs-tesla/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-solar-feed-in-tariff/",
-                          "destination":  "/blogs/what-is-solar-feed-in-tariff/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/biggest-solar-farm-in-australia/",
-                          "destination":  "/blogs/biggest-solar-farm-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-are-the-best-solar-panels/",
-                          "destination":  "/blogs/what-are-the-best-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/german-made-solar-panels/",
-                          "destination":  "/blogs/german-made-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/fronius-inverter-review/",
-                          "destination":  "/blogs/fronius-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/saj-inverter-review/",
-                          "destination":  "/blogs/saj-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/why-solar-panels-are-not-worth-it/",
-                          "destination":  "/blogs/why-solar-panels-are-not-worth-it/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/huawei-inverter-review/",
-                          "destination":  "/blogs/huawei-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-inverter-replacement/",
-                          "destination":  "/blogs/solar-inverter-replacement/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/longi-solar-panels-review/",
-                          "destination":  "/blogs/longi-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/canadian-solar-panels-review/",
-                          "destination":  "/blogs/canadian-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-installation-cost/",
-                          "destination":  "/blogs/solar-installation-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sungrow-battery-review/",
-                          "destination":  "/blogs/sungrow-battery-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-electricity-in-australia-per-kwh/",
-                          "destination":  "/blogs/cost-of-electricity-in-australia-per-kwh/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sonnen-battery-price/",
-                          "destination":  "/blogs/sonnen-battery-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/trina-solar-panels-review/",
-                          "destination":  "/blogs/trina-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10998/",
-                          "destination":  "/blogs/10998/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/australia-online-casino-patterns-a-specialist-s-insight/",
-                          "destination":  "/australia-online-casino-patterns-a-specialist-s-insight/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/australia-online-casino-patterns-a-specialist-s-insight/",
-                          "destination":  "/australia-online-casino-patterns-a-specialist-s-insight/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/sungrow-inverter-review/",
-                          "destination":  "/blogs/sungrow-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-battery-in-australia/",
-                          "destination":  "/blogs/best-solar-battery-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/growatt-inverter-review/",
-                          "destination":  "/blogs/growatt-inverter-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/jinko-solar-panels-review/",
-                          "destination":  "/blogs/jinko-solar-panels-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-solar-battery-price/",
-                          "destination":  "/blogs/10kw-solar-battery-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-cost-sydney/",
-                          "destination":  "/blogs/solar-panels-cost-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-battery-for-solar-panels/",
-                          "destination":  "/blogs/cost-of-battery-for-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/electricity-charges-per-kwh/",
-                          "destination":  "/blogs/electricity-charges-per-kwh/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/are-solar-panels-recyclable/",
-                          "destination":  "/are-solar-panels-recyclable/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/are-solar-panels-recyclable/",
-                          "destination":  "/are-solar-panels-recyclable/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/who-invented-solar-panels/",
-                          "destination":  "/blogs/who-invented-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/cost-of-electricity-sydney/",
-                          "destination":  "/blogs/cost-of-electricity-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-will-a-6-6kw-solar-system-save-me/",
-                          "destination":  "/blogs/how-much-will-a-6-6kw-solar-system-save-me/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-solar-do-i-need/",
-                          "destination":  "/blogs/how-much-solar-do-i-need/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/types-of-solar-panels/",
-                          "destination":  "/blogs/types-of-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-does-electricity-cost-australia/",
-                          "destination":  "/blogs/how-much-does-electricity-cost-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-maintenance-tips/",
-                          "destination":  "/blogs/solar-panel-maintenance-tips/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/average-electricity-bill-for-2-person-household/",
-                          "destination":  "/average-electricity-bill-for-2-person-household/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/average-electricity-bill-for-2-person-household/",
-                          "destination":  "/average-electricity-bill-for-2-person-household/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-solar-energy/",
-                          "destination":  "/blogs/what-is-solar-energy/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-panels/",
-                          "destination":  "/blogs/best-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-cleaning-guide/",
-                          "destination":  "/blogs/solar-panel-cleaning-guide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-to-clean-solar-panels-at-home/",
-                          "destination":  "/blogs/how-to-clean-solar-panels-at-home/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-money-do-you-save-with-solar-panels-australia/",
-                          "destination":  "/blogs/how-much-money-do-you-save-with-solar-panels-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-solar-panels-for-10kw/",
-                          "destination":  "/blogs/how-many-solar-panels-for-10kw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/why-are-solar-panels-good/",
-                          "destination":  "/blogs/why-are-solar-panels-good/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-panels-in-a-6-6kw-solar-system/",
-                          "destination":  "/blogs/how-many-panels-in-a-6-6kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-size-solar-system-do-i-need/",
-                          "destination":  "/blogs/what-size-solar-system-do-i-need/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-10-solar-inverters-in-australia/",
-                          "destination":  "/blogs/top-10-solar-inverters-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-10-solar-companies-in-perth/",
-                          "destination":  "/blogs/top-10-solar-companies-in-perth/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-do-solar-panels-cost/",
-                          "destination":  "/blogs/how-much-do-solar-panels-cost/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-many-solar-panels-do-i-need/",
-                          "destination":  "/blogs/how-many-solar-panels-do-i-need/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-power-systems-prices/",
-                          "destination":  "/blogs/solar-power-systems-prices/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-much-does-one-solar-panel-cost-in-australia/",
-                          "destination":  "/blogs/how-much-does-one-solar-panel-cost-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-batteries-price/",
-                          "destination":  "/blogs/solar-batteries-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-way-to-clean-solar-panels/",
-                          "destination":  "/blogs/best-way-to-clean-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-long-do-solar-panels-last/",
-                          "destination":  "/blogs/how-long-do-solar-panels-last/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-are-solar-panels-made/",
-                          "destination":  "/blogs/how-are-solar-panels-made/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-do-solar-panels-work/",
-                          "destination":  "/blogs/how-do-solar-panels-work/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-10-solar-panels-in-australia/",
-                          "destination":  "/blogs/top-10-solar-panels-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/top-10-solar-companies-in-australia/",
-                          "destination":  "/blogs/top-10-solar-companies-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/benefits-of-solar-panels/",
-                          "destination":  "/benefits-of-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/benefits-of-solar-panels/",
-                          "destination":  "/benefits-of-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/is-solar-worth-it/",
-                          "destination":  "/blogs/is-solar-worth-it/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/advantages-of-solar-energy/",
-                          "destination":  "/advantages-of-solar-energy/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/advantages-of-solar-energy/",
-                          "destination":  "/advantages-of-solar-energy/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10kw-solar-system-price/",
-                          "destination":  "/blogs/10kw-solar-system-price/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/installing-residential-solar-panels/",
-                          "destination":  "/blogs/installing-residential-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/how-6-6-kw-solar-systems-financed/",
-                          "destination":  "/blogs/how-6-6-kw-solar-systems-financed/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/evolving-landscape-solar-energy-australia/",
-                          "destination":  "/blogs/evolving-landscape-solar-energy-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/ev-charging-boosted-with-solar-power/",
-                          "destination":  "/blogs/ev-charging-boosted-with-solar-power/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/all-about-solis-inverter-and-review/",
-                          "destination":  "/all-about-solis-inverter-and-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/all-about-solis-inverter-and-review/",
-                          "destination":  "/all-about-solis-inverter-and-review/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/all-about-electric-vehicles/",
-                          "destination":  "/all-about-electric-vehicles/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/all-about-electric-vehicles/",
-                          "destination":  "/all-about-electric-vehicles/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/guide-solar-panel-rebates-australia/",
-                          "destination":  "/blogs/guide-solar-panel-rebates-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-energy-australia/",
-                          "destination":  "/blogs/solar-energy-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/ways-to-save-energy-consumption/",
-                          "destination":  "/blogs/ways-to-save-energy-consumption/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/tracking-solar-system-home-energy-management-system/",
-                          "destination":  "/blogs/tracking-solar-system-home-energy-management-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/latest-advancement-potential-impacts-solar-technology/",
-                          "destination":  "/blogs/latest-advancement-potential-impacts-solar-technology/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/common-myths-avoid-reason-behind-solar-systems/",
-                          "destination":  "/blogs/common-myths-avoid-reason-behind-solar-systems/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-performance-winter-season/",
-                          "destination":  "/blogs/solar-performance-winter-season/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-systems-advancement/",
-                          "destination":  "/blogs/solar-systems-advancement/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-install-spring/",
-                          "destination":  "/blogs/solar-panels-install-spring/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/hybrid-solar-systems/",
-                          "destination":  "/blogs/hybrid-solar-systems/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-batteries/",
-                          "destination":  "/blogs/solar-batteries/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/which-direction-best-solar-panels/",
-                          "destination":  "/blogs/which-direction-best-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-faqs/",
-                          "destination":  "/blogs/solar-panels-faqs/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/guide-cleaning-solar-panels/",
-                          "destination":  "/blogs/guide-cleaning-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/charging-an-ev-with-solar-panels/",
-                          "destination":  "/blogs/charging-an-ev-with-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/guide-maintain-solar-system/",
-                          "destination":  "/blogs/guide-maintain-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-maintenance-guide/",
-                          "destination":  "/blogs/solar-panel-maintenance-guide/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-in-sydney/",
-                          "destination":  "/blogs/solar-panel-in-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blogs/8-kw-solar-panel-system/",
-                          "destination":  "/8-kw-solar-panel-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/8-kw-solar-panel-system/",
-                          "destination":  "/8-kw-solar-panel-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/questions-asked-to-solar-installers/",
-                          "destination":  "/blogs/questions-asked-to-solar-installers/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/5-kw-solar-system/",
-                          "destination":  "/blogs/5-kw-solar-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/will-trees-affect-solar-panels/",
-                          "destination":  "/blogs/will-trees-affect-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-temperature-coefficient/",
-                          "destination":  "/blogs/solar-panel-temperature-coefficient/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/refinancing-house-with-solar-panels/",
-                          "destination":  "/blogs/refinancing-house-with-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/10-kw-solar-panel-system/",
-                          "destination":  "/blogs/10-kw-solar-panel-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/financing-rooftop-solar-energy-system/",
-                          "destination":  "/blogs/financing-rooftop-solar-energy-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/purchasing-power-through-co-operatives/",
-                          "destination":  "/blogs/purchasing-power-through-co-operatives/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/right-path-choose-solar-sydney/",
-                          "destination":  "/blogs/right-path-choose-solar-sydney/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/power-produced-by-solar-panels/",
-                          "destination":  "/blogs/power-produced-by-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/steps-solar-installation/",
-                          "destination":  "/blogs/steps-solar-installation/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/why-choose-fronius-inverter/",
-                          "destination":  "/blogs/why-choose-fronius-inverter/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-system/",
-                          "destination":  "/blogs/solar-panel-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/importance-solar-panel-installation/",
-                          "destination":  "/blogs/importance-solar-panel-installation/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/process-to-get-best-excellent-solar-quotes/",
-                          "destination":  "/blogs/process-to-get-best-excellent-solar-quotes/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/guide-for-choosing-the-right-solar-panel-system/",
-                          "destination":  "/blogs/guide-for-choosing-the-right-solar-panel-system/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/reasons-for-getting-solar-panels/",
-                          "destination":  "/blogs/reasons-for-getting-solar-panels/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/switching-to-solar-panels-in-australia/",
-                          "destination":  "/blogs/switching-to-solar-panels-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panels-for-your-home/",
-                          "destination":  "/blogs/solar-panels-for-your-home/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-panel-cleaning/",
-                          "destination":  "/blogs/solar-panel-cleaning/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/solar-installation-process/",
-                          "destination":  "/blogs/solar-installation-process/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/most-efficient-solar-systems-install-in-home/",
-                          "destination":  "/blogs/most-efficient-solar-systems-install-in-home/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-system-for-residential-projects-nsw/",
-                          "destination":  "/blogs/best-solar-system-for-residential-projects-nsw/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-panels-australia/",
-                          "destination":  "/blogs/best-solar-panels-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-company-wa/",
-                          "destination":  "/blogs/best-solar-company-wa/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-companies-nsw-australia/",
-                          "destination":  "/blogs/best-solar-companies-nsw-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/best-solar-companies-in-australia/",
-                          "destination":  "/blogs/best-solar-companies-in-australia/",
-                          "permanent":  true
-                      },
-                      {
-                          "source":  "/blog/what-is-a-6-6-kw-solar-system/",
-                          "destination":  "/blogs/what-is-a-6-6-kw-solar-system/",
-                          "permanent":  true
-                      },
+    "cleanUrls": false,
+    "redirects": [
+        {
+            "source": "/contact/",
+            "destination": "/contact-us/",
+            "permanent": true
+        },
+        {
+            "source": "/about-us-3/",
+            "destination": "/about/",
+            "permanent": true
+        },
+        {
+            "source": "/packages/",
+            "destination": "/pricing/",
+            "permanent": true
+        },
+        {
+            "source": "/solar-panel-installation/",
+            "destination": "/installation/",
+            "permanent": true
+        },
+        {
+            "source": "/residential-solar-panel-system/",
+            "destination": "/residential-solar/",
+            "permanent": true
+        },
+        {
+            "source": "/13-3-kw-solar-system/",
+            "destination": "/13-2-kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/13-kw-solar-system/",
+            "destination": "/13-2-kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/is-arise-solar-and-sunboost-the-same-company/",
+            "destination": "/blogs/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-rebate-nsw-2026-update/",
+            "destination": "/blogs/solar-rebate-nsw-2026-update/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-quotes-sydney-nsw/",
+            "destination": "/blogs/solar-quotes-sydney-nsw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-battery-cost-in-australia-2026/",
+            "destination": "/blogs/solar-battery-cost-in-australia-2026/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/fox-ess-battery-review/",
+            "destination": "/blogs/fox-ess-battery-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-battery-storage-2026/",
+            "destination": "/blogs/best-solar-battery-storage-2026/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/determining-the-ideal-solar-system-size-for-your-australian-home-in-2026/",
+            "destination": "/blogs/determining-the-ideal-solar-system-size-for-your-australian-home-in-2026/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-are-solar-panel-batteries-and-what-are-they-used-for/",
+            "destination": "/blogs/what-are-solar-panel-batteries-and-what-are-they-used-for/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/maximizing-your-savings-the-ultimate-guide-to-2026-solar-panel-rebates/",
+            "destination": "/blogs/maximizing-your-savings-the-ultimate-guide-to-2026-solar-panel-rebates/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-clean-solar-panels-on-roof/",
+            "destination": "/blogs/how-to-clean-solar-panels-on-roof/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-will-a-6-6kw-solar-system-save-me-2/",
+            "destination": "/blogs/how-much-will-a-6-6kw-solar-system-save-me-2/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-do-solar-panels-work-with-your-electric-bill/",
+            "destination": "/blogs/how-do-solar-panels-work-with-your-electric-bill/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-are-the-best-solar-panels-in-australia/",
+            "destination": "/blogs/what-are-the-best-solar-panels-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-solar-system-with-battery-price/",
+            "destination": "/blogs/10kw-solar-system-with-battery-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/australian-solar-battery-rebate/",
+            "destination": "/australian-solar-battery-rebate/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/australian-solar-battery-rebate/",
+            "destination": "/australian-solar-battery-rebate/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-do-commercial-solar-panels-cost/",
+            "destination": "/blogs/how-much-do-commercial-solar-panels-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-do-solar-panels-cost-adelaide/",
+            "destination": "/blogs/how-much-do-solar-panels-cost-adelaide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-are-solar-batteries/",
+            "destination": "/blogs/how-much-are-solar-batteries/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/best-10kw-solar-battery-price-australia/",
+            "destination": "/best-10kw-solar-battery-price-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-10kw-solar-battery-price-australia/",
+            "destination": "/best-10kw-solar-battery-price-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-rebate-qld/",
+            "destination": "/blogs/solar-panel-rebate-qld/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-solar-panels-for-4-bedroom-house/",
+            "destination": "/blogs/cost-of-solar-panels-for-4-bedroom-house/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-panels-in-australia/",
+            "destination": "/blogs/best-solar-panels-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-do-solar-panels-cost-sydney/",
+            "destination": "/blogs/how-much-do-solar-panels-cost-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-will-a-10kw-solar-system-save-me/",
+            "destination": "/blogs/how-much-will-a-10kw-solar-system-save-me/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-and-battery/",
+            "destination": "/blogs/solar-panel-and-battery/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-panels-sydney/",
+            "destination": "/blogs/best-solar-panels-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-cost-to-install-solar-panels/",
+            "destination": "/blogs/how-much-cost-to-install-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-battery-cost/",
+            "destination": "/blogs/solar-battery-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/loan-for-solar-panels/",
+            "destination": "/blogs/loan-for-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-subsidy/",
+            "destination": "/blogs/solar-panel-subsidy/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-13kw-solar-system/",
+            "destination": "/blogs/cost-of-13kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-efficiency/",
+            "destination": "/blogs/solar-panel-efficiency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-cost/",
+            "destination": "/blogs/solar-panel-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6kw-solar-system-price-nsw/",
+            "destination": "/6-6kw-solar-system-price-nsw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6kw-solar-system-price-nsw/",
+            "destination": "/6-6kw-solar-system-price-nsw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-vs-13kw-solar-system/",
+            "destination": "/blogs/10kw-vs-13kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-solar-inverter/",
+            "destination": "/blogs/10kw-solar-inverter/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6kw-vs-10kw-solar-system/",
+            "destination": "/6-6kw-vs-10kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6kw-vs-10kw-solar-system/",
+            "destination": "/6-6kw-vs-10kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-do-you-connect-a-solar-panel-to-a-battery/",
+            "destination": "/blogs/how-do-you-connect-a-solar-panel-to-a-battery/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/5kw-solar-inverter-price-australia/",
+            "destination": "/5kw-solar-inverter-price-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/5kw-solar-inverter-price-australia/",
+            "destination": "/5kw-solar-inverter-price-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-replacement/",
+            "destination": "/blogs/solar-panel-replacement/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-check-solar-panel-output-2/",
+            "destination": "/blogs/how-to-check-solar-panel-output-2/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-disadvantages/",
+            "destination": "/blogs/solar-panel-disadvantages/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/govt-rebate-solar-panels/",
+            "destination": "/blogs/govt-rebate-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-solar-panels-on-a-home/",
+            "destination": "/blogs/cost-of-solar-panels-on-a-home/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/5kw-off-grid-solar-system/",
+            "destination": "/blogs/5kw-off-grid-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-power-does-5kw-system-produce/",
+            "destination": "/blogs/how-much-power-does-5kw-system-produce/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-panels-in-a-5kw-system/",
+            "destination": "/blogs/how-many-panels-in-a-5kw-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-power-does-a-10kw-system-produce/",
+            "destination": "/blogs/how-much-power-does-a-10kw-system-produce/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-a-10kw-solar-system/",
+            "destination": "/blogs/what-is-a-10kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-install-a-10kw-solar-system/",
+            "destination": "/blogs/how-to-install-a-10kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-panels-for-10kw-system/",
+            "destination": "/blogs/how-many-panels-for-10kw-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/govt-subsidies-for-10kw-system-australia/",
+            "destination": "/blogs/govt-subsidies-for-10kw-system-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-inverter-for-10kw-solar-system/",
+            "destination": "/blogs/best-inverter-for-10kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/enphase-vs-fronius/",
+            "destination": "/blogs/enphase-vs-fronius/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solaredge-vs-fronius/",
+            "destination": "/blogs/solaredge-vs-fronius/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solaredge-vs-enphase/",
+            "destination": "/blogs/solaredge-vs-enphase/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-increase-solar-panel-efficiency/",
+            "destination": "/blogs/how-to-increase-solar-panel-efficiency/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-not-charging-battery/",
+            "destination": "/blogs/solar-panel-not-charging-battery/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solaredge-battery-vs-tesla-powerwall/",
+            "destination": "/blogs/solaredge-battery-vs-tesla-powerwall/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/shingled-vs-monocrystalline-panels/",
+            "destination": "/blogs/shingled-vs-monocrystalline-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/best-home-batteries-australia/",
+            "destination": "/best-home-batteries-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-home-batteries-australia/",
+            "destination": "/best-home-batteries-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/can-you-add-solar-panels-to-existing-system/",
+            "destination": "/blogs/can-you-add-solar-panels-to-existing-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/longi-vs-jinko-solar-panels/",
+            "destination": "/blogs/longi-vs-jinko-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/are-trina-solar-panels-any-good/",
+            "destination": "/are-trina-solar-panels-any-good/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/are-trina-solar-panels-any-good/",
+            "destination": "/are-trina-solar-panels-any-good/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solis-inverter-vs-fronius/",
+            "destination": "/blogs/solis-inverter-vs-fronius/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-check-solar-panel-output/",
+            "destination": "/blogs/how-to-check-solar-panel-output/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-not-working/",
+            "destination": "/blogs/solar-panels-not-working/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-size-battery-for-a-10kw-system/",
+            "destination": "/blogs/what-size-battery-for-a-10kw-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/trina-solar-panels-vs-jinko/",
+            "destination": "/blogs/trina-solar-panels-vs-jinko/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/5kw-solar-battery-price/",
+            "destination": "/5kw-solar-battery-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/5kw-solar-battery-price/",
+            "destination": "/5kw-solar-battery-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/seraphim-solar-panels-review/",
+            "destination": "/blogs/seraphim-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/bird-proofing-solar-panels/",
+            "destination": "/blogs/bird-proofing-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-size-battery-do-i-need-for-a-6-6kw-solar-system/",
+            "destination": "/blogs/what-size-battery-do-i-need-for-a-6-6kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-financing-is-a-good-idea-different-options-for-solar-loan/",
+            "destination": "/blogs/solar-financing-is-a-good-idea-different-options-for-solar-loan/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-monitor-your-solar-systems-performance-with-a-wifi-app/",
+            "destination": "/blogs/how-to-monitor-your-solar-systems-performance-with-a-wifi-app/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-do-tesla-solar-panels-cost/",
+            "destination": "/blogs/how-much-do-tesla-solar-panels-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability-2/",
+            "destination": "/blogs/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability-2/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/does-your-solar-system-need-maintenance/",
+            "destination": "/blogs/does-your-solar-system-need-maintenance/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/calculate-the-cost-of-installing-a-solar-panel/",
+            "destination": "/blogs/calculate-the-cost-of-installing-a-solar-panel/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/advantages-of-solar-system-installed-in-three-phase-power/",
+            "destination": "/advantages-of-solar-system-installed-in-three-phase-power/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/advantages-of-solar-system-installed-in-three-phase-power/",
+            "destination": "/advantages-of-solar-system-installed-in-three-phase-power/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-do-solar-inverters-work/",
+            "destination": "/blogs/how-do-solar-inverters-work/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-panels-in-a-3kw-solar-system/",
+            "destination": "/blogs/how-many-panels-in-a-3kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/commercial-solar-panel-installation-cost/",
+            "destination": "/blogs/commercial-solar-panel-installation-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-quality-solar-panels-in-australia/",
+            "destination": "/blogs/best-quality-solar-panels-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-will-a-5kw-solar-system-save-me/",
+            "destination": "/blogs/how-much-will-a-5kw-solar-system-save-me/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/risen-solar-panels-vs-jinko/",
+            "destination": "/blogs/risen-solar-panels-vs-jinko/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sungrow-vs-goodwe/",
+            "destination": "/blogs/sungrow-vs-goodwe/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/do-solar-panels-need-direct-sunlight/",
+            "destination": "/blogs/do-solar-panels-need-direct-sunlight/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6kw-solar-battery-cost-in-australia/",
+            "destination": "/6kw-solar-battery-cost-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6kw-solar-battery-cost-in-australia/",
+            "destination": "/6kw-solar-battery-cost-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/best-angle-for-solar-panels/",
+            "destination": "/best-angle-for-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-angle-for-solar-panels/",
+            "destination": "/best-angle-for-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/home-battery-scheme-south-australia/",
+            "destination": "/blogs/home-battery-scheme-south-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/off-grid-solar-inverter/",
+            "destination": "/blogs/off-grid-solar-inverter/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-inverter-repairs-perth/",
+            "destination": "/blogs/solar-inverter-repairs-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/electricity-prices-in-south-australia/",
+            "destination": "/blogs/electricity-prices-in-south-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-a-hybrid-inverter/",
+            "destination": "/blogs/what-is-a-hybrid-inverter/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/13-2kw-solar-system-price/",
+            "destination": "/blogs/13-2kw-solar-system-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-10-solar-companies-in-sydney/",
+            "destination": "/blogs/top-10-solar-companies-in-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/commercial-solar-companies/",
+            "destination": "/blogs/commercial-solar-companies/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/perth-solar-force-reviews/",
+            "destination": "/blogs/perth-solar-force-reviews/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-batteries-australia/",
+            "destination": "/blogs/best-solar-batteries-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6kw-solar-system-with-5kw-inverter-price/",
+            "destination": "/6-6kw-solar-system-with-5kw-inverter-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6kw-solar-system-with-5kw-inverter-price/",
+            "destination": "/6-6kw-solar-system-with-5kw-inverter-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/ev-charger-installation-cost/",
+            "destination": "/blogs/ev-charger-installation-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/disadvantages-of-solar-energy/",
+            "destination": "/blogs/disadvantages-of-solar-energy/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6kw-solar-battery-cost/",
+            "destination": "/6kw-solar-battery-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6kw-solar-battery-cost/",
+            "destination": "/6kw-solar-battery-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability/",
+            "destination": "/blogs/unlocking-the-benefits-of-a-6-6kw-solar-system-in-australia-your-path-to-energy-savings-and-sustainability/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6kw-solar-system-price-adelaide/",
+            "destination": "/6-6kw-solar-system-price-adelaide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6kw-solar-system-price-adelaide/",
+            "destination": "/6-6kw-solar-system-price-adelaide/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/astronergy-solar-panels-review/",
+            "destination": "/astronergy-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/astronergy-solar-panels-review/",
+            "destination": "/astronergy-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/risen-solar-panel-review/",
+            "destination": "/blogs/risen-solar-panel-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/5kw-solar-system-battery-backup/",
+            "destination": "/5kw-solar-system-battery-backup/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/5kw-solar-system-battery-backup/",
+            "destination": "/5kw-solar-system-battery-backup/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-power-does-a-5kw-solar-system-generate/",
+            "destination": "/blogs/how-much-power-does-a-5kw-solar-system-generate/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-solar-system-cost/",
+            "destination": "/blogs/10kw-solar-system-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-solar-panels-brisbane/",
+            "destination": "/blogs/cost-of-solar-panels-brisbane/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-solar-panels-perth/",
+            "destination": "/blogs/cost-of-solar-panels-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-feed-in-tariff-brisbane/",
+            "destination": "/blogs/best-solar-feed-in-tariff-brisbane/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-installer-brisbane/",
+            "destination": "/blogs/best-solar-installer-brisbane/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-system-for-home/",
+            "destination": "/blogs/best-solar-system-for-home/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-battery-price-perth/",
+            "destination": "/blogs/solar-battery-price-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/average-electricity-bill-perth/",
+            "destination": "/average-electricity-bill-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/average-electricity-bill-perth/",
+            "destination": "/average-electricity-bill-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-sunshine-coast/",
+            "destination": "/blogs/solar-panels-sunshine-coast/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/average-electricity-bill-brisbane/",
+            "destination": "/average-electricity-bill-brisbane/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/average-electricity-bill-brisbane/",
+            "destination": "/average-electricity-bill-brisbane/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sunpower-solar-panels/",
+            "destination": "/blogs/sunpower-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-solar-panels-for-10kw-2/",
+            "destination": "/blogs/how-many-solar-panels-for-10kw-2/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/government-incentives-6-6-kw-solar-australia/",
+            "destination": "/blogs/government-incentives-6-6-kw-solar-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-solar-panel-brands-6-6-kw-australia/",
+            "destination": "/blogs/top-solar-panel-brands-6-6-kw-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6-kw-solar-system-power-output/",
+            "destination": "/6-6-kw-solar-system-power-output/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6-kw-solar-system-power-output/",
+            "destination": "/6-6-kw-solar-system-power-output/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/6-6-kw-solar-system-cost-australia/",
+            "destination": "/6-6-kw-solar-system-cost-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/6-6-kw-solar-system-cost-australia/",
+            "destination": "/6-6-kw-solar-system-cost-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/benefits-of-6-6-kw-solar-system-australia/",
+            "destination": "/blogs/benefits-of-6-6-kw-solar-system-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-does-a-6-6-kw-solar-system-cost-in-australia/",
+            "destination": "/blogs/how-much-does-a-6-6-kw-solar-system-cost-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/benefits-of-a-6-6-kw-solar-system-in-australia/",
+            "destination": "/benefits-of-a-6-6-kw-solar-system-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/benefits-of-a-6-6-kw-solar-system-in-australia/",
+            "destination": "/benefits-of-a-6-6-kw-solar-system-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/byd-battery-vs-tesla-battery/",
+            "destination": "/blogs/byd-battery-vs-tesla-battery/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-companies-gold-coast/",
+            "destination": "/blogs/solar-companies-gold-coast/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/do-solar-panels-work-at-night/",
+            "destination": "/blogs/do-solar-panels-work-at-night/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sungrow-vs-fronius/",
+            "destination": "/blogs/sungrow-vs-fronius/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/suntech-solar-panels-review/",
+            "destination": "/blogs/suntech-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/tindo-solar-reviews/",
+            "destination": "/blogs/tindo-solar-reviews/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/das-solar-panels-review/",
+            "destination": "/blogs/das-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-feed-in-tariff-nsw/",
+            "destination": "/blogs/best-solar-feed-in-tariff-nsw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-battery-adelaide/",
+            "destination": "/blogs/solar-battery-adelaide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/origin-solar-feed-in-tariff/",
+            "destination": "/blogs/origin-solar-feed-in-tariff/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-does-solar-energy-work/",
+            "destination": "/blogs/how-does-solar-energy-work/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/is-a-solar-battery-worth-it/",
+            "destination": "/blogs/is-a-solar-battery-worth-it/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-the-solar-rebate-in-australia/",
+            "destination": "/blogs/what-is-the-solar-rebate-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/single-phase-vs-three-phase-solar-systems/",
+            "destination": "/blogs/single-phase-vs-three-phase-solar-systems/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sofar-inverter-review/",
+            "destination": "/blogs/sofar-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/alpha-ess-battery-vs-tesla/",
+            "destination": "/alpha-ess-battery-vs-tesla/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/alpha-ess-battery-vs-tesla/",
+            "destination": "/alpha-ess-battery-vs-tesla/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sungrow-battery-vs-tesla/",
+            "destination": "/blogs/sungrow-battery-vs-tesla/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-solar-feed-in-tariff/",
+            "destination": "/blogs/what-is-solar-feed-in-tariff/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/biggest-solar-farm-in-australia/",
+            "destination": "/blogs/biggest-solar-farm-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-are-the-best-solar-panels/",
+            "destination": "/blogs/what-are-the-best-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/german-made-solar-panels/",
+            "destination": "/blogs/german-made-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/fronius-inverter-review/",
+            "destination": "/blogs/fronius-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/saj-inverter-review/",
+            "destination": "/blogs/saj-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/why-solar-panels-are-not-worth-it/",
+            "destination": "/blogs/why-solar-panels-are-not-worth-it/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/huawei-inverter-review/",
+            "destination": "/blogs/huawei-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-inverter-replacement/",
+            "destination": "/blogs/solar-inverter-replacement/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/longi-solar-panels-review/",
+            "destination": "/blogs/longi-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/canadian-solar-panels-review/",
+            "destination": "/blogs/canadian-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-installation-cost/",
+            "destination": "/blogs/solar-installation-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sungrow-battery-review/",
+            "destination": "/blogs/sungrow-battery-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-electricity-in-australia-per-kwh/",
+            "destination": "/blogs/cost-of-electricity-in-australia-per-kwh/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sonnen-battery-price/",
+            "destination": "/blogs/sonnen-battery-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/trina-solar-panels-review/",
+            "destination": "/blogs/trina-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/sungrow-inverter-review/",
+            "destination": "/blogs/sungrow-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-battery-in-australia/",
+            "destination": "/blogs/best-solar-battery-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/growatt-inverter-review/",
+            "destination": "/blogs/growatt-inverter-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/jinko-solar-panels-review/",
+            "destination": "/blogs/jinko-solar-panels-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-solar-battery-price/",
+            "destination": "/blogs/10kw-solar-battery-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-cost-sydney/",
+            "destination": "/blogs/solar-panels-cost-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-battery-for-solar-panels/",
+            "destination": "/blogs/cost-of-battery-for-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/electricity-charges-per-kwh/",
+            "destination": "/blogs/electricity-charges-per-kwh/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/are-solar-panels-recyclable/",
+            "destination": "/are-solar-panels-recyclable/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/are-solar-panels-recyclable/",
+            "destination": "/are-solar-panels-recyclable/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/who-invented-solar-panels/",
+            "destination": "/blogs/who-invented-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cost-of-electricity-sydney/",
+            "destination": "/blogs/cost-of-electricity-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-will-a-6-6kw-solar-system-save-me/",
+            "destination": "/blogs/how-much-will-a-6-6kw-solar-system-save-me/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-solar-do-i-need/",
+            "destination": "/blogs/how-much-solar-do-i-need/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/types-of-solar-panels/",
+            "destination": "/blogs/types-of-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-does-electricity-cost-australia/",
+            "destination": "/blogs/how-much-does-electricity-cost-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-maintenance-tips/",
+            "destination": "/blogs/solar-panel-maintenance-tips/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/average-electricity-bill-for-2-person-household/",
+            "destination": "/average-electricity-bill-for-2-person-household/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/average-electricity-bill-for-2-person-household/",
+            "destination": "/average-electricity-bill-for-2-person-household/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-solar-energy/",
+            "destination": "/blogs/what-is-solar-energy/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-panels/",
+            "destination": "/blogs/best-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-cleaning-guide/",
+            "destination": "/blogs/solar-panel-cleaning-guide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-to-clean-solar-panels-at-home/",
+            "destination": "/blogs/how-to-clean-solar-panels-at-home/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-money-do-you-save-with-solar-panels-australia/",
+            "destination": "/blogs/how-much-money-do-you-save-with-solar-panels-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-solar-panels-for-10kw/",
+            "destination": "/blogs/how-many-solar-panels-for-10kw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/why-are-solar-panels-good/",
+            "destination": "/blogs/why-are-solar-panels-good/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-panels-in-a-6-6kw-solar-system/",
+            "destination": "/blogs/how-many-panels-in-a-6-6kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-size-solar-system-do-i-need/",
+            "destination": "/blogs/what-size-solar-system-do-i-need/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-10-solar-inverters-in-australia/",
+            "destination": "/blogs/top-10-solar-inverters-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-10-solar-companies-in-perth/",
+            "destination": "/blogs/top-10-solar-companies-in-perth/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-do-solar-panels-cost/",
+            "destination": "/blogs/how-much-do-solar-panels-cost/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-many-solar-panels-do-i-need/",
+            "destination": "/blogs/how-many-solar-panels-do-i-need/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-power-systems-prices/",
+            "destination": "/blogs/solar-power-systems-prices/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-much-does-one-solar-panel-cost-in-australia/",
+            "destination": "/blogs/how-much-does-one-solar-panel-cost-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-batteries-price/",
+            "destination": "/blogs/solar-batteries-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-way-to-clean-solar-panels/",
+            "destination": "/blogs/best-way-to-clean-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-long-do-solar-panels-last/",
+            "destination": "/blogs/how-long-do-solar-panels-last/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-are-solar-panels-made/",
+            "destination": "/blogs/how-are-solar-panels-made/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-do-solar-panels-work/",
+            "destination": "/blogs/how-do-solar-panels-work/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-10-solar-panels-in-australia/",
+            "destination": "/blogs/top-10-solar-panels-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/top-10-solar-companies-in-australia/",
+            "destination": "/blogs/top-10-solar-companies-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/benefits-of-solar-panels/",
+            "destination": "/benefits-of-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/benefits-of-solar-panels/",
+            "destination": "/benefits-of-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/is-solar-worth-it/",
+            "destination": "/blogs/is-solar-worth-it/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/advantages-of-solar-energy/",
+            "destination": "/advantages-of-solar-energy/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/advantages-of-solar-energy/",
+            "destination": "/advantages-of-solar-energy/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10kw-solar-system-price/",
+            "destination": "/blogs/10kw-solar-system-price/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/installing-residential-solar-panels/",
+            "destination": "/blogs/installing-residential-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/how-6-6-kw-solar-systems-financed/",
+            "destination": "/blogs/how-6-6-kw-solar-systems-financed/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/evolving-landscape-solar-energy-australia/",
+            "destination": "/blogs/evolving-landscape-solar-energy-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/ev-charging-boosted-with-solar-power/",
+            "destination": "/blogs/ev-charging-boosted-with-solar-power/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/all-about-solis-inverter-and-review/",
+            "destination": "/all-about-solis-inverter-and-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/all-about-solis-inverter-and-review/",
+            "destination": "/all-about-solis-inverter-and-review/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/all-about-electric-vehicles/",
+            "destination": "/all-about-electric-vehicles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/all-about-electric-vehicles/",
+            "destination": "/all-about-electric-vehicles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/guide-solar-panel-rebates-australia/",
+            "destination": "/blogs/guide-solar-panel-rebates-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-energy-australia/",
+            "destination": "/blogs/solar-energy-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/ways-to-save-energy-consumption/",
+            "destination": "/blogs/ways-to-save-energy-consumption/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/tracking-solar-system-home-energy-management-system/",
+            "destination": "/blogs/tracking-solar-system-home-energy-management-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/latest-advancement-potential-impacts-solar-technology/",
+            "destination": "/blogs/latest-advancement-potential-impacts-solar-technology/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/common-myths-avoid-reason-behind-solar-systems/",
+            "destination": "/blogs/common-myths-avoid-reason-behind-solar-systems/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-performance-winter-season/",
+            "destination": "/blogs/solar-performance-winter-season/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-systems-advancement/",
+            "destination": "/blogs/solar-systems-advancement/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-install-spring/",
+            "destination": "/blogs/solar-panels-install-spring/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/hybrid-solar-systems/",
+            "destination": "/blogs/hybrid-solar-systems/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-batteries/",
+            "destination": "/blogs/solar-batteries/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/which-direction-best-solar-panels/",
+            "destination": "/blogs/which-direction-best-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-faqs/",
+            "destination": "/blogs/solar-panels-faqs/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/guide-cleaning-solar-panels/",
+            "destination": "/blogs/guide-cleaning-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/charging-an-ev-with-solar-panels/",
+            "destination": "/blogs/charging-an-ev-with-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/guide-maintain-solar-system/",
+            "destination": "/blogs/guide-maintain-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-maintenance-guide/",
+            "destination": "/blogs/solar-panel-maintenance-guide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-in-sydney/",
+            "destination": "/blogs/solar-panel-in-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blogs/8-kw-solar-panel-system/",
+            "destination": "/8-kw-solar-panel-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/8-kw-solar-panel-system/",
+            "destination": "/8-kw-solar-panel-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/questions-asked-to-solar-installers/",
+            "destination": "/blogs/questions-asked-to-solar-installers/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/5-kw-solar-system/",
+            "destination": "/blogs/5-kw-solar-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/will-trees-affect-solar-panels/",
+            "destination": "/blogs/will-trees-affect-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-temperature-coefficient/",
+            "destination": "/blogs/solar-panel-temperature-coefficient/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/refinancing-house-with-solar-panels/",
+            "destination": "/blogs/refinancing-house-with-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/10-kw-solar-panel-system/",
+            "destination": "/blogs/10-kw-solar-panel-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/financing-rooftop-solar-energy-system/",
+            "destination": "/blogs/financing-rooftop-solar-energy-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/purchasing-power-through-co-operatives/",
+            "destination": "/blogs/purchasing-power-through-co-operatives/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/right-path-choose-solar-sydney/",
+            "destination": "/blogs/right-path-choose-solar-sydney/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/power-produced-by-solar-panels/",
+            "destination": "/blogs/power-produced-by-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/steps-solar-installation/",
+            "destination": "/blogs/steps-solar-installation/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/why-choose-fronius-inverter/",
+            "destination": "/blogs/why-choose-fronius-inverter/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-system/",
+            "destination": "/blogs/solar-panel-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/importance-solar-panel-installation/",
+            "destination": "/blogs/importance-solar-panel-installation/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/process-to-get-best-excellent-solar-quotes/",
+            "destination": "/blogs/process-to-get-best-excellent-solar-quotes/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/guide-for-choosing-the-right-solar-panel-system/",
+            "destination": "/blogs/guide-for-choosing-the-right-solar-panel-system/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/reasons-for-getting-solar-panels/",
+            "destination": "/blogs/reasons-for-getting-solar-panels/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/switching-to-solar-panels-in-australia/",
+            "destination": "/blogs/switching-to-solar-panels-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panels-for-your-home/",
+            "destination": "/blogs/solar-panels-for-your-home/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-panel-cleaning/",
+            "destination": "/blogs/solar-panel-cleaning/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/solar-installation-process/",
+            "destination": "/blogs/solar-installation-process/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/most-efficient-solar-systems-install-in-home/",
+            "destination": "/blogs/most-efficient-solar-systems-install-in-home/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-system-for-residential-projects-nsw/",
+            "destination": "/blogs/best-solar-system-for-residential-projects-nsw/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-panels-australia/",
+            "destination": "/blogs/best-solar-panels-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-company-wa/",
+            "destination": "/blogs/best-solar-company-wa/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-companies-nsw-australia/",
+            "destination": "/blogs/best-solar-companies-nsw-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/best-solar-companies-in-australia/",
+            "destination": "/blogs/best-solar-companies-in-australia/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/what-is-a-6-6-kw-solar-system/",
+            "destination": "/blogs/what-is-a-6-6-kw-solar-system/",
+            "permanent": true
+        },
         {
             "source": "/10-kw-solar-panel-system/",
             "destination": "/blogs/10-kw-solar-panel-system/",
@@ -1938,16 +1923,6 @@
             "permanent": true
         },
         {
-            "source": "/cryptoslots-canada-guide-for-secure-crypto-play/",
-            "destination": "/blogs/cryptoslots-canada-guide-for-secure-crypto-play/",
-            "permanent": true
-        },
-        {
-            "source": "/blogs/blog/cryptoslots-canada-guide-for-secure-crypto-play/",
-            "destination": "/blogs/cryptoslots-canada-guide-for-secure-crypto-play/",
-            "permanent": true
-        },
-        {
             "source": "/das-solar-panels-review/",
             "destination": "/blogs/das-solar-panels-review/",
             "permanent": true
@@ -1975,16 +1950,6 @@
         {
             "source": "/blogs/blog/disadvantages-of-solar-energy/",
             "destination": "/blogs/disadvantages-of-solar-energy/",
-            "permanent": true
-        },
-        {
-            "source": "/discovering-constraints-in-best-online-casino-australia/",
-            "destination": "/blogs/discovering-constraints-in-best-online-casino-australia/",
-            "permanent": true
-        },
-        {
-            "source": "/blogs/blog/discovering-constraints-in-best-online-casino-australia/",
-            "destination": "/blogs/discovering-constraints-in-best-online-casino-australia/",
             "permanent": true
         },
         {
@@ -3728,16 +3693,6 @@
             "permanent": true
         },
         {
-            "source": "/10998/",
-            "destination": "/blogs/10998/",
-            "permanent": true
-        },
-        {
-            "source": "/blogs/blog/10998/",
-            "destination": "/blogs/10998/",
-            "permanent": true
-        },
-        {
             "source": "/benefits-of-6-6-kw-solar-system-australia/",
             "destination": "/blogs/benefits-of-6-6-kw-solar-system-australia/",
             "permanent": true
@@ -3908,11 +3863,6 @@
             "permanent": true
         },
         {
-            "source": "/australia-online-casino-patterns-a-specialist-s-insight/",
-            "destination": "/blogs/australia-online-casino-patterns-a-specialist-s-insight/",
-            "permanent": true
-        },
-        {
             "source": "/australian-solar-battery-rebate/",
             "destination": "/blogs/australian-solar-battery-rebate/",
             "permanent": true
@@ -3957,11 +3907,51 @@
             "destination": "/blogs/best-home-batteries-australia/",
             "permanent": true
         }
-                  ],
+    ],
     "rewrites": [
         {
-            "source": "/blogs/10998/",
-            "destination": "/blogs/articles/10998/index.html"
+            "source": "/about/about.css",
+            "destination": "/pages/about/about/about.css"
+        },
+        {
+            "source": "/about/about.js",
+            "destination": "/pages/about/about/about.js"
+        },
+        {
+            "source": "/pricing/pricing.css",
+            "destination": "/pages/pricing/pricing/pricing.css"
+        },
+        {
+            "source": "/pricing/pricing.js",
+            "destination": "/pages/pricing/pricing/pricing.js"
+        },
+        {
+            "source": "/contact-us/contact-us.css",
+            "destination": "/pages/contact/contact-us/contact-us.css"
+        },
+        {
+            "source": "/contact-us/contact-us.js",
+            "destination": "/pages/contact/contact-us/contact-us.js"
+        },
+        {
+            "source": "/products/products.css",
+            "destination": "/pages/products/products.css"
+        },
+        {
+            "source": "/products/6-6-kw-solar-system/product.css",
+            "destination": "/pages/products/6-6-kw-solar-system/product.css"
+        },
+        {
+            "source": "/products/6-6-kw-solar-system/product.js",
+            "destination": "/pages/products/6-6-kw-solar-system/product.js"
+        },
+        {
+            "source": "/blog-post.css",
+            "destination": "/blogs/blog-post.css"
+        },
+        {
+            "source": "/blog-post.js",
+            "destination": "/blogs/blog-post.js"
         },
         {
             "source": "/blogs/benefits-of-6-6-kw-solar-system-australia/",
@@ -4160,10 +4150,6 @@
             "destination": "/blogs/articles/cost-of-solar-panels-on-a-home/index.html"
         },
         {
-            "source": "/blogs/cryptoslots-canada-guide-for-secure-crypto-play/",
-            "destination": "/blogs/articles/cryptoslots-canada-guide-for-secure-crypto-play/index.html"
-        },
-        {
             "source": "/blogs/das-solar-panels-review/",
             "destination": "/blogs/articles/das-solar-panels-review/index.html"
         },
@@ -4174,10 +4160,6 @@
         {
             "source": "/blogs/disadvantages-of-solar-energy/",
             "destination": "/blogs/articles/disadvantages-of-solar-energy/index.html"
-        },
-        {
-            "source": "/blogs/discovering-constraints-in-best-online-casino-australia/",
-            "destination": "/blogs/articles/discovering-constraints-in-best-online-casino-australia/index.html"
         },
         {
             "source": "/blogs/do-solar-panels-need-direct-sunlight/",
@@ -4874,10 +4856,6 @@
         {
             "source": "/blogs/will-trees-affect-solar-panels/",
             "destination": "/blogs/articles/will-trees-affect-solar-panels/index.html"
-        },
-        {
-            "source": "/blogs/australia-online-casino-patterns-a-specialist-s-insight/",
-            "destination": "/blogs/articles/australia-online-casino-patterns-a-specialist-s-insight/index.html"
         },
         {
             "source": "/blogs/australian-solar-battery-rebate/",

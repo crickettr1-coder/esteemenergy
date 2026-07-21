@@ -29,7 +29,7 @@
     article.dataset.reveal = '';
     article.dataset.revealDelay = String(index % 3);
     const title = typeof post.title === 'string' && post.title.trim() ? post.title : 'Solar energy guide';
-    article.innerHTML = `<div class="blog-card-visual"><img src="${post.image || '/assests/blogs/solar-panel-closeup.jpg'}" alt="Solar image for ${title.replace(/"/g, '&quot;')}" loading="lazy" ></div><div class="blog-card-content"><div class="blog-card-meta"><span class="blog-tag">${post.category || 'Solar Systems'}</span><span>${dateLabel(post.date)}</span></div><h3><a href="${post.url}">${title}</a></h3><p class="blog-card-excerpt">${post.excerpt || 'Explore practical solar guidance from Esteem Energy.'}</p><div class="blog-card-footer"><span style="font-size:12px;color:var(--blog-muted);">${post.author || 'Esteem Energy'}</span><a class="blog-read-link" href="${post.url}"><span>Read Article</span><span class="blog-read-arrow" aria-hidden="true">â†’</span></a></div></div>`;
+    article.innerHTML = `<div class="blog-card-visual"><img src="${post.image || '/assests/blogs/solar-panel-closeup.jpg'}" alt="Solar image for ${title.replace(/"/g, '&quot;')}" loading="lazy" ></div><div class="blog-card-content"><div class="blog-card-meta"><span class="blog-tag">${post.category || 'Solar Systems'}</span><span>${dateLabel(post.date)}</span></div><h3><a href="${post.url}">${title}</a></h3><p class="blog-card-excerpt">${post.excerpt || 'Explore practical solar guidance from Esteem Energy.'}</p><div class="blog-card-footer"><span style="font-size:12px;color:var(--blog-muted);">${post.author || 'Esteem Energy'}</span><a class="blog-read-link" href="${post.url}"><span>Read Article</span><span class="blog-read-arrow" aria-hidden="true">→</span></a></div></div>`;
     return article;
   };
   const render = () => {
@@ -39,7 +39,7 @@
     const start = (page - 1) * pageSize;
     grid.replaceChildren(...(filtered.slice(start, start + pageSize).map(card)));
     if (!filtered.length) grid.append(empty); else empty.remove();
-    status.textContent = filtered.length ? `Showing ${start + 1}â€“${Math.min(start + pageSize, filtered.length)} of ${filtered.length} articles` : 'No articles match your search.';
+    status.textContent = filtered.length ? `Showing ${start + 1}–${Math.min(start + pageSize, filtered.length)} of ${filtered.length} articles` : 'No articles match your search.';
     pagination.replaceChildren();
     const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = 'Previous'; previous.disabled = page === 1; previous.addEventListener('click', () => { page--; render(); window.scrollTo({ top: grid.offsetTop - 120, behavior: 'smooth' }); }); pagination.append(previous);
     for (let i = 1; i <= totalPages; i++) { const button = document.createElement('button'); button.type = 'button'; button.textContent = String(i); button.className = i === page ? 'is-active' : ''; button.setAttribute('aria-label', `Page ${i}`); button.setAttribute('aria-current', i === page ? 'page' : 'false'); button.addEventListener('click', () => { page = i; render(); window.scrollTo({ top: grid.offsetTop - 120, behavior: 'smooth' }); }); pagination.append(button); }

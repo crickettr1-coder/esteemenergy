@@ -6,9 +6,14 @@ const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
 
 const routeMap = new Map([
+  ["/13-kw-solar-system/", "catalog/solar-systems/13-2-kw-solar-system/index.html"],
+  ["/13-3-kw-solar-system/", "catalog/solar-systems/13-2-kw-solar-system/index.html"],
+  ["/residential-solar-panel-system/", "services/residential-solar/index.html"],
+  ["/solar-panel-installation/", "services/installation/index.html"],
+  ["/blog/is-arise-solar-and-sunboost-the-same-company/", "blogs/index.html"],
   ["/about/", "pages/about/about/index.html"],
   ["/about-us/", "pages/about/about-us/index.html"],
-  ["/contact/", "pages/contact/contact/index.html"],
+  ["/contact/", "pages/contact/contact-us/index.html"],
   ["/contact-us/", "pages/contact/contact-us/index.html"],
   ["/pricing/", "pages/pricing/pricing/index.html"],
   ["/packages/", "pages/pricing/packages/index.html"],

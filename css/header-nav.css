@@ -9,6 +9,28 @@
 /* Responsive foundation shared by every active page. */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { max-width: 100%; overflow-x: hidden; }
+
+.esteem-legacy-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  width: min(calc(100% - 24px), 1480px);
+  margin: 64px auto 12px;
+  padding: 32px max(24px, calc((100% - 1200px) / 2));
+  border: 1px solid rgba(17, 17, 17, .08);
+  border-radius: 24px;
+  background: #edf6e8;
+  color: #111;
+  font: 13px/1.5 "Geist", Arial, sans-serif;
+}
+
+.esteem-legacy-footer a { color: inherit; text-decoration: none; }
+.esteem-legacy-footer a:hover { text-decoration: underline; text-decoration-color: #78a800; text-underline-offset: 4px; }
+.esteem-legacy-footer-brand > a { font-size: 17px; font-weight: 600; }
+.esteem-legacy-footer p { margin: 5px 0 0; color: rgba(17, 17, 17, .68); }
+.esteem-legacy-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.esteem-legacy-footer-copyright { white-space: nowrap; }
 img, picture, video, canvas, svg { max-width: 100%; height: auto; }
 iframe { max-width: 100%; }
 button, input, textarea, select { max-width: 100%; }
@@ -350,6 +372,18 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
 }
 
 @media (max-width: 767px) {
+  .esteem-legacy-footer {
+    flex-direction: column;
+    gap: 18px;
+    width: calc(100% - 16px);
+    margin-top: 44px;
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .esteem-legacy-footer nav { gap: 12px 16px; }
+  .esteem-legacy-footer-copyright { white-space: normal; }
+
   .solaris-site-header {
     padding: max(10px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left));
   }
