@@ -8,7 +8,6 @@ const port = Number(process.env.PORT || 3000);
 const routeMap = new Map([
   ["/about/", "pages/about/about/index.html"],
   ["/about-us/", "pages/about/about-us/index.html"],
-  ["/contact/", "pages/contact/contact/index.html"],
   ["/contact-us/", "pages/contact/contact-us/index.html"],
   ["/pricing/", "pages/pricing/pricing/index.html"],
   ["/packages/", "pages/pricing/packages/index.html"],

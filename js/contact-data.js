@@ -27,7 +27,7 @@
 
   window.ESTEEM_CONTACT_DATA = CONTACT;
 
-  const footerLogoUrl = new URL("./assests/esteem%20energy%20logo.png", document.currentScript?.src || window.location.href).href;
+  const footerLogoUrl = "/assests/esteem%20energy%20logo.png";
 
   const icon = (name) => {
     const paths = {
@@ -196,7 +196,25 @@
     }
   };
 
+  const ensureSharedFooter = () => {
+    if (document.querySelector('meta[http-equiv="refresh"]')) return null;
+
+    let footer = document.querySelector("footer");
+    if (footer) return footer;
+
+    footer = document.createElement("footer");
+    footer.className = "framer-UEkM5 esteem-site-footer";
+    footer.setAttribute("aria-label", "Site footer");
+
+    const content = document.querySelector("main, #main");
+    if (content) content.insertAdjacentElement("afterend", footer);
+    else document.body.append(footer);
+
+    return footer;
+  };
+
   const applyContactData = () => {
+    ensureSharedFooter();
     document.querySelectorAll("footer").forEach(renderFooter);
     updateContactPage();
   };

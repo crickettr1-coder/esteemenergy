@@ -1,7 +1,7 @@
 :root {
-  --esteem-cta-lime: #c8ff3d;
-  --esteem-cta-ink: #111;
-  --esteem-cta-radius: 16px;
+  --esteem-cta-lime: var(--esteem-color-lime, #c8ff3d);
+  --esteem-cta-ink: var(--esteem-color-ink, #111);
+  --esteem-cta-radius: var(--esteem-radius-button, 16px);
   --esteem-cta-arrow-size: 38px;
   --esteem-cta-duration: 300ms;
   --esteem-cta-ease: cubic-bezier(.2, .8, .2, 1);
@@ -405,7 +405,17 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   color: #fff;
 }
 
-@media (max-width: 767px) {
+/* Shared final-section treatment for CTAs placed on the lime panel. */
+.esteem-primary-cta--dark {
+  background: var(--esteem-cta-ink);
+}
+
+.esteem-secondary-cta--dark {
+  border-color: rgba(17, 17, 17, .25);
+  background: rgba(255, 255, 255, .38);
+}
+
+@media (max-width: 809px) {
   .framer-WiXf4 .framer-pvrod3.about-actions {
     flex-direction: column;
     width: 100%;

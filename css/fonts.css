@@ -1,0 +1,18 @@
+/* Shared local font sources for the normal Esteem Energy site. */
+@font-face { font-family: "Geist"; src: url("/assests/fonts/geist-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Geist"; src: url("/assests/fonts/geist-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Geist"; src: url("/assests/fonts/geist-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 600; }
+@font-face { font-family: "Geist"; src: url("/assests/fonts/geist-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 700; }
+
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 700; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-italic-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 400; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-italic-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 700; }
+
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 700; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-italic-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 400; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-italic-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 500; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-italic-400-700-latin.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 700; }

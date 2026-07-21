@@ -88,11 +88,11 @@
 .products-faq-item[open] summary::after { content: "−"; }
 .products-faq-item p { margin: 0; padding: 0 24px 22px; color: var(--prod-muted); font-size: 14px; line-height: 1.5; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-@media (max-width: 1024px) {
+@media (max-width: 1199px) and (min-width: 810px) {
   .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .products-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (max-width: 767px) {
+@media (max-width: 809px) {
   
   .products-hero { min-height: auto; }
   .products-hero-visual { min-height: 380px; }
@@ -104,10 +104,10 @@
   .products-faq-item summary { padding: 18px 20px; font-size: 16px; }
   .products-faq-item p { padding: 0 20px 20px; }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1199px) and (min-width: 810px) {
   .product-landing .prod-highlight-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 767px) {
+@media (max-width: 809px) {
   .product-landing .prod-hero-visual, .product-landing .prod-hero-visual img { min-height: 380px; }
   .product-landing .prod-highlight-grid, .product-landing .prod-icon-list { grid-template-columns: 1fr; }
   .product-landing .prod-compare-table th, .product-landing .prod-compare-table td { padding: 14px; }
@@ -154,11 +154,11 @@
 .product-runtime .runtime-centered { max-width: 760px; margin-inline: auto; text-align: center; }
 .product-runtime .runtime-centered h2, .product-runtime .runtime-centered p { margin-inline: auto; }
 .product-runtime .runtime-why-grid { margin-top: 42px; }
-@media (max-width: 1024px) {
+@media (max-width: 1199px) and (min-width: 810px) {
   .product-runtime .prod-highlight-grid { grid-template-columns: repeat(2, 1fr); }
   .product-runtime .runtime-list-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 767px) {
+@media (max-width: 809px) {
   
   .product-runtime .prod-hero { padding-top: 120px; }
   .product-runtime .prod-hero-visual, .product-runtime .prod-hero-visual img { min-height: 380px; }
@@ -169,7 +169,7 @@
   .product-runtime .runtime-benefit-visual { min-height: 300px; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 809px) {
   .product-landing .prod-container,
   .product-runtime .prod-container { width: min(calc(100% - 32px), 640px); }
 

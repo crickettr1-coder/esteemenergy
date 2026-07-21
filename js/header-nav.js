@@ -42,6 +42,14 @@
 
   const currentPath = () => window.location.pathname.replace(/\/+$/, "") || "/";
 
+  const markBlogPostPage = () => {
+    const isBlogPost = Boolean(document.querySelector('script[src*="blog-post.js"]'))
+      || currentPath().startsWith("/blogs/articles/");
+    const isBlogListing = currentPath() === "/blogs";
+    document.body.classList.toggle("blog-post-page", isBlogPost);
+    document.body.classList.toggle("blog-listing-page", isBlogListing);
+  };
+
   const makeItem = (label, mobile = false) => {
     const route = menuRoutes[label];
     if (label === "Products") {
@@ -469,6 +477,7 @@
 
   let enhancementTimer;
   const runEnhancements = () => {
+    markBlogPostPage();
     initHeader();
     if (!document.querySelector(".solaris-site-header")) {
       enhancementTimer = window.setTimeout(runEnhancements, 50);

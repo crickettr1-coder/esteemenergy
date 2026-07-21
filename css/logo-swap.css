@@ -40,11 +40,11 @@
   pointer-events: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) and (min-width: 810px) {
   .esteem-energy-logo--header { width: 120px; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 809px) {
   .esteem-energy-logo--header { width: 112px; }
   .esteem-energy-logo--footer { width: 160px; }
 

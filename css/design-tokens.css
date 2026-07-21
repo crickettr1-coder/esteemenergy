@@ -1,0 +1,53 @@
+/*
+ * Esteem Energy design-system foundation.
+ *
+ * These tokens intentionally do not change existing page output yet. New and
+ * migrated components should use them so the current duplicated values can be
+ * consolidated safely, one component family at a time.
+ */
+:root {
+  /* Typography */
+  --esteem-font-heading: "Host Grotesk", "Host Grotesk Placeholder", sans-serif;
+  --esteem-font-body: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
+  --esteem-font-ui: "Geist", "Geist Placeholder", sans-serif;
+
+  /* Colour */
+  --esteem-color-ink: #111;
+  --esteem-color-paper: #fff;
+  --esteem-color-surface: #fbfcf8;
+  --esteem-color-mint: #edf6e8;
+  --esteem-color-lime: #c8ff3d;
+  --esteem-color-lime-soft: #e2fa5a;
+  --esteem-color-muted: rgba(17, 17, 17, .7);
+  --esteem-color-border: rgba(17, 17, 17, .12);
+
+  /* Layout */
+  --esteem-container-content: 1280px;
+  --esteem-container-wide: 1440px;
+  --esteem-container-mobile: 640px;
+  --esteem-gutter-desktop: 48px;
+  --esteem-gutter-mobile: 40px;
+  --esteem-gutter-narrow: 32px;
+  --esteem-section-space: clamp(82px, 9vw, 132px);
+
+  /* Components */
+  --esteem-radius-control: 11px;
+  --esteem-radius-button: 16px;
+  --esteem-radius-card: 20px;
+  --esteem-radius-panel: 30px;
+  --esteem-radius-feature: 36px;
+  --esteem-cta-height: 52px;
+  --esteem-cta-arrow-size: 38px;
+  --esteem-transition-duration: 300ms;
+  --esteem-transition-ease: cubic-bezier(.2, .8, .2, 1);
+
+  /*
+   * Breakpoint convention for future component migrations:
+   * desktop >= 1200px, tablet 810px–1199px, mobile <= 809px.
+   * CSS custom properties cannot be used directly in @media rules, so these
+   * values document the convention while individual media queries migrate.
+   */
+  --esteem-breakpoint-desktop: 1200px;
+  --esteem-breakpoint-tablet: 810px;
+  --esteem-breakpoint-mobile: 809px;
+}
