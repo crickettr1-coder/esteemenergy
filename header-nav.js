@@ -196,6 +196,26 @@
     document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonical);
   };
 
+  const stabilizeHomepageStats = () => {
+    if (currentPath() !== "/") return;
+
+    const values = new Map([
+      ["Solar experience", "Experienced Team"],
+      ["Australian solar projects", "Australia-Wide"],
+      ["Panel warranty", "25 Years"],
+    ]);
+
+    document.querySelectorAll('[data-framer-name="Properties under management"]').forEach((labelContainer) => {
+      const label = labelContainer.querySelector("p")?.textContent.trim();
+      const value = values.get(label);
+      const card = labelContainer.closest('[data-framer-name^="Stat Card"]');
+      if (!value || !card) return;
+      card.querySelectorAll(".framer-1b4edkh-container p").forEach((element) => {
+        element.textContent = value;
+      });
+    });
+  };
+
   const cleanupTemplateContent = () => {
     document.querySelectorAll('[data-framer-name="Review Quote Text"] p').forEach((element, index) => {
       element.textContent = `“${genuineTestimonials[index % genuineTestimonials.length][1]}”`;
@@ -207,11 +227,6 @@
     replaceExactText("Have questions about Salesflow?", "Have questions about solar panels, batteries, installation or system sizing?");
     replaceExactText("Here are some of the most common queries to help you get started.", "Here are answers to common questions from Australian homeowners.");
     if (currentPath() !== "/") replaceExactText("by 500+ Homeowners", "for Australian homeowners");
-    replaceExactText("10+", "—");
-    replaceExactText("500+", "—");
-    replaceExactText("20 Years", "—");
-    replaceExactText("0+", "—");
-    replaceExactText("0 Years", "—");
     replaceExactText("Solar Industry Experience", "Solar experience");
     replaceExactText("Solar Projects Installed", "Australian solar projects");
     replaceExactText("Panel Performance Warranty", "Panel warranty");
@@ -465,7 +480,11 @@
     stabilizeHomepageHero();
     initHomepageTestimonials();
     cleanupTemplateContent();
-    window.setTimeout(cleanupTemplateContent, 3000);
+    stabilizeHomepageStats();
+    window.setTimeout(() => {
+      cleanupTemplateContent();
+      stabilizeHomepageStats();
+    }, 3000);
   };
   const scheduleEnhancements = () => {
     window.clearTimeout(enhancementTimer);
