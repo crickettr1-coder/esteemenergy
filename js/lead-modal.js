@@ -2,7 +2,7 @@
   if (new URLSearchParams(window.location.search).has("lead-bridge")) return;
   const heroCtaSelector = '#hero a[name="Primary Button"]';
   const scriptUrl = document.currentScript?.src || window.location.href;
-  const illustrationUrl = new URL("./assests/wind-power.png", scriptUrl).href;
+  const illustrationUrl = new URL("./assets/wind-power.png", scriptUrl).href;
   const focusableSelector = 'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])';
   let trigger = null;
   let isSubmitting = false;
