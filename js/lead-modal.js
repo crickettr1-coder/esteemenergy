@@ -348,10 +348,19 @@
     });
   };
   const prepareLegacyQuoteCtas = () => {
-    document.querySelectorAll('a[href="#"]').forEach((cta) => {
+    const keywords = ["quote", "assessment", "consultation", "estimate", "calculate", "talk to", "inquire", "inquiry", "chat", "book", "get started"];
+    document.querySelectorAll('a[href="#"], a[href="./#"], a[href="javascript:void(0)"], button[data-open-quote-modal]').forEach((cta) => {
+      if (cta.closest("form") || cta.classList.contains("solar-lead-close") || cta.classList.contains("pricing-faq-item")) return;
       const label = cta.textContent.replace(/\s+/g, " ").trim().toLowerCase();
-      if (cta.id === "218" || cta.id === "892" || label === "instant quote request") {
+      if (
+        cta.hasAttribute("data-open-quote-modal") ||
+        cta.id === "218" || cta.id === "892" ||
+        keywords.some((kw) => label.includes(kw))
+      ) {
         cta.setAttribute("data-open-quote-modal", "");
+        cta.setAttribute("role", "button");
+        cta.setAttribute("aria-haspopup", "dialog");
+        cta.setAttribute("aria-controls", "solar-lead-dialog");
       }
     });
   };

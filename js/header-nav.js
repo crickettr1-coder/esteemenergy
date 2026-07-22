@@ -127,39 +127,6 @@
     return item;
   };
 
-  const updateFooterNavigationLinks = () => {
-    document.querySelectorAll("footer .framer-by8pig").forEach((list) => {
-      let pricingLink = [...list.querySelectorAll("a")]
-        .find((link) => /^(packages|pricing)$/i.test(link.textContent.trim()));
-
-      list.querySelectorAll("a").forEach((link) => {
-        if (!/^about(?: us)?$/i.test(link.textContent.trim())) return;
-        link.href = "/about/";
-        const label = link.querySelector("p") || link;
-        if (label.textContent.trim() !== "About Us") label.textContent = "About Us";
-        if (currentPath() === "/about") link.setAttribute("aria-current", "page");
-        else link.removeAttribute("aria-current");
-      });
-
-      if (!pricingLink) {
-        pricingLink = document.createElement("a");
-        pricingLink.className = "esteem-footer-pricing-link";
-        pricingLink.textContent = "Pricing";
-        const aboutLink = [...list.querySelectorAll("a")]
-          .find((link) => /^about us$/i.test(link.textContent.trim()));
-        const aboutItem = aboutLink?.parentElement;
-        if (aboutItem && aboutItem !== list) aboutItem.insertAdjacentElement("afterend", pricingLink);
-        else list.append(pricingLink);
-      }
-
-      pricingLink.href = "/pricing/";
-      const pricingLabel = pricingLink.querySelector("p") || pricingLink;
-      if (pricingLabel.textContent.trim() !== "Pricing") pricingLabel.textContent = "Pricing";
-      if (currentPath() === "/pricing") pricingLink.setAttribute("aria-current", "page");
-      else pricingLink.removeAttribute("aria-current");
-    });
-  };
-
   const genuineTestimonials = Object.freeze([
     ["D Mann", "Very professional and friendly. Excellent quality product and great workmanship. The team was prompt and handled everything perfectly."],
     ["Singh I.", "Very professional work done by Esteem Energy. Overall was happy with the timely and efficient installation of solar panels and inverter."],
@@ -213,22 +180,22 @@
       ["Panel warranty", "25 Years"],
     ]);
 
-    document.querySelectorAll('[data-framer-name="Properties under management"]').forEach((labelContainer) => {
+    document.querySelectorAll('.stats-label, [data-framer-name="Properties under management"]').forEach((labelContainer) => {
       const label = labelContainer.querySelector("p")?.textContent.trim();
       const value = values.get(label);
-      const card = labelContainer.closest('[data-framer-name^="Stat Card"]');
+      const card = labelContainer.closest('.stats-card, [data-framer-name^="Stat Card"]');
       if (!value || !card) return;
-      card.querySelectorAll(".framer-1b4edkh-container p").forEach((element) => {
+      card.querySelectorAll(".stats-value p, .framer-1b4edkh-container p").forEach((element) => {
         element.textContent = value;
       });
     });
   };
 
   const cleanupTemplateContent = () => {
-    document.querySelectorAll('[data-framer-name="Review Quote Text"] p').forEach((element, index) => {
+    document.querySelectorAll('.review-quote, [data-framer-name="Review Quote Text"] p').forEach((element, index) => {
       element.textContent = `“${genuineTestimonials[index % genuineTestimonials.length][1]}”`;
     });
-    document.querySelectorAll('[data-framer-name="User Name Label"] p').forEach((element, index) => {
+    document.querySelectorAll('.review-author, [data-framer-name="User Name Label"] p').forEach((element, index) => {
       element.textContent = genuineTestimonials[index % genuineTestimonials.length][0];
     });
 
@@ -262,10 +229,10 @@
   const stabilizeHomepageHero = () => {
     if (currentPath() !== "/") return;
 
-    const badge = document.querySelector('#hero .framer-wz7pp6 p');
+    const badge = document.querySelector("#hero .esteem-hero__badge-caption");
     if (badge) badge.textContent = "by Australian homeowners";
 
-    const paragraph = document.querySelector('#hero .framer-cokco8 p');
+    const paragraph = document.querySelector("#hero .hero-description, #hero .hero-copy p, #hero .esteem-hero__copy p");
     if (paragraph) paragraph.textContent = "Powering Australian homes and businesses with reliable solar solutions designed to reduce energy costs and support a cleaner future.";
 
     document.querySelectorAll('#hero .esteem-cta-arrow').forEach((arrowElement) => {
@@ -277,7 +244,7 @@
   const initHomepageTestimonials = () => {
     if (currentPath() !== "/" || document.documentElement.dataset.testimonialsReady) return;
 
-    const carousel = Array.from(document.querySelectorAll('[data-framer-name="Testimonials Carousel"]'))
+    const carousel = Array.from(document.querySelectorAll('.testimonials-carousel, [data-framer-name="Testimonials Carousel"]'))
       .find((element) => Array.from(element.querySelectorAll("div")).some((node) => /rotateY\(/.test(node.style.transform)));
     if (!carousel) return;
 
@@ -286,10 +253,12 @@
     if (!ring) return;
 
     document.documentElement.dataset.testimonialsReady = "true";
-    carousel.classList.add("esteem-testimonial-autoplay");
+    carousel.classList.add("testimonials-carousel", "esteem-testimonial-autoplay");
+    ring.classList.add("testimonials-track");
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const cards = carousel.querySelectorAll('[data-framer-name="Review Card"]');
+    const cards = carousel.querySelectorAll('.testimonial-card, [data-framer-name="Review Card"]');
+    cards.forEach((card) => card.classList.add("testimonial-card"));
     const stepAngle = 360 / Math.max(cards.length, 1);
     const initialMatch = ring.style.transform.match(/rotateY\((-?[\d.]+)deg\)/);
     let angle = initialMatch ? Number(initialMatch[1]) : 0;
@@ -374,20 +343,20 @@
   };
 
   const initHeader = () => {
-    const originalHeader = document.querySelector(".framer-efto20-container");
-    const originalLogo = originalHeader?.querySelector(".framer-yi202p-container")
-      || document.querySelector(".framer-yi202p-container");
+    const originalHeader = document.querySelector(".site-header-source, .framer-efto20-container");
+    const originalLogo = originalHeader?.querySelector(".site-brand, .framer-yi202p-container")
+      || document.querySelector(".site-brand, .framer-yi202p-container");
     if (document.querySelector(".solaris-site-header")) return;
 
     const header = document.createElement("header");
-    header.className = "solaris-site-header";
+    header.className = "solaris-site-header site-header-source";
     header.setAttribute("aria-label", "Site header");
 
     const inner = document.createElement("div");
     inner.className = "solaris-header-inner";
 
     const brand = document.createElement("div");
-    brand.className = "solaris-brand";
+    brand.className = "solaris-brand site-brand";
     if (originalLogo) {
       brand.append(originalLogo.cloneNode(true));
     } else {
@@ -465,50 +434,6 @@
     document.body.prepend(header);
     originalHeader?.remove();
 
-    // Inject footer if missing (e.g., on content pages)
-    if (!document.querySelector("footer")) {
-      const footer = document.createElement("footer");
-      footer.className = "framer-UEkM5";
-      footer.setAttribute("aria-label", "Site footer");
-      footer.innerHTML = `
-        <div class="framer-1i9yief">
-          <div class="framer-4ecdkv">
-            <div class="framer-jeyeg9">
-              <div class="framer-1c3gdfr"><a name="Company Logo" href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div>
-              <div class="framer-1fujns7"><p>Helping Australian homes and businesses reduce electricity bills with premium solar panel systems, battery storage solutions, and professional installations nationwide.</p></div>
-            </div>
-            <div class="framer-1rsz38m">
-              <div class="framer-32fdza">
-                <h2>Quick Links</h2>
-                <nav class="framer-by8pig" aria-label="Footer navigation">
-                  <a href="/">Home</a>
-                  <a href="/about">About Us</a>
-                  <a href="/contact-us/">Contact</a>
-                </nav>
-              </div>
-              <div class="framer-166c3sd">
-                <h2>Contact Us</h2>
-                <div class="framer-vm55zi">
-                  <div class="framer-n9us4s">
-                    <div class="framer-1yowo8r">
-                      <p><a href="mailto:info@esteemenergy.com.au">info@esteemenergy.com.au</a></p>
-                    </div>
-                  </div>
-                  <div class="framer-1top3uf">
-                    <div class="framer-18bz7kj">
-                      <p><a href="tel:1300220354">1300 220 354</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="framer-c5fo9j"><div class="framer-vixlb5"></div></div>
-        </div>`;
-      document.body.append(footer);
-    }
-
-    updateFooterNavigationLinks();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();
 
@@ -527,7 +452,6 @@
       enhancementTimer = window.setTimeout(runEnhancements, 50);
       return;
     }
-    updateFooterNavigationLinks();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();
     stabilizeHomepageHero();
@@ -552,4 +476,149 @@
   document.addEventListener("framer:pageview", () => {
     if (document.readyState === "complete") scheduleEnhancements();
   });
+})();
+
+/* Homepage hero migration: replace the exported Framer subtree with semantic markup. */
+(() => {
+  if (window.location.pathname !== "/") return;
+
+  const hero = document.querySelector("#hero");
+  if (!hero) return;
+
+  const imageBase = "/assets/homepage/";
+  hero.outerHTML = `
+    <section class="esteem-hero home-hero" id="hero" aria-labelledby="esteem-hero-title">
+      <picture class="esteem-hero__background" aria-hidden="true">
+        <source media="(max-width: 809px)" srcset="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png 1376w">
+        <img src="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png"
+          srcset="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png 1376w"
+          sizes="100vw" width="1376" height="768" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="esteem-hero__content hero-content">
+        <div class="esteem-hero__main">
+          <div class="esteem-hero__badge" aria-label="Trusted by Australian homeowners">
+            <span class="esteem-hero__badge-label">Trusted</span>
+            <span class="esteem-hero__badge-caption">by Australian homeowners</span>
+          </div>
+          <div class="esteem-hero__copy hero-copy">
+            <h1 class="hero-title" id="esteem-hero-title">Solar energy that moves the world forward</h1>
+            <p class="hero-description">Powering Australian homes and businesses with reliable solar solutions designed to reduce energy costs and support a cleaner future.</p>
+          </div>
+          <div class="esteem-hero__actions hero-actions">
+            <button class="esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+              <span class="esteem-cta-label">Get a Free Quote</span>
+              <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+            </button>
+            <a class="esteem-secondary-cta" href="tel:1300220354">
+              <span>Talk to Our Solar Team</span>
+              <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+        <figure class="esteem-hero__roofing hero-media">
+          <img src="${imageBase}0fHDe2iBdq8jcNJtLJtaRz2EiXc.png"
+            srcset="${imageBase}0fHDe2iBdq8jcNJtLJtaRz2EiXc.png 2794w"
+            sizes="100vw" width="2794" height="1005" alt="Modern house with solar panels, large windows, and a parked car" decoding="async">
+        </figure>
+      </div>
+      <div class="esteem-hero__noise hero-noise" aria-hidden="true"></div>
+    </section>`;
+
+  const cleanHero = document.querySelector(".esteem-hero");
+  if (!cleanHero) return;
+  requestAnimationFrame(() => cleanHero.classList.add("is-visible"));
+})();
+
+/* Remove only Framer variant/editor markers proven absent from CSS, JS, SVG, and accessibility hooks. */
+(() => {
+  if (window.location.pathname !== "/") return;
+
+  const unusedFramerClasses = [
+    "framer-v-1r6zuo6",
+    "framer-v-ot39b8",
+    "framer-v-1wutdf1",
+    "framer-v-qeqjnn",
+    "framer-v-bpmy6d",
+    "framer-v-cqfbub",
+    "framer-v-19hst88",
+    "framer-v-1t3xj7z",
+    "framer-v-1svph5",
+    "framer-v-1hbx9k8",
+    "framer-v-1o6fz0m",
+    "framer-6jWyo",
+    "framer-n0ccwk",
+    "framer-v-n0ccwk",
+    "framer-bmpgw8",
+    "framer-13yxzio",
+    "framer-19yaanm",
+    "framer-1kflzx5",
+    "framer-hcsc7",
+    "framer-e50co",
+    "framer-g7oZR",
+    "framer-1um7t9d",
+    "framer-j4ugry",
+    "framer-jnuwbw"
+  ];
+  const unusedFramerAttributes = [
+    "data-framer-font-css",
+    "data-framer-css-ssr-minified",
+    "data-framer-components",
+    "data-framer-css",
+    "data-framer-hydrate-v2",
+    "data-framer-generated-page",
+    "data-framer-html-style",
+    "data-framer-layout-hint-center-x",
+    "data-framer-root"
+  ];
+  const unusedFramerVariables = [
+    "--framer-viewport-height",
+    "--framer-blockquote-text-alignment",
+    "--framer-font-variation-axes-preview",
+    "--framer-blockquote-text-background-radius",
+    "--framer-blockquote-text-background-corner-shape",
+    "--framer-blockquote-text-background-padding",
+    "--framer-blockquote-font-family-italic",
+    "--framer-blockquote-font-style-italic",
+    "--framer-blockquote-font-weight-italic",
+    "--framer-blockquote-font-variation-axes-italic",
+    "--framer-font-variation-axes-italic",
+    "--framer-blockquote-font-family-bold-italic",
+    "--framer-blockquote-font-style-bold-italic",
+    "--framer-blockquote-font-weight-bold-italic",
+    "--framer-blockquote-font-variation-axes-bold-italic",
+    "--framer-font-variation-axes-bold-italic",
+    "--framer-blockquote-paragraph-spacing",
+    "--framer-custom-cursors"
+  ];
+
+  const cleanUnusedFramerArtifacts = () => {
+    document.querySelectorAll("[class]").forEach((element) => {
+      unusedFramerClasses.forEach((className) => element.classList.remove(className));
+    });
+    document.querySelectorAll("*").forEach((element) => {
+      unusedFramerAttributes.forEach((attributeName) => element.removeAttribute(attributeName));
+    });
+    document.querySelectorAll("html, body, #main").forEach((element) => {
+      unusedFramerVariables.forEach((variableName) => element.style.removeProperty(variableName));
+    });
+    document.querySelectorAll("style, link[rel=stylesheet]").forEach((sheetElement) => {
+      try {
+        const visitRules = (rules) => {
+          Array.from(rules || []).forEach((rule) => {
+            if (rule.style) unusedFramerVariables.forEach((variableName) => rule.style.removeProperty(variableName));
+            if (rule.cssRules) visitRules(rule.cssRules);
+          });
+        };
+        visitRules(sheetElement.sheet?.cssRules);
+      } catch {
+        /* Cross-origin stylesheets are left untouched. */
+      }
+    });
+  };
+
+  if (document.readyState === "complete") {
+    cleanUnusedFramerArtifacts();
+  } else {
+    window.addEventListener("load", cleanUnusedFramerArtifacts, { once: true });
+  }
 })();

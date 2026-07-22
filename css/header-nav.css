@@ -246,22 +246,7 @@ button, input, select, textarea, .solaris-site-header, .esteem-home-cta, .esteem
 .solaris-menu-toggle[aria-expanded="true"] span:last-child { top: 22px; transform: rotate(-45deg); }
 .solaris-mobile-menu { display: none; }
 
-footer .esteem-footer-pricing-link {
-  display: block;
-  color: inherit;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.6;
-  text-decoration: none;
-}
 
-footer .esteem-footer-pricing-link:hover,
-footer .esteem-footer-pricing-link[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-color: #78a800;
-  text-underline-offset: 5px;
-}
 
 @media (max-width: 1199px) {
   html, body { max-width: 100%; overflow-x: clip; }

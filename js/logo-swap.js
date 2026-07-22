@@ -2,10 +2,10 @@
   const scriptUrl = document.currentScript?.src || window.location.href;
   const logoUrl = new URL("/assests/esteem%20energy%20logo.png", scriptUrl).href;
 
-  const replaceLogo = (link, placement) => {
+  const replaceLogo = (link) => {
     if (link.querySelector(".esteem-energy-logo")) return;
     const image = document.createElement("img");
-    image.className = `esteem-energy-logo esteem-energy-logo--${placement}`;
+    image.className = "esteem-energy-logo esteem-energy-logo--header";
     image.src = logoUrl;
     image.alt = "Esteem Energy";
     image.decoding = "async";
@@ -14,10 +14,8 @@
   };
 
   const updateLogos = () => {
-    document.querySelectorAll(".framer-yi202p-container a, .solaris-brand a")
-      .forEach((link) => replaceLogo(link, "header"));
-    document.querySelectorAll('a[name="Company Logo"]')
-      .forEach((link) => replaceLogo(link, "footer"));
+    document.querySelectorAll(".site-brand a, .framer-yi202p-container a, .solaris-brand a")
+      .forEach((link) => replaceLogo(link));
   };
 
   updateLogos();

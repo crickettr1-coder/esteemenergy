@@ -100,7 +100,10 @@ http.createServer((request, response) => {
       response.end("Not found");
       return;
     }
-    response.writeHead(200, { "Content-Type": mime[path.extname(file).toLowerCase()] || "application/octet-stream" });
+    response.writeHead(200, {
+      "Content-Type": mime[path.extname(file).toLowerCase()] || "application/octet-stream",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+    });
     fs.createReadStream(file).pipe(response);
   });
 }).listen(port, "127.0.0.1", () => {
