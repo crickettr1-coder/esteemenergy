@@ -142,6 +142,43 @@
     true
   );
 
+  // Static Custom Accordion Event Listener
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest(".esteem-faq-trigger");
+    if (!trigger) return;
+    event.preventDefault();
+    const item = trigger.closest(".esteem-faq-item");
+    if (!item) return;
+    const isAlreadyOpen = item.classList.contains("is-open");
+    
+    // Close all other items in this accordion box
+    const box = item.closest(".esteem-faq-box");
+    if (box) {
+      box.querySelectorAll(".esteem-faq-item").forEach(other => {
+        other.classList.remove("is-open");
+        other.querySelector(".esteem-faq-trigger")?.setAttribute("aria-expanded", "false");
+        const content = other.querySelector(".esteem-faq-content");
+        if (content) {
+          content.setAttribute("aria-hidden", "true");
+          content.style.maxHeight = null;
+          content.style.opacity = "0";
+        }
+      });
+    }
+    
+    // Toggle current item
+    if (!isAlreadyOpen) {
+      item.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      const content = item.querySelector(".esteem-faq-content");
+      if (content) {
+        content.setAttribute("aria-hidden", "false");
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.opacity = "1";
+      }
+    }
+  });
+
   const applyFixes = () => {
     updateContextualCtas();
     initializeFaqs();
