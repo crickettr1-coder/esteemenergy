@@ -52,7 +52,7 @@ img, svg { display: block; max-width: 100%; }
 
 .pricing-showroom-section { scroll-margin-top: 96px; background: #fff; }
 .pricing-showroom { position: relative; display: grid; grid-template-columns: minmax(260px,29fr) minmax(0,71fr); gap: 26px; padding: 28px; overflow: clip; border: 1px solid var(--pricing-border); border-radius: 32px; background: var(--pricing-neutral); }
-.pricing-showroom-bg { position: absolute; inset: 52% 0 0; background: linear-gradient(to bottom,var(--pricing-neutral),rgba(255,255,255,.9) 48%,rgba(255,255,255,.97)),url("../assets/about/solar-installers-at-work.webp") center 40%/cover no-repeat; opacity: .24; pointer-events: none; }
+.pricing-showroom-bg { position: absolute; inset: 52% 0 0; background: linear-gradient(to bottom,var(--pricing-neutral),rgba(255,255,255,.9) 48%,rgba(255,255,255,.97)),url("../assests/about/solar-installers-at-work.webp") center 40%/cover no-repeat; opacity: .24; pointer-events: none; }
 .pricing-intro { position: sticky; top: 120px; align-self: start; padding: 28px 18px 20px 10px; }
 .pricing-intro .pricing-note { padding: 14px; border-left: 2px solid #86b900; background: rgba(255,255,255,.54); color: rgba(17,17,17,.72); }
 .pricing-house-illustration { margin: 30px 0 24px; color: var(--pricing-ink); }

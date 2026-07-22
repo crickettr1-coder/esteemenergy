@@ -16,7 +16,7 @@
         <div class="esteem-footer-grid">
           <section class="esteem-footer-brand" aria-labelledby="global-footer-brand-title">
             <a class="esteem-footer-logo" href="/" aria-label="Esteem Energy home">
-              <img src="/assets/esteem%20energy%20logo.png" alt="Esteem Energy">
+              <img src="/assests/esteem%20energy%20logo.png" alt="Esteem Energy">
             </a>
             <h2 class="esteem-footer-heading" id="global-footer-brand-title">Smarter solar for the places you call home.</h2>
             <p>Helping Australian homes and businesses reduce electricity bills with premium solar panel systems, battery storage solutions, and professional installations nationwide.</p>

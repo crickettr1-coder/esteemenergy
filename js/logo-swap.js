@@ -1,6 +1,6 @@
 (() => {
   const scriptUrl = document.currentScript?.src || window.location.href;
-  const logoUrl = new URL("/assets/esteem%20energy%20logo.png", scriptUrl).href;
+  const logoUrl = new URL("/assests/esteem%20energy%20logo.png", scriptUrl).href;
 
   const replaceLogo = (link) => {
     if (link.querySelector(".esteem-energy-logo")) return;
