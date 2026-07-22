@@ -14,7 +14,7 @@
   };
 
   const updateLogos = () => {
-    document.querySelectorAll(".framer-yi202p-container a, .solaris-brand a")
+    document.querySelectorAll(".site-brand a, .framer-yi202p-container a, .solaris-brand a")
       .forEach((link) => replaceLogo(link, "header"));
     document.querySelectorAll('a[name="Company Logo"]')
       .forEach((link) => replaceLogo(link, "footer"));

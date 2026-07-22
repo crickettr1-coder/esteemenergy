@@ -54,6 +54,7 @@ button, input, select, textarea, .solaris-site-header, .esteem-home-cta, .esteem
 
 .solaris-brand { min-width: 0; justify-self: start; }
 .solaris-header-cta { justify-self: end; }
+.solaris-brand .site-brand,
 .solaris-brand .framer-yi202p-container { display: flex; width: max-content; }
 
 .solaris-nav {
@@ -387,6 +388,7 @@ footer .esteem-footer-pricing-link[aria-current="page"] {
   [class*="grid"] { min-width: 0; max-width: 100%; }
 
   .solaris-brand,
+  .solaris-brand .site-brand,
   .solaris-brand .framer-yi202p-container,
   .solaris-brand a { min-width: 0; max-width: 100%; }
 

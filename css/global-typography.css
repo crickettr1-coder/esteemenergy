@@ -3,7 +3,7 @@ body:not(.media-page) :is(#main, main:not(.post-page)) h1,
 body:not(.media-page) :is(#main, main:not(.post-page)) h1 *,
 body:not(.media-page) :is(#main, main:not(.post-page)) h2,
 body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
-  font-family: "Host Grotesk", "Host Grotesk Placeholder", sans-serif;
+  font-family: var(--esteem-font-heading);
   font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
 }
 

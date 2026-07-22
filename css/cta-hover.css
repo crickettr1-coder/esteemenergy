@@ -9,6 +9,7 @@
 
 /* 1. Framer container overrides to prevent min-content wrapping */
 .framer-WiXf4 .framer-1c985e4,
+footer.site-footer .framer-woxfuq,
 .framer-UEkM5 .framer-woxfuq {
   width: auto;
   height: auto;
@@ -28,13 +29,13 @@
 
 /* 2. Base shared styles for primary CTA variants */
 :where(
-  a.framer-WMYoJ.framer-v-j15i3q,
-  a.framer-WMYoJ.framer-v-11jj171,
-  .esteem-home-cta,
   .esteem-primary-cta,
   .esteem-secondary-cta,
+  .esteem-home-cta,
+  a.framer-WMYoJ.framer-v-j15i3q,
+  a.framer-WMYoJ.framer-v-11jj171,
   .solar-lead-submit,
-  form[data-framer-name="Contact Form"] button[type="submit"]
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
 ) {
   box-sizing: border-box;
   position: relative;
@@ -54,9 +55,11 @@
 }
 
 /* Specific styling for homepage and Framer CTAs (without !important, using specificity) */
+.esteem-primary-cta,
+.esteem-secondary-cta,
+.esteem-home-cta,
 a.framer-WMYoJ.framer-v-j15i3q,
-a.framer-WMYoJ.framer-v-11jj171,
-.esteem-home-cta {
+a.framer-WMYoJ.framer-v-11jj171 {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -72,7 +75,7 @@ a.framer-WMYoJ.framer-v-11jj171,
 /* Specific styling for lead form submit button */
 :where(
   .solar-lead-submit,
-  form[data-framer-name="Contact Form"] button[type="submit"]
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
 ) {
   padding: 7px 7px 7px 20px;
   background: var(--esteem-cta-ink);
@@ -80,9 +83,11 @@ a.framer-WMYoJ.framer-v-11jj171,
 }
 
 /* First child label text color transition and layout */
+.esteem-primary-cta > span:first-child,
+.esteem-secondary-cta > span:first-child,
+.esteem-home-cta > span:first-child,
 a.framer-WMYoJ.framer-v-j15i3q > span:first-child,
-a.framer-WMYoJ.framer-v-11jj171 > span:first-child,
-.esteem-home-cta > span:first-child {
+a.framer-WMYoJ.framer-v-11jj171 > span:first-child {
   position: relative;
   z-index: 1;
   color: #fff;
@@ -132,7 +137,7 @@ a.framer-WMYoJ.framer-v-11jj171 > span:first-child,
   .esteem-primary-cta,
   .esteem-secondary-cta,
   .solar-lead-submit,
-  form[data-framer-name="Contact Form"] button[type="submit"]
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
 )::before {
   content: "";
   position: absolute;
@@ -161,7 +166,7 @@ a.framer-WMYoJ.framer-v-11jj171::before {
   .esteem-primary-cta,
   .esteem-secondary-cta,
   .solar-lead-submit,
-  form[data-framer-name="Contact Form"] button[type="submit"]
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
 ) > * {
   position: relative;
   z-index: 1;
@@ -176,7 +181,7 @@ a.framer-WMYoJ.framer-v-11jj171::before {
     .esteem-primary-cta,
     .esteem-secondary-cta,
     .solar-lead-submit,
-    form[data-framer-name="Contact Form"] button[type="submit"]
+    :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
   ):hover::before {
     transform: scaleX(1);
   }
@@ -187,7 +192,7 @@ a.framer-WMYoJ.framer-v-11jj171::before {
   .esteem-primary-cta:hover,
   .esteem-secondary-cta:hover,
   .solar-lead-submit:hover,
-  form[data-framer-name="Contact Form"] button[type="submit"]:hover {
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]:hover {
     color: var(--esteem-cta-ink);
   }
 
@@ -214,7 +219,7 @@ a.framer-WMYoJ.framer-v-11jj171::before {
   .esteem-primary-cta,
   .esteem-secondary-cta,
   .solar-lead-submit,
-  form[data-framer-name="Contact Form"] button[type="submit"]
+  :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
 ):focus-visible::before {
   transform: scaleX(1);
 }
@@ -225,7 +230,7 @@ a.framer-WMYoJ.framer-v-11jj171:focus-visible,
 .esteem-primary-cta:focus-visible,
 .esteem-secondary-cta:focus-visible,
 .solar-lead-submit:focus-visible,
-form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible {
+:is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]:focus-visible {
   color: var(--esteem-cta-ink);
   outline: 3px solid var(--esteem-cta-lime);
   outline-offset: 3px;
@@ -245,7 +250,81 @@ a.framer-WMYoJ.framer-v-11jj171:focus-visible .esteem-cta-arrow,
   transform: translateX(2px);
 }
 
-/* 5. Clean footer quote block styling overrides */
+/* 5. Footer quote CTA: semantic selectors with generated fallbacks */
+.footer-quote .footer-quote-title,
+.footer-quote .esteem-footer-cta-title {
+  margin: 0;
+}
+
+.footer-quote .footer-quote-copy,
+.footer-quote .esteem-footer-cta-desc {
+  margin: 0;
+}
+
+.footer-quote .footer-quote-action,
+.footer-quote .esteem-home-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  max-width: 100%;
+  min-height: 52px;
+  padding: 7px 7px 7px 20px;
+  gap: 16px;
+}
+
+.footer-quote .footer-quote-action > span:first-child,
+.footer-quote .esteem-home-cta > span:first-child {
+  white-space: nowrap;
+}
+
+.footer-quote .footer-quote-action .esteem-cta-arrow,
+.footer-quote .esteem-home-cta .esteem-cta-arrow {
+  flex: 0 0 var(--esteem-cta-arrow-size);
+  width: var(--esteem-cta-arrow-size);
+  height: var(--esteem-cta-arrow-size);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-quote .footer-quote-action:hover::before,
+  .footer-quote .esteem-home-cta:hover::before {
+    transform: scaleX(1);
+  }
+
+  .footer-quote .footer-quote-action:hover > span:first-child,
+  .footer-quote .esteem-home-cta:hover > span:first-child {
+    color: var(--esteem-cta-ink);
+  }
+
+  .footer-quote .footer-quote-action:hover .esteem-cta-arrow,
+  .footer-quote .esteem-home-cta:hover .esteem-cta-arrow {
+    transform: translateX(2px);
+  }
+}
+
+.footer-quote .footer-quote-action:focus-visible::before,
+.footer-quote .esteem-home-cta:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.footer-quote .footer-quote-action:focus-visible > span:first-child,
+.footer-quote .esteem-home-cta:focus-visible > span:first-child {
+  color: var(--esteem-cta-ink);
+}
+
+.footer-quote .footer-quote-action:focus-visible .esteem-cta-arrow,
+.footer-quote .esteem-home-cta:focus-visible .esteem-cta-arrow {
+  transform: translateX(2px);
+}
+
+@media (max-width: 350px) {
+  .footer-quote .footer-quote-action > span:first-child,
+  .footer-quote .esteem-home-cta > span:first-child {
+    white-space: normal;
+  }
+}
+
+/* Legacy footer quote selectors retained temporarily as fallbacks. */
 footer .esteem-footer-quote-wrap {
   width: min(240px, 100%);
   max-width: 100%;
@@ -303,6 +382,7 @@ footer .esteem-footer-quote-cta .framer-vlv1kw {
 
 /* 6. Lead Form Submit overrides */
 .solar-lead-submit::after,
+form.solar-lead-form button[type="submit"]::after,
 form[data-framer-name="Contact Form"] button[type="submit"]::after {
   content: "→";
   position: absolute;
@@ -325,6 +405,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]::after {
 }
 
 .solar-lead-submit,
+form.solar-lead-form button[type="submit"],
 form[data-framer-name="Contact Form"] button[type="submit"] {
   padding-right: 54px;
   text-align: left;
@@ -332,12 +413,15 @@ form[data-framer-name="Contact Form"] button[type="submit"] {
 }
 
 .solar-lead-submit-label,
+form.solar-lead-form button[type="submit"] p,
 form[data-framer-name="Contact Form"] button[type="submit"] p {
   margin-right: auto;
 }
 
 .solar-lead-submit:hover,
 .solar-lead-submit:focus-visible,
+form.solar-lead-form button[type="submit"]:hover,
+form.solar-lead-form button[type="submit"]:focus-visible,
 form[data-framer-name="Contact Form"] button[type="submit"]:hover,
 form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible {
   background: var(--esteem-cta-ink);
@@ -346,18 +430,21 @@ form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible {
 
 @media (hover: hover) and (pointer: fine) {
   .solar-lead-submit:hover::after,
+  form.solar-lead-form button[type="submit"]:hover::after,
   form[data-framer-name="Contact Form"] button[type="submit"]:hover::after {
     transform: translateX(3px) translateY(-50%);
   }
 }
 
 .solar-lead-submit:focus-visible::after,
+form.solar-lead-form button[type="submit"]:focus-visible::after,
 form[data-framer-name="Contact Form"] button[type="submit"]:focus-visible::after {
   transform: translateX(3px) translateY(-50%);
 }
 
 .solar-lead-submit.is-loading::after,
 .solar-lead-submit:disabled::after,
+form.solar-lead-form button[type="submit"]:disabled::after,
 form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   opacity: 0;
 }
@@ -446,7 +533,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     .esteem-primary-cta,
     .esteem-secondary-cta,
     .solar-lead-submit,
-    form[data-framer-name="Contact Form"] button[type="submit"]
+    :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
   ),
   :where(
     a.framer-WMYoJ.framer-v-j15i3q,
@@ -455,7 +542,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     .esteem-primary-cta,
     .esteem-secondary-cta,
     .solar-lead-submit,
-    form[data-framer-name="Contact Form"] button[type="submit"]
+    :is(form.solar-lead-form, form[data-framer-name="Contact Form"]) button[type="submit"]
   )::before,
   .esteem-cta-arrow {
     transition: none !important;
@@ -466,6 +553,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
 #hero [style*="filter"],
 #hero [style*="backdrop-filter"],
 #hero [data-framer-appear-id],
+#hero .hero-media,
 #hero img,
 #hero [data-framer-background-image-wrapper="true"] {
   filter: none !important;
@@ -475,13 +563,16 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   transform: none !important;
 }
 
+#hero .hero-noise,
 #hero .framer-bcxrl8-container,
+#hero .hero-noise *,
 #hero .framer-bcxrl8-container * {
   filter: none !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }
 
+#hero .hero-noise > div,
 #hero .framer-bcxrl8-container > div {
   opacity: .04 !important;
 }
@@ -495,19 +586,25 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   }
 
   #hero .framer-9onuti,
+  #hero .hero-content,
   #hero .framer-wfzur6,
+  #hero .hero-copy,
   #hero .framer-1nvzpyf,
-  #hero .framer-cokco8 {
+  #hero .hero-title,
+  #hero .framer-cokco8,
+  #hero .hero-description {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
   }
 
+  #hero .hero-content,
   #hero .framer-9onuti {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  #hero .hero-title,
   #hero .framer-1nvzpyf h1 {
     width: 100% !important;
     max-width: 100% !important;
@@ -517,6 +614,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     overflow-wrap: anywhere;
   }
 
+  #hero .hero-title > span,
   #hero .framer-1nvzpyf h1 > span {
     display: inline !important;
   }
@@ -525,6 +623,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     width: 100% !important;
   }
 
+  .home-hero .hero-title,
   .framer-WiXf4 .framer-1nvzpyf h1 {
     width: min(100%, 343px) !important;
     max-width: 343px !important;
@@ -532,11 +631,13 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     margin-right: auto;
   }
 
+  .home-hero .hero-actions,
   .framer-WiXf4 .framer-pvrod3 {
     width: 100% !important;
     max-width: 343px !important;
   }
 
+  #hero .hero-actions,
   #hero .framer-pvrod3 {
     flex-direction: column;
     align-items: stretch;
@@ -551,17 +652,230 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
 }
 
 /* Keep the existing Framer testimonial ring and card geometry; only add motion. */
+.testimonials-carousel.esteem-testimonial-autoplay,
 [data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay {
   overflow: hidden;
 }
 
+.testimonials-carousel.esteem-testimonial-autoplay .is-testimonial-animating,
 [data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay .is-testimonial-animating {
   transition: transform 900ms cubic-bezier(.22, .61, .36, 1) !important;
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .testimonials-carousel.esteem-testimonial-autoplay .is-testimonial-animating,
   [data-framer-name="Testimonials Carousel"].esteem-testimonial-autoplay .is-testimonial-animating {
     transition: none !important;
+  }
+}
+
+/* ============================================================
+   SEMANTIC HOMEPAGE HERO
+   Replaces the Framer hero subtree while retaining the approved composition.
+   ============================================================ */
+.esteem-hero,
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  color: var(--esteem-color-ink, #111);
+  background: var(--esteem-color-paper, #fff);
+}
+
+.esteem-hero__background,
+.esteem-hero__background img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.esteem-hero__background {
+  z-index: -2;
+}
+
+.esteem-hero__background img {
+  object-fit: cover;
+  object-position: right top;
+}
+
+.esteem-hero__content,
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  padding-top: 160px;
+}
+
+.esteem-hero__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: min(100%, 700px);
+  padding: 0;
+  text-align: center;
+}
+
+.esteem-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  padding: 3px 14px 3px 3px;
+  border-radius: 70px;
+  background: var(--esteem-color-ink, #111);
+  color: var(--esteem-color-paper, #fff);
+  font: 500 14px/1.2 var(--esteem-font-ui, sans-serif);
+  letter-spacing: -.02em;
+}
+
+.esteem-hero__badge-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 30px;
+  background: var(--esteem-color-lime-soft, #e2fa5a);
+  color: var(--esteem-color-ink, #111);
+}
+
+.esteem-hero__badge-caption { white-space: nowrap; }
+
+.esteem-hero__copy,
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.esteem-hero__copy h1,
+.hero-copy .hero-title {
+  max-width: 100%;
+  margin: 0;
+  color: var(--esteem-color-ink, #111);
+  font: 500 64px/1.1 var(--esteem-font-heading, sans-serif);
+  letter-spacing: -.02em;
+  text-align: center;
+}
+
+.esteem-hero__copy p,
+.hero-copy .hero-description {
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  color: var(--esteem-color-ink, #111);
+  font: 400 15px/1.4 var(--esteem-font-body, sans-serif);
+  letter-spacing: -.01em;
+  text-align: center;
+}
+
+.esteem-hero__actions,
+.hero-actions {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: max-content;
+  margin-top: 34px;
+}
+
+.esteem-hero__actions .esteem-primary-cta,
+.esteem-hero__actions .esteem-secondary-cta,
+.hero-actions .esteem-primary-cta,
+.hero-actions .esteem-secondary-cta {
+  flex: 0 0 auto;
+}
+
+.esteem-hero__roofing,
+.hero-media {
+  display: block;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 2.7801;
+  overflow: hidden;
+}
+
+.esteem-hero__roofing img,
+.hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.esteem-hero__noise,
+.hero-noise {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, .04);
+}
+
+.esteem-hero:not(.is-visible) .esteem-hero__main,
+.esteem-hero:not(.is-visible) .esteem-hero__roofing,
+.home-hero:not(.is-visible) .hero-media {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.esteem-hero__main,
+.esteem-hero__roofing,
+.hero-media {
+  transition: opacity 400ms cubic-bezier(.44, 0, .56, 1) 120ms,
+    transform 400ms cubic-bezier(.44, 0, .56, 1) 120ms;
+}
+
+@media (max-width: 1199.98px) and (min-width: 810px) {
+  .esteem-hero__copy h1, .hero-copy .hero-title { font-size: 56px; }
+  .esteem-hero__copy p, .hero-copy .hero-description { font-size: 15px; }
+  .esteem-hero__badge { font-size: 11px; }
+}
+
+@media (max-width: 809.98px) {
+  .esteem-hero__content, .hero-content { gap: 60px; }
+  .esteem-hero__main { width: 100%; max-width: 700px; padding: 0 16px; }
+  .esteem-hero__copy h1, .hero-copy .hero-title {
+    width: min(100%, 343px);
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+  }
+  .esteem-hero__copy p, .hero-copy .hero-description { max-width: 343px; font-size: 14px; }
+  .esteem-hero__actions, .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 343px);
+  }
+  .esteem-hero__actions .esteem-primary-cta,
+  .esteem-hero__actions .esteem-secondary-cta,
+  .hero-actions .esteem-primary-cta,
+  .hero-actions .esteem-secondary-cta {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .esteem-hero__badge { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esteem-hero__main,
+  .esteem-hero__roofing,
+  .esteem-hero:not(.is-visible) .esteem-hero__main,
+  .esteem-hero:not(.is-visible) .esteem-hero__roofing {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

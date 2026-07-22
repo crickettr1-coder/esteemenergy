@@ -1,10 +1,10 @@
 /* Solar Savings Calculator Stylesheet */
 
 .solar-calculator-section {
-  background-color: #f4f6ee; /* Soft pale-green section background */
+  background-color: var(--esteem-color-pale-green); /* Soft pale-green section background */
   padding: 80px 24px;
-  font-family: "Instrument Sans", Arial, sans-serif;
-  color: #111;
+  font-family: var(--esteem-font-body);
+  color: var(--esteem-color-ink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.7);
-  font-family: "Instrument Sans", Arial, sans-serif;
+  font-family: var(--esteem-font-body);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -39,8 +39,8 @@
 
 .calculator-heading {
   margin: 0 0 16px;
-  font-family: "Host Grotesk", "Instrument Sans", Arial, sans-serif;
-  font-weight: 500;
+  font-family: var(--esteem-font-heading);
+  font-weight: var(--esteem-weight-medium);
   font-size: clamp(32px, 5vw, 46px);
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -58,9 +58,9 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 40px;
-  background-color: #ffffff; /* Large off-white calculator panel */
+  background-color: var(--esteem-color-paper); /* Large off-white calculator panel */
   border: 1px solid rgba(17, 17, 17, 0.06);
-  border-radius: 24px;
+  border-radius: var(--esteem-radius-card);
   padding: 44px;
   box-shadow: 0 20px 50px rgba(17, 17, 17, 0.04);
 }
@@ -184,10 +184,10 @@
 }
 
 .calc-bill-val-display {
-  font-family: "Geist", sans-serif;
+  font-family: var(--esteem-font-ui);
   font-size: 22px;
-  font-weight: 700;
-  color: #111;
+  font-weight: var(--esteem-weight-bold);
+  color: var(--esteem-color-ink);
 }
 
 .calc-slider-container {
@@ -211,8 +211,8 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #111;
-  border: 2px solid #ffffff;
+  background: var(--esteem-color-ink);
+  border: 2px solid var(--esteem-color-paper);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.1s ease, background-color 0.2s ease;
@@ -220,7 +220,7 @@
 
 .calc-slider-container input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.1);
-  background: var(--esteem-cta-lime, #c8ff3d);
+  background: var(--esteem-color-lime);
 }
 
 .calc-slider-container input[type="range"]::-webkit-slider-thumb:active {
@@ -228,7 +228,7 @@
 }
 
 .calc-slider-container input[type="range"]:focus-visible::-webkit-slider-thumb {
-  outline: 3px solid var(--esteem-cta-lime, #c8ff3d);
+  outline: 3px solid var(--esteem-color-lime);
   outline-offset: 2px;
 }
 
@@ -255,10 +255,10 @@
   border: 1px solid rgba(17, 17, 17, 0.15);
   border-radius: 10px;
   background-color: #fbfbfa;
-  color: #111;
+  color: var(--esteem-color-ink);
   font-size: 15px;
-  font-family: "Geist", sans-serif;
-  font-weight: 500;
+  font-family: var(--esteem-font-ui);
+  font-weight: var(--esteem-weight-medium);
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -281,7 +281,7 @@
 }
 
 .calc-result-card {
-  background-color: #ffffff;
+  background-color: var(--esteem-color-paper);
   border: 1px solid rgba(17, 17, 17, 0.05);
   border-radius: 14px;
   padding: 18px 20px;
@@ -304,10 +304,10 @@
 }
 
 .calc-card-value {
-  font-family: "Geist", sans-serif;
+  font-family: var(--esteem-font-ui);
   font-size: 32px;
-  font-weight: 700;
-  color: #111;
+  font-weight: var(--esteem-weight-bold);
+  color: var(--esteem-color-ink);
   line-height: 1.1;
 }
 
@@ -319,9 +319,9 @@
 
 /* Highlighted result card style (black background, lime accents) */
 .calc-result-card.is-highlighted {
-  background-color: #111111; /* Black background */
-  border-color: #111111;
-  color: #ffffff;
+  background-color: var(--esteem-color-ink); /* Black background */
+  border-color: var(--esteem-color-ink);
+  color: var(--esteem-color-paper);
 }
 
 .calc-result-card.is-highlighted .calc-card-label {
@@ -329,7 +329,7 @@
 }
 
 .calc-result-card.is-highlighted .calc-card-value {
-  color: #c8ff3d; /* Lime accent */
+  color: var(--esteem-color-lime); /* Lime accent */
 }
 
 .calc-result-card.is-highlighted .calc-card-sub {
@@ -343,8 +343,8 @@
   justify-content: space-between;
   width: 100%;
   padding: 7px 7px 7px 20px;
-  background: var(--esteem-cta-ink, #111);
-  color: #fff;
+  background: var(--esteem-color-ink);
+  color: var(--esteem-color-paper);
   gap: 16px;
   text-decoration: none;
   cursor: pointer;

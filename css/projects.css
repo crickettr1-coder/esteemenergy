@@ -1,0 +1,120 @@
+/* ============================================================
+   PROJECTS / OVERVIEW SECTION
+   Replaces the Framer Overview Section (framer-dfvejw).
+   ============================================================ */
+
+/* Section wrapper */
+.esteem-projects-section {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Row container (2 cards per row on desktop) */
+.esteem-projects-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Individual project card */
+.esteem-project-card {
+  position: relative;
+  flex: 1 1 0;
+  width: 0;                  /* flex basis override for equal columns */
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+  background: #111;
+}
+
+/* Background image */
+.esteem-project-card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+/* Hover scale on image */
+.esteem-project-card:hover .esteem-project-card-img {
+  transform: scale(1.04);
+}
+
+/* Gradient + blur overlay */
+.esteem-project-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.55);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+  backdrop-filter: blur(0px);
+}
+
+/* Text content */
+.esteem-project-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: clamp(18px, 2.5vw, 32px);
+  gap: 8px;
+}
+
+.esteem-project-card-title {
+  margin: 0;
+  font-family: var(--esteem-font-heading);
+  font-size: clamp(15px, 1.4vw, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.esteem-project-card-desc {
+  margin: 0;
+  font-family: var(--esteem-font-body);
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 809px) {
+  .esteem-projects-row {
+    flex-direction: column;
+  }
+  .esteem-project-card {
+    width: 100%;
+    flex: none;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 430px) {
+  .esteem-project-card {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esteem-project-card-img {
+    transition: none;
+  }
+}

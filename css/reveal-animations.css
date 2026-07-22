@@ -1,0 +1,33 @@
+/* Parallel semantic reveal system. Content is visible by default if JS is unavailable. */
+[data-esteem-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+html:not(.esteem-reveal-ready) [data-esteem-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.esteem-reveal-ready [data-esteem-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 520ms cubic-bezier(.44, 0, .56, 1) var(--esteem-reveal-delay, 0ms),
+    transform 520ms cubic-bezier(.44, 0, .56, 1) var(--esteem-reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+html.esteem-reveal-ready [data-esteem-reveal].is-esteem-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.esteem-reveal-ready [data-esteem-reveal],
+  html.esteem-reveal-ready [data-esteem-reveal].is-esteem-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

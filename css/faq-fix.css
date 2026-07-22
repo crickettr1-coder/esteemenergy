@@ -1,124 +1,144 @@
 /* ============================================================
-   FAQ ACCORDION FIX
-   Overrides Framer's fixed-height / overflow-hidden defaults
-   so the custom JS toggle works correctly.
+   SEMANTIC FAQ ACCORDION STYLES
    ============================================================ */
 
-/* --- Outer wrappers: let height grow naturally --- */
-#faqs .framer-86z70m-container,
-#faqs .framer-SqIAO {
-  height: auto !important;
-  overflow: visible !important;   /* Framer sets overflow:hidden – must undo */
+.esteem-faq-container {
+  width: 100%;
+  height: auto;
 }
 
-/* --- Each FAQ item container --- */
-#faqs .esteem-faq-item {
-  height: auto !important;
-  overflow: visible !important;   /* Allow the answer to flow below the item */
+.esteem-faq-box {
+  background-color: var(--token-9f66b2f3-1c22-4180-8d4d-ccbc037786e7, rgb(242, 242, 242));
+  width: 100%;
+  border-radius: 20px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.esteem-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.esteem-faq-item {
+  background-color: var(--token-cecf886f-35d1-4207-a045-acf7164ed7a9, rgb(255, 255, 255));
+  border: 1px solid var(--token-66cf77ff-0f3f-4e1d-acc4-caa0067c546a, rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: border-color 200ms ease;
+}
+
+.esteem-faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border: none;
+  background: none;
+  text-align: left;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
-/* --- Inner content column --- */
-#faqs .esteem-faq-item .framer-1yvhhbg {
-  gap: 0 !important;
-  width: 100% !important;
-  overflow: visible !important;
+.esteem-faq-trigger:focus-visible {
+  outline: 3px solid var(--esteem-color-lime, #c8ff3d);
+  outline-offset: -3px;
+  border-radius: 16px;
 }
 
-/* ── ANSWER PANEL (hidden by default) ── */
-#faqs .esteem-faq-item .framer-1fiznb2 {
-  /* Pull out of Framer's absolute positioning */
-  position: relative !important;
-  bottom: auto !important;
-  left: auto !important;
-  /* Reset Framer's translateX(-50%) inline transform */
-  transform: none !important;
-
-  display: flex !important;
-  width: 100% !important;
-  padding: 0 !important;
-
-  /* Hidden state */
-  max-height: 0;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition:
-    max-height 350ms cubic-bezier(.2, .8, .2, 1),
-    opacity 260ms ease,
-    padding-top 350ms ease,
-    visibility 0s linear 350ms;
+.esteem-faq-question {
+  margin-right: 16px;
+  pointer-events: none; /* Prevent text selection target issue */
+  user-select: text;
 }
 
-/* ── When open: reveal answer ── */
-#faqs .esteem-faq-item.is-open .framer-1yvhhbg {
-  gap: 16px !important;
+.esteem-faq-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: var(--token-9f66b2f3-1c22-4180-8d4d-ccbc037786e7, rgb(242, 242, 242));
+  flex-shrink: 0;
+  transition: background-color 280ms ease;
 }
 
-#faqs .esteem-faq-item.is-open .framer-1fiznb2 {
-  max-height: 400px;            /* generous cap; increase if answers are longer */
-  padding-top: 4px !important;
-  opacity: 1 !important;
+.esteem-faq-icon-line {
+  position: absolute;
+  background-color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, rgb(17, 17, 17));
+  transition: transform 280ms ease, opacity 280ms ease;
+}
+
+.esteem-faq-icon-line.horizontal {
+  width: 12px;
+  height: 2px;
+}
+
+.esteem-faq-icon-line.vertical {
+  width: 2px;
+  height: 12px;
+}
+
+/* Open state styles */
+.esteem-faq-item.is-open .esteem-faq-icon-wrapper {
+  background-color: var(--esteem-color-lime, #c8ff3d);
+}
+
+.esteem-faq-item.is-open .esteem-faq-icon-line.vertical {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.esteem-faq-item.is-open .esteem-faq-icon-line.horizontal {
+  transform: rotate(180deg);
+}
+
+/* Accordion expand collapse grid transition */
+.esteem-faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden; /* Exclude hidden items from tab order */
+  transition: grid-template-rows 280ms cubic-bezier(.2, .8, .2, 1), visibility 0s linear 280ms;
+  box-sizing: border-box;
+}
+
+.esteem-faq-answer-inner {
+  overflow: hidden;
+  padding: 0 24px 20px 24px;
+  box-sizing: border-box;
+}
+
+.esteem-faq-answer-inner p {
+  margin: 0;
+}
+
+.esteem-faq-item.is-open .esteem-faq-content {
+  grid-template-rows: 1fr;
   visibility: visible;
-  pointer-events: auto;
-  transition:
-    max-height 350ms cubic-bezier(.2, .8, .2, 1),
-    opacity 260ms ease,
-    padding-top 350ms ease,
-    visibility 0s linear 0s;
+  transition: grid-template-rows 280ms cubic-bezier(.2, .8, .2, 1), visibility 0s linear 0s;
 }
 
-/* ── Answer text wrapper ── */
-#faqs .esteem-faq-item .framer-1gp89n4 {
-  width: 100% !important;
-  flex: 1 1 auto !important;
-  white-space: normal !important;
-  word-break: normal !important;
-  overflow-wrap: break-word;
-}
-
-/* ── Toggle icon button transitions ── */
-#faqs .esteem-faq-item .framer-kiabgh,
-#faqs .esteem-faq-item .framer-1ku4baz,
-#faqs .esteem-faq-item .framer-sxfbde {
-  transition: transform 280ms ease, background-color 280ms ease;
-}
-
-/* Open state: accent colour on the toggle button */
-#faqs .esteem-faq-item.is-open .framer-kiabgh {
-  background-color: #c8ff3d !important;
-}
-
-/* Rotate the vertical bar to make the + become a × / − */
-#faqs .esteem-faq-item.is-open .framer-sxfbde {
-  transform: rotate(-180deg) scaleY(0) !important;
-}
-
-/* Keyboard focus ring */
-#faqs .esteem-faq-item .framer-kiabgh:focus-visible {
-  outline: 3px solid #c8ff3d;
-  outline-offset: 3px;
-}
-
-/* ── Mobile ── */
+/* --- Responsive padding overrides --- */
 @media (max-width: 600px) {
-  #faqs .esteem-faq-item {
-    padding: 20px !important;
+  .esteem-faq-trigger {
+    padding: 16px 20px;
   }
-
-  #faqs .esteem-faq-item.is-open .framer-1fiznb2 {
-    max-height: 500px;
+  .esteem-faq-answer-inner {
+    padding: 0 20px 16px 20px;
   }
 }
 
-/* ── Reduced-motion ── */
+/* --- Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
-  #faqs .esteem-faq-item .framer-1fiznb2,
-  #faqs .esteem-faq-item .framer-kiabgh,
-  #faqs .esteem-faq-item .framer-1ku4baz,
-  #faqs .esteem-faq-item .framer-sxfbde {
-    transition: none;
+  .esteem-faq-content,
+  .esteem-faq-icon-wrapper,
+  .esteem-faq-icon-line {
+    transition: none !important;
   }
 }

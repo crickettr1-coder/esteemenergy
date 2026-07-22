@@ -1,5 +1,4 @@
 (() => {
-  if (new URLSearchParams(window.location.search).has("lead-bridge")) return;
   const heroCtaSelector = '#hero a[name="Primary Button"]';
   const scriptUrl = document.currentScript?.src || window.location.href;
   const illustrationUrl = new URL("./assests/wind-power.png", scriptUrl).href;
@@ -90,14 +89,6 @@
       </section>
     </div>`;
 
-  const iframe = document.createElement("iframe");
-  iframe.className = "solar-legacy-form-bridge";
-  iframe.src = "/contact/?lead-bridge=1";
-  iframe.title = "Solar consultation submission service";
-  iframe.tabIndex = -1;
-  iframe.setAttribute("aria-hidden", "true");
-  document.body.append(iframe);
-
   const shell = document.createElement("div");
   shell.innerHTML = markup;
   const overlay = shell.firstElementChild;
@@ -179,74 +170,6 @@
     firstInvalid?.focus();
     return !firstInvalid;
   };
-
-  const updateLegacyControl = (control, value) => {
-    if (!control) return;
-    const view = control.ownerDocument.defaultView;
-    const prototype = control.tagName === "SELECT" ? view.HTMLSelectElement.prototype :
-      control.tagName === "TEXTAREA" ? view.HTMLTextAreaElement.prototype : view.HTMLInputElement.prototype;
-    Object.getOwnPropertyDescriptor(prototype, "value").set.call(control, value);
-    control.dispatchEvent(new Event("input", { bubbles: true }));
-    control.dispatchEvent(new Event("change", { bubbles: true }));
-  };
-
-  const submitThroughLegacyForm = () => new Promise((resolve, reject) => {
-    const legacyDocument = iframe.contentDocument;
-    const legacyForm = legacyDocument?.querySelector('form[data-framer-name="Contact Form"]');
-    if (!legacyForm) {
-      reject(new Error("The secure form service is still loading. Please try again in a moment."));
-      return;
-    }
-
-    const values = new FormData(form);
-    const names = legacyForm.querySelectorAll('input[name="Name"]');
-    const email = legacyForm.querySelector('input[name="Email"]');
-    const property = legacyForm.querySelector('select[name="Location"]');
-    const message = legacyForm.querySelector('textarea[name="Email"]');
-    const propertyMap = {
-      Home: "Residential Property",
-      Villa: "Residential Property",
-      Commercial: "Commercial Building",
-      Other: "Industrial Facility",
-    };
-    const details = [
-      `Selected solar package: ${form.dataset.selectedPackage || "Not specified"}`,
-      `Property address or area: ${values.get("Address")}`,
-      `Property type: ${values.get("Location")}`,
-      `Average monthly electricity bill: ${values.get("Electricity Bill") || "Not provided"}`,
-      `Message or project details: ${values.get("Message") || "Not provided"}`,
-    ].join("\n");
-
-    updateLegacyControl(names[0], values.get("Name"));
-    updateLegacyControl(names[1], values.get("Phone"));
-    updateLegacyControl(email, values.get("Email"));
-    updateLegacyControl(property, propertyMap[values.get("Location")]);
-    updateLegacyControl(message, details);
-
-    const startedAt = Date.now();
-    let timeout = 0;
-    const finish = (callback) => {
-      observer.disconnect();
-      window.clearInterval(timeout);
-      callback();
-    };
-    const observer = new MutationObserver(() => {
-      const stateButton = legacyDocument.querySelector('form[data-framer-name="Contact Form"] button[type="submit"]');
-      const state = stateButton?.getAttribute("data-framer-name")?.toLowerCase();
-      if (state === "success") {
-        finish(resolve);
-      } else if (state === "error") {
-        finish(() => reject(new Error("We could not send your request. Please check your details and try again.")));
-      }
-    });
-    observer.observe(legacyDocument.body, { attributes: true, childList: true, subtree: true });
-
-    legacyForm.requestSubmit();
-    timeout = window.setInterval(() => {
-      if (Date.now() - startedAt < 30000) return;
-      finish(() => reject(new Error("The request took too long. Please try again without closing this form.")));
-    }, 500);
-  });
 
   const showSuccess = () => {
     const wrap = overlay.querySelector(".solar-lead-form-wrap");

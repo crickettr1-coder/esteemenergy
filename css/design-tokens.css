@@ -10,6 +10,9 @@
   --esteem-font-heading: "Host Grotesk", "Host Grotesk Placeholder", sans-serif;
   --esteem-font-body: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
   --esteem-font-ui: "Geist", "Geist Placeholder", sans-serif;
+  --esteem-weight-regular: 400;
+  --esteem-weight-medium: 500;
+  --esteem-weight-bold: 700;
 
   /* Colour */
   --esteem-color-ink: #111;
@@ -18,6 +21,7 @@
   --esteem-color-mint: #edf6e8;
   --esteem-color-lime: #c8ff3d;
   --esteem-color-lime-soft: #e2fa5a;
+  --esteem-color-pale-green: #f4f6ee;
   --esteem-color-muted: rgba(17, 17, 17, .7);
   --esteem-color-border: rgba(17, 17, 17, .12);
 
