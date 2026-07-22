@@ -1,48 +1,53 @@
-/* Shared homepage heading typography for non-blog pages only. */
-:is(#main, main:not(.post-page)) h1,
-:is(#main, main:not(.post-page)) h1 *,
-:is(#main, main:not(.post-page)) h2,
-:is(#main, main:not(.post-page)) h2 * {
+/* Shared homepage heading typography for non-blog pages only. Excludes media pages (.media-page) to prevent specificity overrides. */
+body:not(.media-page) :is(#main, main:not(.post-page)) h1,
+body:not(.media-page) :is(#main, main:not(.post-page)) h1 *,
+body:not(.media-page) :is(#main, main:not(.post-page)) h2,
+body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
   font-family: "Host Grotesk", "Host Grotesk Placeholder", sans-serif;
   font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
 }
 
-:is(#main, main:not(.post-page)) h1,
-:is(#main, main:not(.post-page)) h1 * {
+body:not(.media-page) :is(#main, main:not(.post-page)) h1,
+body:not(.media-page) :is(#main, main:not(.post-page)) h1 * {
   font-size: 64px;
   font-weight: 500;
   letter-spacing: -.02em;
   line-height: 1.1;
 }
 
-:is(#main, main:not(.post-page)) h2,
-:is(#main, main:not(.post-page)) h2 * {
+body:not(.media-page) :is(#main, main:not(.post-page)) h2,
+body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: -.04em;
   line-height: 1.2;
 }
 
+/* Ensure bold and strong tags within headings retain bold weight */
+:is(#main, main:not(.post-page)) :is(h1, h2) :is(b, strong, b *, strong *) {
+  font-weight: 700 !important;
+}
+
 @media (max-width: 1199px) and (min-width: 810px) {
-  :is(#main, main:not(.post-page)) h1,
-  :is(#main, main:not(.post-page)) h1 * {
+  body:not(.media-page) :is(#main, main:not(.post-page)) h1,
+  body:not(.media-page) :is(#main, main:not(.post-page)) h1 * {
     font-size: 56px;
   }
 
-  :is(#main, main:not(.post-page)) h2,
-  :is(#main, main:not(.post-page)) h2 * {
+  body:not(.media-page) :is(#main, main:not(.post-page)) h2,
+  body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
     font-size: 34px;
   }
 }
 
 @media (max-width: 809px) {
-  :is(#main, main:not(.post-page)) h1,
-  :is(#main, main:not(.post-page)) h1 * {
+  body:not(.media-page) :is(#main, main:not(.post-page)) h1,
+  body:not(.media-page) :is(#main, main:not(.post-page)) h1 * {
     font-size: 38px;
   }
 
-  :is(#main, main:not(.post-page)) h2,
-  :is(#main, main:not(.post-page)) h2 * {
+  body:not(.media-page) :is(#main, main:not(.post-page)) h2,
+  body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
     font-size: 30px;
   }
 }

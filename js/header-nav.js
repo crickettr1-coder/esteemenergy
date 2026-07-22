@@ -453,7 +453,7 @@
       if (event.key === "Escape") closeMenu();
     });
 
-    const desktopViewport = window.matchMedia("(min-width: 1025px)");
+    const desktopViewport = window.matchMedia("(min-width: 1200px)");
     const closeOnDesktop = (event) => {
       if (event.matches) closeMenu();
     };
@@ -464,6 +464,50 @@
     header.append(inner);
     document.body.prepend(header);
     originalHeader?.remove();
+
+    // Inject footer if missing (e.g., on content pages)
+    if (!document.querySelector("footer")) {
+      const footer = document.createElement("footer");
+      footer.className = "framer-UEkM5";
+      footer.setAttribute("aria-label", "Site footer");
+      footer.innerHTML = `
+        <div class="framer-1i9yief">
+          <div class="framer-4ecdkv">
+            <div class="framer-jeyeg9">
+              <div class="framer-1c3gdfr"><a name="Company Logo" href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div>
+              <div class="framer-1fujns7"><p>Helping Australian homes and businesses reduce electricity bills with premium solar panel systems, battery storage solutions, and professional installations nationwide.</p></div>
+            </div>
+            <div class="framer-1rsz38m">
+              <div class="framer-32fdza">
+                <h2>Quick Links</h2>
+                <nav class="framer-by8pig" aria-label="Footer navigation">
+                  <a href="/">Home</a>
+                  <a href="/about">About Us</a>
+                  <a href="/contact-us/">Contact</a>
+                </nav>
+              </div>
+              <div class="framer-166c3sd">
+                <h2>Contact Us</h2>
+                <div class="framer-vm55zi">
+                  <div class="framer-n9us4s">
+                    <div class="framer-1yowo8r">
+                      <p><a href="mailto:info@esteemenergy.com.au">info@esteemenergy.com.au</a></p>
+                    </div>
+                  </div>
+                  <div class="framer-1top3uf">
+                    <div class="framer-18bz7kj">
+                      <p><a href="tel:1300220354">1300 220 354</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="framer-c5fo9j"><div class="framer-vixlb5"></div></div>
+        </div>`;
+      document.body.append(footer);
+    }
+
     updateFooterNavigationLinks();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();

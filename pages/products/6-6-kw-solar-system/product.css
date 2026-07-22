@@ -5,9 +5,9 @@
   --prod-mint: #f3faee;
   --prod-line: rgba(16, 17, 15, .12);
   --prod-radius: 30px;
-  --prod-heading-font: "Host Grotesk", "Arial Narrow", Arial, sans-serif;
-  --prod-body-font: "Instrument Sans", Arial, sans-serif;
-  --prod-ui-font: "Geist", Arial, sans-serif;
+  --prod-heading-font: var(--esteem-font-heading);
+  --prod-body-font: var(--esteem-font-body);
+  --prod-ui-font: var(--esteem-font-ui);
 }
 
 * { box-sizing: border-box; }

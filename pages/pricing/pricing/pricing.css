@@ -4,9 +4,9 @@
   --pricing-lime: #c8ff3d;
   --pricing-neutral: #f3f5ef;
   --pricing-border: rgba(17,17,17,.1);
-  --pricing-heading: "Host Grotesk", "Arial Narrow", Arial, sans-serif;
-  --pricing-body: "Instrument Sans", Arial, sans-serif;
-  --pricing-ui: "Geist", Arial, sans-serif;
+  --pricing-heading: var(--esteem-font-heading);
+  --pricing-body: var(--esteem-font-body);
+  --pricing-ui: var(--esteem-font-ui);
   --pricing-ease: cubic-bezier(.2,.8,.2,1);
 }
 

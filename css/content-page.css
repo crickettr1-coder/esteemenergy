@@ -246,3 +246,91 @@
   .content-page { width: calc(100% - var(--esteem-gutter-narrow)); }
   .content-page .post-meta { flex-wrap: wrap; }
 }
+
+/* ============================================================
+   LEGACY CTA BUTTON STANDARDIZATION (id="218" and id="892")
+   Styles the legacy inline hyperlinks as design-system CTAs.
+   ============================================================ */
+.content-page :is(#218, #892) {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 7px 54px 7px 20px;
+  overflow: hidden;
+  border: 1px solid var(--esteem-color-ink, #111);
+  border-radius: var(--esteem-radius-button, 16px);
+  background: var(--esteem-color-ink, #111);
+  color: #fff !important;
+  font-family: var(--esteem-font-ui, "Geist", sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 1;
+  text-decoration: none !important;
+  cursor: pointer;
+  margin: 16px 0;
+  transition: color 250ms ease, border-color 250ms ease, background-color 250ms ease;
+}
+
+/* Background hover overlay (sliding fill) */
+.content-page :is(#218, #892)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--esteem-color-lime, #c8ff3d);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.content-page :is(#218, #892):hover::before,
+.content-page :is(#218, #892):focus-visible::before {
+  transform: scaleX(1);
+}
+
+.content-page :is(#218, #892):hover,
+.content-page :is(#218, #892):focus-visible {
+  color: var(--esteem-color-ink, #111) !important;
+  border-color: var(--esteem-color-lime, #c8ff3d);
+}
+
+/* Green arrow box on the right */
+.content-page :is(#218, #892)::after {
+  content: "→";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 7px;
+  display: grid;
+  width: var(--esteem-cta-arrow-size, 38px);
+  height: var(--esteem-cta-arrow-size, 38px);
+  place-items: center;
+  border-radius: var(--esteem-radius-control, 11px);
+  background: var(--esteem-color-lime, #c8ff3d);
+  color: var(--esteem-color-ink, #111);
+  font: 500 17px/1 "Geist", "Geist Placeholder", sans-serif;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(.2, .8, .2, 1),
+    background-color 250ms ease;
+}
+
+.content-page :is(#218, #892):hover::after,
+.content-page :is(#218, #892):focus-visible::after {
+  transform: translateX(3px) translateY(-50%);
+  background-color: var(--esteem-color-ink, #111);
+  color: #fff;
+}
+
+@media (max-width: 809px) {
+  .content-page :is(#218, #892) {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+

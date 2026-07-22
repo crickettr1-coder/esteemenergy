@@ -5,9 +5,9 @@
   --about-mint: #f3faee;
   --about-line: rgba(16, 17, 15, .12);
   --about-radius: 30px;
-  --about-heading-font: "Host Grotesk", "Arial Narrow", Arial, sans-serif;
-  --about-body-font: "Instrument Sans", Arial, sans-serif;
-  --about-ui-font: "Geist", Arial, sans-serif;
+  --about-heading-font: var(--esteem-font-heading);
+  --about-body-font: var(--esteem-font-body);
+  --about-ui-font: var(--esteem-font-ui);
 }
 
 * { box-sizing: border-box; }

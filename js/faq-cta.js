@@ -92,6 +92,56 @@
     document.querySelectorAll("#faqs .framer-SqIAO").forEach(initializeAccordion);
   };
 
+  const getFaqItems = () =>
+    [...document.querySelectorAll("#faqs .framer-3KJtR")].filter(
+      (item) => item.querySelector(".framer-kiabgh") && item.querySelector(".framer-1fiznb2")
+    );
+
+  const toggleFaqItem = (item) => {
+    const willOpen = !item.classList.contains("is-open");
+    getFaqItems().forEach((other) => {
+      const question = other.querySelector(".framer-m1lqsr p")?.textContent.trim() || "";
+      setItemState(other, other === item && willOpen, question);
+    });
+  };
+
+  // Framer rehydrates this area after deferred scripts have run, which can replace
+  // element-level listeners. Capture events at the document instead so the FAQ
+  // remains reliable after that rehydration.
+  document.addEventListener(
+    "click",
+    (event) => {
+      const trigger = event.target.closest?.("#faqs .framer-kiabgh");
+      if (!trigger) return;
+
+      const item = trigger.closest(".framer-3KJtR");
+      if (!item) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      toggleFaqItem(item);
+    },
+    true
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+
+      const trigger = event.target.closest?.("#faqs .framer-kiabgh");
+      if (!trigger) return;
+
+      const item = trigger.closest(".framer-3KJtR");
+      if (!item) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      toggleFaqItem(item);
+    },
+    true
+  );
+
   const applyFixes = () => {
     updateContextualCtas();
     initializeFaqs();
