@@ -485,7 +485,7 @@
   const hero = document.querySelector("#hero");
   if (!hero) return;
 
-  const imageBase = "/assets/homepage/";
+  const imageBase = "/assests/homepage/";
   hero.outerHTML = `
     <section class="esteem-hero home-hero" id="hero" aria-labelledby="esteem-hero-title">
       <picture class="esteem-hero__background" aria-hidden="true">
