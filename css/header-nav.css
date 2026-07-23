@@ -253,7 +253,8 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
 @media (max-width: 1199px) {
   html, body { max-width: 100%; overflow-x: clip; }
   .site-header-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
-  .site-header-cta { display: none; }
+  .site-header-cta,
+  .site-header-actions { display: none; }
   .site-navigation { display: none; }
   .site-menu-toggle { display: block; justify-self: end; }
 

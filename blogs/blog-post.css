@@ -1,8 +1,8 @@
-@font-face { font-family: "Host Grotesk"; src: url("../../assests/fonts/host-grotesk-400.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
-@font-face { font-family: "Host Grotesk"; src: url("../../assests/fonts/host-grotesk-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
-@font-face { font-family: "Instrument Sans"; src: url("../../assests/fonts/instrument-sans-400.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
-@font-face { font-family: "Instrument Sans"; src: url("../../assests/fonts/instrument-sans-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
-@font-face { font-family: "Geist"; src: url("../../assests/fonts/geist-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-400.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Host Grotesk"; src: url("/assests/fonts/host-grotesk-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-400.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 400; }
+@font-face { font-family: "Instrument Sans"; src: url("/assests/fonts/instrument-sans-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+@font-face { font-family: "Geist"; src: url("/assests/fonts/geist-500.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
 
 :root {
   --post-ink: #10110f;
@@ -82,7 +82,7 @@ img, svg { display: block; max-width: 100%; }
 .post-back-btn:hover { background: rgba(16, 17, 15, 0.03); border-color: var(--post-ink); }
 
 /* Next / prev read drawer */
-.post-read-next { border-top: 1px solid var(--post-line); padding: 64px 0; background: #fafbfc; }
+.post-read-next { margin-top: 80px; border-top: 1px solid var(--post-line); padding: 64px 0; background: #fafbfc; }
 .post-read-next-container { width: min(calc(100% - 48px), 1280px); margin-inline: auto; }
 .post-read-next h2 { margin: 0 0 32px; font-family: var(--post-heading-font); font-size: 32px; font-weight: 500; letter-spacing: -.02em; text-align: center; }
 .post-read-next-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -239,3 +239,77 @@ img, svg { display: block; max-width: 100%; }
   .post-read-next-grid { grid-template-columns: 1fr; }
   .post-footer { flex-direction: column; padding: 32px 16px; }
 }
+ 
+/* Sidebar Table of Contents layout */
+.post-sidebar {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .post-layout-wrapper {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 60px;
+    padding-inline: 24px;
+    align-items: start;
+  }
+  .post-content {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 800px !important;
+  }
+  .post-sidebar {
+    display: block;
+    position: sticky;
+    top: 110px; /* Spacing below site sticky header */
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    border-right: 1px solid var(--post-line);
+    padding-right: 24px;
+    padding-bottom: 20px;
+  }
+}
+
+/* TOC Styling */
+.toc-title {
+  font-family: var(--post-heading-font);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--post-ink);
+  margin: 0 0 16px;
+}
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.toc-link {
+  display: block;
+  font-family: var(--post-ui-font);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--post-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+  margin-left: -12px;
+}
+.toc-link:hover {
+  color: var(--post-ink);
+  padding-left: 16px;
+}
+.toc-link.is-active {
+  color: #78a800;
+  font-weight: 500;
+  border-left-color: #78a800;
+  padding-left: 16px;
+}
+
