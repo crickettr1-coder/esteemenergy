@@ -14,7 +14,7 @@
   };
 
   const updateLogos = () => {
-    document.querySelectorAll(".site-brand a, .framer-yi202p-container a, .solaris-brand a")
+    document.querySelectorAll(".site-brand a, .framer-yi202p-container a, .site-brand a")
       .forEach((link) => replaceLogo(link));
   };
 

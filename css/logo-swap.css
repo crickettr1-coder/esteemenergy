@@ -29,13 +29,13 @@
 
 .esteem-energy-logo--header { width: 140px; }
 
-.solaris-brand {
+.site-brand {
   width: auto !important;
   height: auto !important;
   overflow: visible !important;
 }
 
-.solaris-brand .esteem-energy-logo-link {
+.site-brand .esteem-energy-logo-link {
   pointer-events: auto;
 }
 
@@ -46,7 +46,7 @@
 @media (max-width: 809px) {
   .esteem-energy-logo--header { width: 112px; }
 
-  .solaris-brand .framer-yi202p-container {
+  .site-brand .framer-yi202p-container {
     width: auto !important;
     transform: none !important;
   }

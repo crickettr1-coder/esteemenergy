@@ -11,7 +11,90 @@
   <link rel="stylesheet" href="/css/global-footer.css">
 </head>
 <body>
-  <div class="site-header-source framer-efto20-container about-header-source" aria-hidden="true"><div class="site-brand framer-yi202p-container"><a href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div></div>
+  <header class="site-header site-header-source">
+  <div class="site-header-inner">
+    <div class="site-brand">
+      <a href="/" aria-label="Esteem Energy home" class="esteem-energy-logo-link">
+        <img class="esteem-energy-logo esteem-energy-logo--header" src="/assests/esteem%20energy%20logo.png" alt="Esteem Energy" decoding="async">
+      </a>
+    </div>
+    
+    <nav class="site-navigation" aria-label="Primary navigation">
+      <div class="site-nav-list">
+        <a class="site-nav-link site-nav-item" href="/">Home</a>
+        <a class="site-nav-link site-nav-item" href="/about/">About</a>
+        
+        <div class="site-nav-dropdown">
+          <a class="site-nav-link site-nav-item site-products-link" href="/products/">Products</a>
+          <span class="site-nav-dropdown-toggle" aria-hidden="true">
+            <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="site-products-menu" id="desktop-products-menu" aria-label="Solar products">
+            <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+            <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+            <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+            <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+            <a href="/battery-storage/">Battery Storage</a>
+            <a href="/residential-solar/">Residential Solar</a>
+            <a href="/installation/">Installation</a>
+          </div>
+        </div>
+
+        <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+        <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+        <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+        <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+        <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="site-header-cta">
+      <button class="site-header-cta esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span></button>
+    </div>
+    
+    <button class="site-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-mobile-menu">
+      <span></span><span></span>
+    </button>
+    
+    <nav class="site-mobile-menu" id="site-mobile-menu" aria-label="Mobile primary navigation">
+      <a class="site-nav-link site-nav-item" href="/">Home</a>
+      <a class="site-nav-link site-nav-item" href="/about/">About</a>
+      
+      <div class="site-nav-dropdown site-nav-dropdown--mobile">
+        <button class="site-nav-link site-nav-item site-nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="mobile-products-menu" aria-label="Toggle Products menu">
+          <span>Products</span>
+          <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="site-products-menu" id="mobile-products-menu" aria-label="Solar products">
+          <a href="/products/">View All Products</a>
+          <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+          <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+          <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+          <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+          <a href="/battery-storage/">Battery Storage</a>
+          <a href="/residential-solar/">Residential Solar</a>
+          <a href="/installation/">Installation</a>
+        </div>
+      </div>
+      
+      <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+      <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+      <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+      <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+      <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      
+      <button class="site-header-cta esteem-primary-cta site-mobile-quote" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span></button>
+    </nav>
+  </div>
+</header>
   <main class="contact-page">
     <section class="contact-hero" aria-labelledby="contact-title"><div><p class="contact-kicker">LET’S TALK SOLAR</p><h1 id="contact-title">Get in Touch with Solar Experts</h1><p class="contact-hero-lead">We’re here to help you reduce your carbon footprint and energy costs with a solar solution tailored to your property and requirements.</p><div class="contact-actions"><button class="esteem-primary-cta" type="button" data-open-quote-modal><span>Get a Free Quote</span><span class="esteem-cta-arrow" aria-hidden="true">→</span></button><a class="esteem-secondary-cta" href="tel:1300220354"><span>Call 1300 220 354</span><span class="esteem-cta-arrow" aria-hidden="true">→</span></a></div></div><figure class="contact-hero-visual"><img src="/assests/about/solar-consultation-support.webp" alt="Solar consultation for a home energy solution" width="900" height="700" fetchpriority="high"><figcaption>Practical guidance for your next energy decision.</figcaption></figure></section>
     <section class="contact-details" aria-labelledby="details-title"><div class="contact-section-heading"><p class="contact-kicker">FIND US</p><h2 id="details-title">Here when you need us</h2></div><div class="contact-detail-grid"><article class="contact-detail-card"><span class="contact-detail-icon" aria-hidden="true">⌖</span><h3>NSW Head Office</h3><p>4, 187 Targo Rd<br>Girraween, NSW 2145</p></article><article class="contact-detail-card"><span class="contact-detail-icon" aria-hidden="true">⌖</span><h3>WA Office</h3><p>202/37 Barrack St<br>Perth, WA 6000</p></article><article class="contact-detail-card"><span class="contact-detail-icon" aria-hidden="true">◷</span><h3>Opening Hours</h3><p>Mon–Sat<br>9:00 AM–6:30 PM</p></article><article class="contact-detail-card"><span class="contact-detail-icon" aria-hidden="true">⌕</span><h3>Phone</h3><p><a href="tel:1300220354">1300 220 354</a></p></article><article class="contact-detail-card"><span class="contact-detail-icon" aria-hidden="true">@</span><h3>Email</h3><p><a href="mailto:info@esteemenergy.com.au">info@esteemenergy.com.au</a></p></article></div></section>

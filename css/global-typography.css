@@ -51,3 +51,145 @@ body:not(.media-page) :is(#main, main:not(.post-page)) h2 * {
     font-size: 30px;
   }
 }
+
+/* Apply the typography and sizing of the pricing page to all pages except home, blog, and blog post page */
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) {
+  font-family: var(--esteem-font-body), "Instrument Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  color: #111;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--esteem-font-heading), "Host Grotesk", sans-serif;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h2 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h3 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(p, li, span, dt, dd) {
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+@media (max-width: 1199px) {
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h1 {
+    font-size: 56px;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 809px) {
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) {
+    font-size: 14px;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(p, li, span, dt, dd) {
+    font-size: 14px;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h1 {
+    font-size: 38px;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h2 {
+    font-size: 30px;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) h3 {
+    font-size: 24px;
+  }
+}
+
+/* Hero section layout, spacing and style sync (based on pricing page) */
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero, .prod-hero, .contact-hero, .campaign-hero, .location-hero, .media-hero) {
+  position: relative;
+  min-height: 720px;
+  padding: 148px 0 80px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fbfcf9, #f1f8ed) !important;
+}
+
+/* Remove decorative background circles or paths on non-pricing pages to match styling */
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero, .prod-hero, .contact-hero, .campaign-hero, .location-hero, .media-hero)::before {
+  display: none !important;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-grid, .prod-hero-grid, .contact-hero, .media-hero-grid) {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0, 54fr) minmax(430px, 46fr) !important;
+  align-items: center;
+  gap: clamp(44px, 6vw, 86px) !important;
+  width: min(calc(100% - 48px), 1280px);
+  margin-inline: auto;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-visual, .prod-hero-visual, .contact-hero-visual, .media-hero-image) {
+  position: relative;
+  aspect-ratio: 4/3 !important;
+  min-height: 480px !important;
+  height: auto !important;
+  border: 1px solid rgba(120, 168, 0, .42) !important;
+  border-radius: 30px !important;
+  background: #e8efe4 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-visual, .prod-hero-visual, .contact-hero-visual, .media-hero-image) img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: unset !important;
+  border-radius: inherit !important;
+  object-fit: cover !important;
+}
+
+/* Responsive Overrides 1200px */
+@media (max-width: 1199px) {
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero, .prod-hero, .contact-hero, .campaign-hero, .location-hero, .media-hero) {
+    padding-top: 138px !important;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-grid, .prod-hero-grid, .contact-hero, .media-hero-grid) {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr) !important;
+    gap: 34px !important;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-visual, .prod-hero-visual, .contact-hero-visual, .media-hero-image) {
+    min-height: 430px !important;
+  }
+}
+
+/* Responsive Overrides 809px */
+@media (max-width: 809px) {
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero, .prod-hero, .contact-hero, .campaign-hero, .location-hero, .media-hero) {
+    min-height: auto !important;
+    padding: 124px 0 64px !important;
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-grid, .prod-hero-grid, .contact-hero, .media-hero-grid) {
+    grid-template-columns: 1fr !important;
+    width: min(calc(100% - 40px), 640px);
+  }
+  body:not(.home-page):not(.blog-listing-page):not(.blog-post-page) :is(.about-hero-visual, .prod-hero-visual, .contact-hero-visual, .media-hero-image) {
+    min-height: 0 !important;
+    margin-top: 20px !important;
+    border-radius: 30px !important;
+  }
+}

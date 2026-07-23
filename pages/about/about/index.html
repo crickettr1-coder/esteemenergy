@@ -6,7 +6,7 @@
   <title>About Esteem Energy | Australian Solar Solutions</title>
   <meta name="description" content="Learn how Esteem Energy helps Australian homes and businesses access reliable solar panels, battery storage and professional installation services.">
   <link rel="canonical" href="/about/">
-  <link rel="icon" href="../assests/esteem%20energy%20logo.png">
+  <link rel="icon" href="/assests/esteem%20energy%20logo.png">
   <link rel="stylesheet" href="/css/header-nav.css">
   <link rel="stylesheet" href="/css/logo-swap.css">
   <link rel="stylesheet" href="/css/lead-modal.css">
@@ -16,9 +16,90 @@
   <link rel="stylesheet" href="/css/global-footer.css">
 </head>
 <body>
-  <div class="site-header-source framer-efto20-container about-header-source" aria-hidden="true">
-    <div class="site-brand framer-yi202p-container"><a href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a></div>
+  <header class="site-header site-header-source">
+  <div class="site-header-inner">
+    <div class="site-brand">
+      <a href="/" aria-label="Esteem Energy home" class="esteem-energy-logo-link">
+        <img class="esteem-energy-logo esteem-energy-logo--header" src="/assests/esteem%20energy%20logo.png" alt="Esteem Energy" decoding="async">
+      </a>
+    </div>
+    
+    <nav class="site-navigation" aria-label="Primary navigation">
+      <div class="site-nav-list">
+        <a class="site-nav-link site-nav-item" href="/">Home</a>
+        <a class="site-nav-link site-nav-item" href="/about/">About</a>
+        
+        <div class="site-nav-dropdown">
+          <a class="site-nav-link site-nav-item site-products-link" href="/products/">Products</a>
+          <span class="site-nav-dropdown-toggle" aria-hidden="true">
+            <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="site-products-menu" id="desktop-products-menu" aria-label="Solar products">
+            <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+            <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+            <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+            <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+            <a href="/battery-storage/">Battery Storage</a>
+            <a href="/residential-solar/">Residential Solar</a>
+            <a href="/installation/">Installation</a>
+          </div>
+        </div>
+
+        <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+        <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+        <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+        <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+        <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="site-header-cta">
+      <button class="site-header-cta esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span></button>
+    </div>
+    
+    <button class="site-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-mobile-menu">
+      <span></span><span></span>
+    </button>
+    
+    <nav class="site-mobile-menu" id="site-mobile-menu" aria-label="Mobile primary navigation">
+      <a class="site-nav-link site-nav-item" href="/">Home</a>
+      <a class="site-nav-link site-nav-item" href="/about/">About</a>
+      
+      <div class="site-nav-dropdown site-nav-dropdown--mobile">
+        <button class="site-nav-link site-nav-item site-nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="mobile-products-menu" aria-label="Toggle Products menu">
+          <span>Products</span>
+          <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="site-products-menu" id="mobile-products-menu" aria-label="Solar products">
+          <a href="/products/">View All Products</a>
+          <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+          <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+          <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+          <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+          <a href="/battery-storage/">Battery Storage</a>
+          <a href="/residential-solar/">Residential Solar</a>
+          <a href="/installation/">Installation</a>
+        </div>
+      </div>
+      
+      <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+      <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+      <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+      <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+      <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      
+      <button class="site-header-cta esteem-primary-cta site-mobile-quote" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span></button>
+    </nav>
   </div>
+</header>
 
   <main id="main">
     <section class="about-hero" aria-labelledby="about-title">
@@ -35,7 +116,7 @@
           </div>
         </div>
         <div class="about-hero-visual about-parallax" data-reveal data-reveal-delay="1">
-          <img src="../assests/about/modern-home-solar-panels.webp" width="1600" height="1068" alt="Modern home fitted with rooftop solar panels" fetchpriority="high">
+          <img src="/assests/about/modern-home-solar-panels.webp" width="1600" height="1068" alt="Modern home fitted with rooftop solar panels" fetchpriority="high">
           <span class="about-orbit" aria-hidden="true"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="6"/><path d="M17 1v6m0 20v6M1 17h6m20 0h6M5.7 5.7 10 10m14 14 4.3 4.3M28.3 5.7 24 10M10 24l-4.3 4.3"/></svg></span>
           <span class="about-image-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15h16L17 7H7l-3 8Zm2 0v3m12-3v3M9 11h6m-7 3h8"/></svg> Solar made straightforward</span>
         </div>
@@ -52,7 +133,7 @@
           <div class="about-energy-line" aria-hidden="true"><svg viewBox="0 0 280 74"><path d="M5 48h58l17-29 31 48 24-39 19 20h121"/><circle cx="5" cy="48" r="4"/><circle cx="275" cy="48" r="4"/><path d="m245 36 13 12-13 12"/></svg></div>
         </div>
         <figure class="about-photo about-parallax" data-reveal data-reveal-delay="1">
-          <img src="../assests/about/solar-installers-at-work.webp" width="1400" height="788" alt="Professional installers fitting solar panels safely on a residential roof" loading="lazy">
+          <img src="/assests/about/solar-installers-at-work.webp" width="1400" height="788" alt="Professional installers fitting solar panels safely on a residential roof" loading="lazy">
         </figure>
       </div>
     </section>
@@ -83,7 +164,7 @@
     <section class="about-section about-support" aria-labelledby="support-title">
       <div class="about-container about-split about-split--reverse">
         <figure class="about-photo about-parallax" data-reveal>
-          <img src="../assests/about/solar-consultation-support.webp" width="1300" height="887" alt="Consultant providing clear, in-person support to a customer" loading="lazy">
+          <img src="/assests/about/solar-consultation-support.webp" width="1300" height="887" alt="Consultant providing clear, in-person support to a customer" loading="lazy">
           <span class="about-support-mark" aria-hidden="true"><svg viewBox="0 0 44 44"><path d="M8 10h28v19H21l-8 6v-6H8V10Z"/><path d="M15 17h14M15 22h9"/></svg></span>
         </figure>
         <div class="about-copy" data-reveal data-reveal-delay="1">

@@ -1,45 +1,4 @@
 (() => {
-  const menuLabels = [
-    "About", "Pricing", "Products",
-    "Gallery", "Blogs", "Reviews", "Contact",
-  ];
-
-  const mobileMenuLabels = [
-    "About", "Pricing", "Products",
-    "Gallery", "Blogs", "Reviews", "Contact",
-  ];
-
-  const menuRoutes = Object.freeze({
-    Home: "/",
-    About: "/about/",
-    Packages: "/packages/",
-    Pricing: "/pricing/",
-    Gallery: "/our-gallery/",
-    Blogs: "/blogs/",
-    Reviews: "/reviews/",
-    Contact: "/contact-us/",
-  });
-
-  const productLinks = Object.freeze([
-    ["6.6kW Solar System", "/6-6-kw-solar-system/"],
-    ["10.5kW Solar System", "/10-5-kw-solar-system/"],
-    ["13.2kW Solar System", "/13-2-kw-solar-system/"],
-    ["19.5kW Solar System", "/19-5-kw-solar-system/"],
-    ["Battery Storage", "/battery-storage/"],
-    ["Residential Solar", "/residential-solar/"],
-    ["Installation", "/installation/"],
-  ]);
-
-  const chevron = `
-    <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
-      <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-
-  const arrow = `
-    <svg viewBox="0 0 18 18" aria-hidden="true">
-      <path d="M4 9h9.2M9.8 5.6 13.2 9l-3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-
   const currentPath = () => window.location.pathname.replace(/\/+$/, "") || "/";
 
   const markBlogPostPage = () => {
@@ -48,83 +7,6 @@
     const isBlogListing = currentPath() === "/blogs";
     document.body.classList.toggle("blog-post-page", isBlogPost);
     document.body.classList.toggle("blog-listing-page", isBlogListing);
-  };
-
-  const makeItem = (label, mobile = false) => {
-    const route = menuRoutes[label];
-    if (label === "Products") {
-      const wrapper = document.createElement("div");
-      wrapper.className = `solaris-nav-dropdown${mobile ? " solaris-nav-dropdown--mobile" : ""}`;
-      const menuId = `${mobile ? "mobile" : "desktop"}-products-menu`;
-      const submenu = document.createElement("div");
-      submenu.className = "solaris-products-menu";
-      submenu.id = menuId;
-      submenu.setAttribute("aria-label", "Solar products");
-      const submenuLinks = mobile
-        ? [["View All Products", "/products/"], ...productLinks]
-        : productLinks;
-      submenu.innerHTML = submenuLinks.map(([productLabel, productRoute]) =>
-        `<a href="${productRoute}">${productLabel}</a>`).join("");
-      const submenuLink = [...submenu.querySelectorAll("a")]
-        .find((link) => currentPath() === link.getAttribute("href").replace(/\/+$/, ""));
-      if (submenuLink) submenuLink.setAttribute("aria-current", "page");
-
-      if (mobile) {
-        const toggle = document.createElement("button");
-        toggle.type = "button";
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-controls", menuId);
-        toggle.setAttribute("aria-label", "Toggle Products menu");
-        toggle.className = "solaris-mobile-nav-item";
-        toggle.innerHTML = `<span>${label}</span>${chevron}`;
-        if (submenuLink) toggle.classList.add("is-active");
-        toggle.addEventListener("click", () => {
-          const isOpen = wrapper.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-        wrapper.addEventListener("keydown", (event) => {
-          if (event.key !== "Escape") return;
-          wrapper.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.focus();
-        });
-        wrapper.append(toggle, submenu);
-      } else {
-        const productsLink = document.createElement("a");
-        productsLink.className = "solaris-nav-item solaris-products-link";
-        productsLink.href = "/products/";
-        productsLink.textContent = label;
-        productsLink.addEventListener("click", (event) => {
-          event.stopPropagation();
-        });
-        if (currentPath() === "/products") {
-          productsLink.classList.add("is-active");
-          productsLink.setAttribute("aria-current", "page");
-        } else if (submenuLink) {
-          productsLink.classList.add("is-active");
-        }
-        const productsChevron = document.createElement("span");
-        productsChevron.className = "solaris-products-chevron";
-        productsChevron.setAttribute("aria-hidden", "true");
-        productsChevron.innerHTML = chevron;
-        wrapper.append(productsLink, productsChevron, submenu);
-      }
-      return wrapper;
-    }
-    const item = document.createElement(route ? "a" : "button");
-    if (route) {
-      item.href = route;
-      if (currentPath() === route.replace(/\/+$/, "")) {
-        item.classList.add("is-active");
-        item.setAttribute("aria-current", "page");
-      }
-    } else {
-      item.type = "button";
-      item.addEventListener("click", (event) => event.preventDefault());
-    }
-    item.classList.add(mobile ? "solaris-mobile-nav-item" : "solaris-nav-item");
-    item.innerHTML = `<span>${label}</span>${label === "Products" ? chevron : ""}`;
-    return item;
   };
 
   const genuineTestimonials = Object.freeze([
@@ -328,115 +210,69 @@
     }, { once: true, passive: true });
   };
 
-  const makeQuoteButton = (extraClass = "") => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `solaris-quote-cta ${extraClass}`.trim();
-    button.setAttribute("data-open-quote-modal", "");
-    button.setAttribute("aria-haspopup", "dialog");
-    button.setAttribute("aria-controls", "solar-lead-dialog");
-    button.innerHTML = `
-      <span class="solaris-quote-fill" aria-hidden="true"></span>
-      <span class="solaris-quote-label">Get Quote</span>
-      <span class="solaris-quote-arrow">${arrow}</span>`;
-    return button;
-  };
+  const initHeaderBehavior = () => {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
 
-  const initHeader = () => {
-    const originalHeader = document.querySelector(".site-header-source, .framer-efto20-container");
-    const originalLogo = originalHeader?.querySelector(".site-brand, .framer-yi202p-container")
-      || document.querySelector(".site-brand, .framer-yi202p-container");
-    if (document.querySelector(".solaris-site-header")) return;
+    const toggle = header.querySelector(".site-menu-toggle");
+    const mobileMenu = header.querySelector(".site-mobile-menu");
+    const mobileDropdownToggle = header.querySelector(".site-nav-dropdown--mobile .site-nav-dropdown-toggle");
+    const mobileDropdown = header.querySelector(".site-nav-dropdown--mobile .site-products-menu");
 
-    const header = document.createElement("header");
-    header.className = "solaris-site-header site-header-source";
-    header.setAttribute("aria-label", "Site header");
+    if (toggle && mobileMenu) {
+      const closeMenu = () => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        mobileMenu.classList.remove("is-open");
+        document.body.classList.remove("site-mobile-menu-open");
+        if (mobileDropdown) {
+          mobileDropdown.style.display = "none";
+          if (mobileDropdownToggle) mobileDropdownToggle.setAttribute("aria-expanded", "false");
+        }
+      };
 
-    const inner = document.createElement("div");
-    inner.className = "solaris-header-inner";
-
-    const brand = document.createElement("div");
-    brand.className = "solaris-brand site-brand";
-    if (originalLogo) {
-      brand.append(originalLogo.cloneNode(true));
-    } else {
-      brand.innerHTML = '<a href="/" aria-label="Esteem Energy home"><span>Esteem Energy</span></a>';
-    }
-    const brandLink = brand.querySelector("a");
-    if (brandLink) {
-      brandLink.href = "/";
-      brandLink.setAttribute("aria-label", "Esteem Energy home");
-    }
-
-    const desktopNav = document.createElement("nav");
-    desktopNav.className = "solaris-nav";
-    desktopNav.setAttribute("aria-label", "Visual menu options");
-    menuLabels.forEach((label) => desktopNav.append(makeItem(label)));
-
-    const cta = document.createElement("div");
-    cta.className = "solaris-header-cta";
-    cta.append(makeQuoteButton());
-
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "solaris-menu-toggle";
-    toggle.setAttribute("aria-label", "Open menu");
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-controls", "solaris-mobile-menu");
-    toggle.innerHTML = "<span></span><span></span>";
-
-    const mobileMenu = document.createElement("nav");
-    mobileMenu.className = "solaris-mobile-menu";
-    mobileMenu.id = "solaris-mobile-menu";
-    mobileMenu.setAttribute("aria-label", "Mobile visual menu options");
-    (currentPath() === "/" ? menuLabels : mobileMenuLabels).forEach((label) => mobileMenu.append(makeItem(label, true)));
-    mobileMenu.append(makeQuoteButton("solaris-mobile-quote"));
-
-    const closeProducts = () => {
-      mobileMenu.querySelectorAll(".solaris-nav-dropdown.is-open").forEach((dropdown) => {
-        dropdown.classList.remove("is-open");
-        dropdown.querySelector(".solaris-mobile-nav-item")?.setAttribute("aria-expanded", "false");
+      toggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        document.body.classList.toggle("site-mobile-menu-open", isOpen);
       });
-    };
 
-    const closeMenu = () => {
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open menu");
-      mobileMenu.classList.remove("is-open");
-      document.body.classList.remove("solaris-mobile-menu-open");
-      closeProducts();
-    };
+      // Close menu on link clicks or lead modal trigger
+      mobileMenu.querySelectorAll("a, button[data-open-quote-modal]").forEach((element) => {
+        element.addEventListener("click", closeMenu);
+      });
 
-    toggle.addEventListener("click", () => {
-      const willOpen = toggle.getAttribute("aria-expanded") !== "true";
-      toggle.setAttribute("aria-expanded", String(willOpen));
-      toggle.setAttribute("aria-label", willOpen ? "Close menu" : "Open menu");
-      mobileMenu.classList.toggle("is-open", willOpen);
-      document.body.classList.toggle("solaris-mobile-menu-open", willOpen);
-    });
+      // Escape key to close
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
 
-    mobileMenu.querySelector("[data-open-quote-modal]").addEventListener("click", closeMenu);
-    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+      // Outside click close
+      document.addEventListener("click", (event) => {
+        if (!header.contains(event.target)) {
+          closeMenu();
+        }
+      });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeMenu();
-    });
+      // Desktop viewport transition close
+      const desktopViewport = window.matchMedia("(min-width: 1200px)");
+      desktopViewport.addEventListener("change", (e) => {
+        if (e.matches) closeMenu();
+      });
+    }
 
-    const desktopViewport = window.matchMedia("(min-width: 1200px)");
-    const closeOnDesktop = (event) => {
-      if (event.matches) closeMenu();
-    };
-    if (typeof desktopViewport.addEventListener === "function") desktopViewport.addEventListener("change", closeOnDesktop);
-    else desktopViewport.addListener(closeOnDesktop);
+    // Mobile products dropdown toggle
+    if (mobileDropdownToggle && mobileDropdown) {
+      mobileDropdownToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = mobileDropdown.style.display === "grid";
+        mobileDropdown.style.display = isOpen ? "none" : "grid";
+        mobileDropdownToggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
 
-    inner.append(brand, desktopNav, cta, toggle, mobileMenu);
-    header.append(inner);
-    document.body.prepend(header);
-    originalHeader?.remove();
-
-    normalizeLegacyPageLinks();
-    normalizeCanonicalUrl();
-
+    // Scroll state trigger
     const updateScrollState = () => {
       header.classList.toggle("is-scrolled", window.scrollY > 28);
     };
@@ -444,14 +280,107 @@
     window.addEventListener("scroll", updateScrollState, { passive: true });
   };
 
+  const ensureHeaderExists = () => {
+    let header = document.querySelector(".site-header");
+    if (!header) {
+      header = document.createElement("header");
+      header.className = "site-header site-header-source";
+      header.setAttribute("aria-label", "Site header");
+      header.innerHTML = `
+  <div class="site-header-inner">
+    <div class="site-brand">
+      <a href="/" aria-label="Esteem Energy home" class="esteem-energy-logo-link">
+        <img class="esteem-energy-logo esteem-energy-logo--header" src="/assests/esteem%20energy%20logo.png" alt="Esteem Energy" decoding="async">
+      </a>
+    </div>
+    
+    <nav class="site-navigation" aria-label="Primary navigation">
+      <div class="site-nav-list">
+        <a class="site-nav-link site-nav-item" href="/">Home</a>
+        <a class="site-nav-link site-nav-item" href="/about/">About</a>
+        
+        <div class="site-nav-dropdown">
+          <a class="site-nav-link site-nav-item site-products-link" href="/products/">Products</a>
+          <span class="site-nav-dropdown-toggle" aria-hidden="true">
+            <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="site-products-menu" aria-label="Solar products">
+            <a href="/products/">View All Products</a>
+            <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+            <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+            <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+            <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+            <a href="/battery-storage/">Battery Storage</a>
+            <a href="/residential-solar/">Residential Solar</a>
+            <a href="/installation/">Installation</a>
+          </div>
+        </div>
+
+        <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+        <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+        <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+        <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+        <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="site-header-cta">
+      <button class="site-header-cta esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+    
+    <button class="site-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-mobile-menu">
+      <span></span><span></span>
+    </button>
+    
+    <nav class="site-mobile-menu" id="site-mobile-menu" aria-label="Mobile primary navigation">
+      <a class="site-nav-link site-nav-item" href="/">Home</a>
+      <a class="site-nav-link site-nav-item" href="/about/">About</a>
+      
+      <div class="site-nav-dropdown site-nav-dropdown--mobile">
+        <button class="site-nav-link site-nav-item site-nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="mobile-products-menu" aria-label="Toggle Products menu">
+          <span>Products</span>
+          <svg class="solaris-chevron" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="site-products-menu" id="mobile-products-menu" aria-label="Solar products">
+          <a href="/products/">View All Products</a>
+          <a href="/6-6-kw-solar-system/">6.6kW Solar System</a>
+          <a href="/10-5-kw-solar-system/">10.5kW Solar System</a>
+          <a href="/13-2-kw-solar-system/">13.2kW Solar System</a>
+          <a href="/19-5-kw-solar-system/">19.5kW Solar System</a>
+          <a href="/battery-storage/">Battery Storage</a>
+          <a href="/residential-solar/">Residential Solar</a>
+          <a href="/installation/">Installation</a>
+        </div>
+      </div>
+      
+      <a class="site-nav-link site-nav-item" href="/pricing/">Pricing</a>
+      <a class="site-nav-link site-nav-item" href="/our-gallery/">Gallery</a>
+      <a class="site-nav-link site-nav-item" href="/blogs/">Blogs</a>
+      <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
+      <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
+      
+      <button class="site-header-cta esteem-primary-cta site-mobile-quote" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Get a Free Quote</span>
+        <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+      </button>
+    </nav>
+  </div>`;
+      document.body.prepend(header);
+    }
+  };
+
   let enhancementTimer;
   const runEnhancements = () => {
+    ensureHeaderExists();
     markBlogPostPage();
-    initHeader();
-    if (!document.querySelector(".solaris-site-header")) {
-      enhancementTimer = window.setTimeout(runEnhancements, 50);
-      return;
-    }
+    initHeaderBehavior();
     normalizeLegacyPageLinks();
     normalizeCanonicalUrl();
     stabilizeHomepageHero();
@@ -476,149 +405,4 @@
   document.addEventListener("framer:pageview", () => {
     if (document.readyState === "complete") scheduleEnhancements();
   });
-})();
-
-/* Homepage hero migration: replace the exported Framer subtree with semantic markup. */
-(() => {
-  if (window.location.pathname !== "/") return;
-
-  const hero = document.querySelector("#hero");
-  if (!hero) return;
-
-  const imageBase = "/assests/homepage/";
-  hero.outerHTML = `
-    <section class="esteem-hero home-hero" id="hero" aria-labelledby="esteem-hero-title">
-      <picture class="esteem-hero__background" aria-hidden="true">
-        <source media="(max-width: 809px)" srcset="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png 1376w">
-        <img src="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png"
-          srcset="${imageBase}Ss87WdLoqtNCvaghtqpXQxsznjk.png 1376w"
-          sizes="100vw" width="1376" height="768" alt="" fetchpriority="high" decoding="async">
-      </picture>
-      <div class="esteem-hero__content hero-content">
-        <div class="esteem-hero__main">
-          <div class="esteem-hero__badge" aria-label="Trusted by Australian homeowners">
-            <span class="esteem-hero__badge-label">Trusted</span>
-            <span class="esteem-hero__badge-caption">by Australian homeowners</span>
-          </div>
-          <div class="esteem-hero__copy hero-copy">
-            <h1 class="hero-title" id="esteem-hero-title">Solar energy that moves the world forward</h1>
-            <p class="hero-description">Powering Australian homes and businesses with reliable solar solutions designed to reduce energy costs and support a cleaner future.</p>
-          </div>
-          <div class="esteem-hero__actions hero-actions">
-            <button class="esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
-              <span class="esteem-cta-label">Get a Free Quote</span>
-              <span class="esteem-cta-arrow" aria-hidden="true">→</span>
-            </button>
-            <a class="esteem-secondary-cta" href="tel:1300220354">
-              <span>Talk to Our Solar Team</span>
-              <span class="esteem-cta-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-        <figure class="esteem-hero__roofing hero-media">
-          <img src="${imageBase}0fHDe2iBdq8jcNJtLJtaRz2EiXc.png"
-            srcset="${imageBase}0fHDe2iBdq8jcNJtLJtaRz2EiXc.png 2794w"
-            sizes="100vw" width="2794" height="1005" alt="Modern house with solar panels, large windows, and a parked car" decoding="async">
-        </figure>
-      </div>
-      <div class="esteem-hero__noise hero-noise" aria-hidden="true"></div>
-    </section>`;
-
-  const cleanHero = document.querySelector(".esteem-hero");
-  if (!cleanHero) return;
-  requestAnimationFrame(() => cleanHero.classList.add("is-visible"));
-})();
-
-/* Remove only Framer variant/editor markers proven absent from CSS, JS, SVG, and accessibility hooks. */
-(() => {
-  if (window.location.pathname !== "/") return;
-
-  const unusedFramerClasses = [
-    "framer-v-1r6zuo6",
-    "framer-v-ot39b8",
-    "framer-v-1wutdf1",
-    "framer-v-qeqjnn",
-    "framer-v-bpmy6d",
-    "framer-v-cqfbub",
-    "framer-v-19hst88",
-    "framer-v-1t3xj7z",
-    "framer-v-1svph5",
-    "framer-v-1hbx9k8",
-    "framer-v-1o6fz0m",
-    "framer-6jWyo",
-    "framer-n0ccwk",
-    "framer-v-n0ccwk",
-    "framer-bmpgw8",
-    "framer-13yxzio",
-    "framer-19yaanm",
-    "framer-1kflzx5",
-    "framer-hcsc7",
-    "framer-e50co",
-    "framer-g7oZR",
-    "framer-1um7t9d",
-    "framer-j4ugry",
-    "framer-jnuwbw"
-  ];
-  const unusedFramerAttributes = [
-    "data-framer-font-css",
-    "data-framer-css-ssr-minified",
-    "data-framer-components",
-    "data-framer-css",
-    "data-framer-hydrate-v2",
-    "data-framer-generated-page",
-    "data-framer-html-style",
-    "data-framer-layout-hint-center-x",
-    "data-framer-root"
-  ];
-  const unusedFramerVariables = [
-    "--framer-viewport-height",
-    "--framer-blockquote-text-alignment",
-    "--framer-font-variation-axes-preview",
-    "--framer-blockquote-text-background-radius",
-    "--framer-blockquote-text-background-corner-shape",
-    "--framer-blockquote-text-background-padding",
-    "--framer-blockquote-font-family-italic",
-    "--framer-blockquote-font-style-italic",
-    "--framer-blockquote-font-weight-italic",
-    "--framer-blockquote-font-variation-axes-italic",
-    "--framer-font-variation-axes-italic",
-    "--framer-blockquote-font-family-bold-italic",
-    "--framer-blockquote-font-style-bold-italic",
-    "--framer-blockquote-font-weight-bold-italic",
-    "--framer-blockquote-font-variation-axes-bold-italic",
-    "--framer-font-variation-axes-bold-italic",
-    "--framer-blockquote-paragraph-spacing",
-    "--framer-custom-cursors"
-  ];
-
-  const cleanUnusedFramerArtifacts = () => {
-    document.querySelectorAll("[class]").forEach((element) => {
-      unusedFramerClasses.forEach((className) => element.classList.remove(className));
-    });
-    document.querySelectorAll("*").forEach((element) => {
-      unusedFramerAttributes.forEach((attributeName) => element.removeAttribute(attributeName));
-    });
-    document.querySelectorAll("html, body, #main").forEach((element) => {
-      unusedFramerVariables.forEach((variableName) => element.style.removeProperty(variableName));
-    });
-    document.querySelectorAll("style, link[rel=stylesheet]").forEach((sheetElement) => {
-      try {
-        const visitRules = (rules) => {
-          Array.from(rules || []).forEach((rule) => {
-            if (rule.style) unusedFramerVariables.forEach((variableName) => rule.style.removeProperty(variableName));
-            if (rule.cssRules) visitRules(rule.cssRules);
-          });
-        };
-        visitRules(sheetElement.sheet?.cssRules);
-      } catch {
-        /* Cross-origin stylesheets are left untouched. */
-      }
-    });
-  };
-
-  if (document.readyState === "complete") {
-    cleanUnusedFramerArtifacts();
-  } else {
-    window.addEventListener("load", cleanUnusedFramerArtifacts, { once: true });
-  }
 })();

@@ -13,7 +13,7 @@
   height: auto;
 }
 
-.framer-WiXf4 .framer-pvrod3.about-actions {
+.esteem-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -483,7 +483,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
 }
 
 @media (max-width: 809px) {
-  .framer-WiXf4 .framer-pvrod3.about-actions {
+  .esteem-hero-actions {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
@@ -544,16 +544,16 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
 }
 
 #hero .hero-noise,
-#hero .framer-bcxrl8-container,
+#hero .esteem-hero-noise,
 #hero .hero-noise *,
-#hero .framer-bcxrl8-container * {
+#hero .esteem-hero-noise * {
   filter: none !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }
 
 #hero .hero-noise > div,
-#hero .framer-bcxrl8-container > div {
+#hero .esteem-hero-noise > div {
   opacity: .04 !important;
 }
 
@@ -565,13 +565,13 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
     min-width: 0 !important;
   }
 
-  #hero .framer-9onuti,
+  #hero .esteem-hero-content,
   #hero .hero-content,
-  #hero .framer-wfzur6,
+  #hero .esteem-hero-text,
   #hero .hero-copy,
-  #hero .framer-1nvzpyf,
+  #hero .esteem-hero-title,
   #hero .hero-title,
-  #hero .framer-cokco8,
+  #hero .esteem-hero-description,
   #hero .hero-description {
     width: 100% !important;
     max-width: 100% !important;
@@ -579,13 +579,13 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   }
 
   #hero .hero-content,
-  #hero .framer-9onuti {
+  #hero .esteem-hero-content {
     padding-left: 16px;
     padding-right: 16px;
   }
 
   #hero .hero-title,
-  #hero .framer-1nvzpyf h1 {
+  #hero .esteem-hero-title h1 {
     width: 100% !important;
     max-width: 100% !important;
     font-size: 38px !important;
@@ -595,7 +595,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   }
 
   #hero .hero-title > span,
-  #hero .framer-1nvzpyf h1 > span {
+  #hero .esteem-hero-title h1 > span {
     display: inline !important;
   }
 
@@ -604,7 +604,7 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   }
 
   .home-hero .hero-title,
-  .framer-WiXf4 .framer-1nvzpyf h1 {
+  .esteem-hero-title h1 {
     width: min(100%, 343px) !important;
     max-width: 343px !important;
     margin-left: auto;
@@ -612,13 +612,13 @@ form[data-framer-name="Contact Form"] button[type="submit"]:disabled::after {
   }
 
   .home-hero .hero-actions,
-  .framer-WiXf4 .framer-pvrod3 {
+  .esteem-hero-actions {
     width: 100% !important;
     max-width: 343px !important;
   }
 
   #hero .hero-actions,
-  #hero .framer-pvrod3 {
+  #hero .esteem-hero-actions {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
