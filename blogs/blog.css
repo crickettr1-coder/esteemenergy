@@ -128,7 +128,7 @@ img, svg { display: block; max-width: 100%; }
 [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
 
 /* Responsive layout adjustments */
-@media (max-width: 1199px) and (min-width: 810px) {
+@media (max-width: 1199px) {
   .blog-featured-card { grid-template-columns: 1fr; gap: 32px; padding: 24px; }
   .blog-featured-visual { aspect-ratio: 1.8; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }

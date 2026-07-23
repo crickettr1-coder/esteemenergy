@@ -227,17 +227,20 @@ img, svg { display: block; max-width: 100%; }
   .post-read-next-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 767px) {
-  .post-page { width: min(calc(100% - 32px), 800px); }
-  .post-header { padding-top: 110px; }
-  .post-hero-visual { aspect-ratio: 1.5; border-radius: 16px; }
-  .post-header h1 { font-size: 30px; }
-  .post-lead { font-size: 16px; }
-  .post-content h2 { scroll-margin-top: 88px; font-size: 24px; }
-  .post-content h3 { scroll-margin-top: 88px; font-size: 20px; }
-  .post-final { padding: 28px; }
-  .post-final h2 { font-size: 27px; }
-  .post-read-next-grid { grid-template-columns: 1fr; }
-  .post-footer { flex-direction: column; padding: 32px 16px; }
+  .post-page { width: 100%; padding-inline: 16px; }
+  .post-header { width: 100% !important; padding-top: 100px; }
+  .post-header h1 { font-size: 26px; line-height: 1.25; }
+  .post-lead { font-size: 15px; margin-top: 16px; }
+  .wp-import-featured-image,
+  .post-hero-visual { width: 100% !important; margin: 24px auto !important; aspect-ratio: 1.5; border-radius: 16px; }
+  .post-content { width: 100% !important; font-size: 16px; }
+  .post-content h2 { scroll-margin-top: 88px; font-size: 22px; margin-top: 36px; }
+  .post-content h3 { scroll-margin-top: 88px; font-size: 18px; margin-top: 28px; }
+  .post-final { width: 100% !important; padding: 32px 20px; border-radius: 16px; margin: 48px 0 0 !important; }
+  .post-final h2 { font-size: 24px; }
+  .post-read-next { margin-top: 48px; }
+  .post-read-next-grid { grid-template-columns: 1fr; gap: 20px; }
+  .post-footer { flex-direction: column; padding: 32px 16px; gap: 20px; }
 }
  
 /* Sidebar Table of Contents layout */
