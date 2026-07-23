@@ -96,8 +96,16 @@ http.createServer((request, response) => {
   }
   fs.stat(file, (error, stats) => {
     if (error || !stats.isFile()) {
-      response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-      response.end("Not found");
+      const errorFile = path.resolve(root, "404.html");
+      fs.stat(errorFile, (err, estats) => {
+        if (!err && estats.isFile()) {
+          response.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+          fs.createReadStream(errorFile).pipe(response);
+        } else {
+          response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+          response.end("Not found");
+        }
+      });
       return;
     }
     response.writeHead(200, {
