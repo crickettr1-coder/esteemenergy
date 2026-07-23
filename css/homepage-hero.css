@@ -1,0 +1,222 @@
+/* Homepage Hero Section Styles */
+
+.esteem-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 72px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+}
+
+.esteem-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  width: 100%;
+  padding: 160px 0 0;
+  position: relative;
+  height: min-content;
+  overflow: clip;
+}
+
+.esteem-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.esteem-hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: right top;
+  object-fit: cover;
+}
+
+.esteem-hero-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: 700px;
+  height: min-content;
+  position: relative;
+  overflow: visible;
+}
+
+.esteem-hero-badge {
+  background-color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, #111);
+  border-radius: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: min-content;
+  height: min-content;
+  padding: 3px 14px 3px 3px;
+  position: relative;
+  overflow: visible;
+}
+
+.esteem-hero-badge-trusted {
+  background-color: var(--token-15d833e3-f4d9-4ee2-8e53-d70dcb341a0a, #e2fa5a);
+  height: min-content;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min-content;
+  padding: 2px 9px;
+  position: relative;
+  overflow: clip;
+}
+
+.esteem-hero-badge-trusted-label {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, rgb(17, 17, 17));
+  white-space: pre;
+  margin: 0;
+}
+
+.esteem-hero-badge-count-label {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: var(--token-cecf886f-35d1-4207-a045-acf7164ed7a9, rgb(255, 255, 255));
+  white-space: pre;
+  margin: 0;
+}
+
+.esteem-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  height: min-content;
+  position: relative;
+  overflow: visible;
+}
+
+.esteem-hero-title {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0;
+}
+
+.esteem-hero-title h1 {
+  font-family: "Host Grotesk", "Host Grotesk Placeholder", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1em;
+  text-align: center;
+  color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, rgb(17, 17, 17));
+  margin: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.esteem-hero-description {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  margin: 0;
+}
+
+.esteem-hero-description p {
+  font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4em;
+  text-align: center;
+  color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, rgb(17, 17, 17));
+  margin: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.esteem-hero-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: min-content;
+  height: min-content;
+  position: relative;
+  overflow: visible;
+}
+
+.esteem-hero-graphic {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.7801 / 1;
+  overflow: visible;
+}
+
+.esteem-hero-graphic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center top;
+  object-fit: cover;
+}
+
+.esteem-hero-noise {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  height: 176%;
+  bottom: -780px;
+  left: 0;
+  background-size: 161px;
+  background-repeat: repeat;
+  background-image: url('/assests/homepage/noise.png');
+  opacity: 0.04;
+  border-radius: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 809.98px) {
+  .esteem-hero-content {
+    padding: 0 16px;
+  }
+  
+  .esteem-hero-graphic {
+    display: none;
+  }
+  
+  .esteem-hero-noise {
+    height: 1179px;
+  }
+}
