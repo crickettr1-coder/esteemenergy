@@ -108,49 +108,70 @@
   <main class="error-page">
     <div class="error-container">
       
-      <!-- Left Column: Content -->
-      <div class="error-content">
-        <h1 class="error-title">Oops. We couldn't find that page.</h1>
-        <p class="error-description">The page may have been moved, renamed or no longer exists. Let's get you back to the right place.</p>
+      <!-- First Fold: Hero Banner and Actions (visible on load) -->
+      <section class="error-hero-fold">
+        <div class="error-banner-wrapper">
+          <div class="error-radial-bg"></div>
+          <div class="error-banner">
+            <img src="/assests/404.jpg" alt="404 Illustration - Page Not Found">
+          </div>
+        </div>
         
-        <div class="error-actions">
-          <a href="/" class="error-primary-btn">
-            <span>Back to Home</span>
-            <span class="btn-arrow" aria-hidden="true">→</span>
+        <div class="error-hero-text">
+          <h1 class="error-title">Oops. We couldn't find that page.</h1>
+          <p class="error-description">The page may have been moved, renamed or no longer exists. Let's get you back to the right place.</p>
+        </div>
+
+        <div class="error-hero-actions">
+          <a class="esteem-primary-cta" href="/">
+            <span class="esteem-cta-label">Back to Home</span>
+            <span class="esteem-cta-arrow" aria-hidden="true">→</span>
           </a>
-          <a href="/products/" class="error-secondary-btn">Explore Solar Solutions</a>
+          <a class="esteem-secondary-cta" href="/products/">
+            <span>Explore Solar Solutions</span>
+            <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
-        
-        <div class="error-links-section">
-          <h4 class="error-links-title">Looking for something specific?</h4>
-          <ul class="error-links-list">
-            <li><a href="/products/">Solar Systems</a></li>
-            <li><a href="/battery-storage/">Battery Storage</a></li>
-            <li><a href="/residential-solar/">Residential Solar</a></li>
-            <li><a href="/installation/">Installation</a></li>
-          </ul>
-        </div>
-        
-        <div class="error-help-card">
-          <h4 class="card-title">Need help?</h4>
-          <p class="card-text">
-            Call us: <a href="tel:1300220354" class="card-phone">1300 220 354</a>
-          </p>
-          <p class="card-text-sep">or</p>
-          <button class="card-quote-link" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
-            <span>Get a Free Solar Quote</span>
-            <span class="card-quote-arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
+      </section>
       
-      <!-- Right Column: Visual illustration -->
-      <div class="error-visual-wrapper">
-        <div class="error-radial-bg"></div>
-        <div class="error-visual">
-          <img src="/assests/404.jpg" alt="404 Illustration - Page Not Found">
+      <!-- Second Fold: Portal Links and Help Card (scroll down) -->
+      <section class="error-details-fold">
+        <div class="error-details-grid">
+          
+          <div class="error-links-section">
+            <h2 class="error-links-title">Looking for something specific?</h2>
+            <div class="error-links-grid">
+              <a href="/products/" class="error-link-pill">
+                <span>Solar Systems</span>
+                <span class="pill-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="/battery-storage/" class="error-link-pill">
+                <span>Battery Storage</span>
+                <span class="pill-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="/residential-solar/" class="error-link-pill">
+                <span>Residential Solar</span>
+                <span class="pill-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="/installation/" class="error-link-pill">
+                <span>Installation</span>
+                <span class="pill-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="error-help-card">
+            <span class="card-kicker">Need help?</span>
+            <h3 class="card-title">Call us: <a href="tel:1300220354" class="card-phone">1300 220 354</a></h3>
+            <p class="card-or">or</p>
+            <button class="esteem-primary-cta card-quote-btn" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+              <span class="esteem-cta-label">Get a Free Solar Quote</span>
+              <span class="esteem-cta-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+          
         </div>
-      </div>
+      </section>
       
     </div>
   </main>
