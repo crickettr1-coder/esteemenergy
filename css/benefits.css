@@ -1,0 +1,285 @@
+/* ============================================================
+   SOLAR BENEFITS SECTION - MOBILE RESPONSIVENESS OVERRIDES
+   ============================================================ */
+
+@media (max-width: 809.98px) {
+  /* Ensure the benefits section has normal height and flows correctly */
+  #benefits {
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding: 40px 0 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Section Container */
+  #benefits .framer-1594k7g {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 16px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  /* Section Title Container */
+  #benefits .framer-hlqnay {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  /* Eyebrow / Badge Component */
+  #benefits .framer-139ysck-container {
+    width: auto !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #benefits .framer-ZDQHO {
+    margin: 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    background-color: var(--token-9f66b2f3-1c22-4180-8d4d-ccbc037786e7, rgb(242, 242, 242)) !important;
+    border-radius: 8px !important;
+  }
+
+  #benefits .framer-1rfy16v,
+  #benefits .framer-zf0x63 {
+    width: auto !important;
+    display: inline-block !important;
+  }
+
+  #benefits .framer-1rfy16v p,
+  #benefits .framer-zf0x63 p {
+    font-size: clamp(14px, 4vw, 15px) !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    color: var(--token-7a4abf4f-f022-4317-96d1-4d64f8c7d124, rgba(17, 17, 17, 0.7)) !important;
+  }
+
+  /* Main Heading */
+  #benefits .framer-c4vb7j {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  #benefits .framer-c4vb7j h2 {
+    font-size: clamp(30px, 8vw, 36px) !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  /* Supporting Paragraph */
+  #benefits .framer-djndjn {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  #benefits .framer-djndjn p {
+    font-size: clamp(15px, 4vw, 16px) !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 500px !important;
+    color: var(--token-7a4abf4f-f022-4317-96d1-4d64f8c7d124, rgba(17, 17, 17, 0.7)) !important;
+  }
+
+  /* Benefits Overview Wrapper */
+  #benefits .framer-75c0vc {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  /* Benefits List Container */
+  #benefits .framer-30lrkw-container {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Row Grid / Desktop 1 element */
+  #benefits .framer-PaQi9 {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Image at top, cards list below */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    gap: 24px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Background Image (the large image) */
+  #benefits .framer-3v9ppl {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important; /* Beautiful layout ratio for mobile devices */
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    margin-bottom: 0 !important;
+    align-self: stretch !important;
+    flex: none !important;
+  }
+
+  #benefits .framer-3v9ppl img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 16px !important;
+  }
+
+  /* Benefits Cards Container */
+  #benefits .framer-5zc4e6 {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    height: auto !important;
+    flex: none !important;
+  }
+
+  /* Individual Benefits Cards */
+  #benefits .framer-mKEzU {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 48px !important; /* Ensure min touch target height */
+    padding: 14px 16px !important;
+    box-sizing: border-box !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--token-cecf886f-35d1-4207-a045-acf7164ed7a9, rgb(255, 255, 255)) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  /* Card content container inside the cards */
+  #benefits .framer-3lvfjm {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  #benefits .framer-1m3n2al {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  #benefits .framer-7ko4g2 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  /* Icon Container inside the cards */
+  #benefits .framer-isv12s-container {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #benefits .framer-isv12s-container svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Text Label inside the cards */
+  #benefits .framer-17kfnm9 {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  #benefits .framer-17kfnm9 h4 {
+    font-size: clamp(16px, 4.5vw, 18px) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: var(--token-c0720168-1e12-45f8-8c7d-25768cd24fa0, rgb(17, 17, 17)) !important;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: normal !important; /* Allow wrapping */
+    word-break: break-word !important;
+  }
+
+  /* Chevron Arrow Right Icon on the right of the cards */
+  #benefits .framer-SYorz {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+    margin-left: 8px !important;
+    opacity: 0.8 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* Interaction Hover/Active states */
+  #benefits .framer-mKEzU:hover {
+    background-color: var(--token-9f66b2f3-1c22-4180-8d4d-ccbc037786e7, rgb(242, 242, 242)) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  #benefits .framer-mKEzU:focus-visible {
+    outline: 2px solid var(--token-15d833e3-f4d9-4ee2-8e53-d70dcb341a0a, rgb(234, 252, 83)) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 600px) and (max-width: 809.98px) {
+  #benefits .framer-3v9ppl {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* Small mobile specific adjustments */
+@media (max-width: 390px) {
+  #benefits .framer-c4vb7j h2 {
+    font-size: 30px !important;
+  }
+  #benefits .framer-mKEzU {
+    padding: 12px 14px !important;
+  }
+  #benefits .framer-17kfnm9 h4 {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #benefits .framer-1594k7g {
+    padding: 0 12px !important;
+  }
+}

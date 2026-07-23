@@ -93,12 +93,12 @@ footer.site-footer {
   margin-inline: auto;
 }
 .pricing-final {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) auto;
-  align-items: end;
-  gap: 48px;
-  padding: clamp(42px, 6vw, 74px);
-  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 42px;
+  border-radius: 24px;
   background: var(--esteem-color-lime, #c8ff3d);
   color: #111;
 }
@@ -127,11 +127,11 @@ footer.site-footer {
 }
 .pricing-final-actions {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-direction: row;
+  align-items: center;
   gap: 12px;
-  min-width: 250px;
-  margin: 0;
+  min-width: 0;
+  margin: 12px 0 0;
 }
 .pricing-final .esteem-secondary-cta {
   background: rgba(255,255,255,.38);
@@ -139,23 +139,16 @@ footer.site-footer {
 }
 
 @media (max-width: 1199px) and (min-width: 810px) {
-  .pricing-final {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-  .pricing-final-actions {
-    flex-direction: row;
-    min-width: 0;
-  }
+  /* Tablet final CTA section style matches desktop stacked style */
 }
 @media (max-width: 809px) {
   .pricing-final-wrap .pricing-container {
     width: min(calc(100% - 32px), 640px);
   }
   .pricing-final {
-    grid-template-columns: 1fr;
     padding: 36px 24px;
     border-radius: 24px;
+    gap: 24px;
   }
   .pricing-final-actions {
     flex-direction: column;

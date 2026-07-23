@@ -1,0 +1,54 @@
+/* ============================================================
+   How It Works Section — Sticky Title Block
+   "From Consultation to Clean Energy in 4 Simple Steps"
+
+   ROOT CAUSE:
+   Framer's SSR CSS already sets position:sticky on .framer-1m8mjmi
+   but two things prevent it from working:
+
+   1. .framer-h7qpa4 has overflow:clip  → kills sticky on descendants
+   2. .framer-1c4x54c has will-change:transform → creates a new
+      stacking/containing block context, which also kills sticky
+      on its sibling .framer-1m8mjmi
+
+   This file fixes both issues on desktop only (≥ 810px).
+   Mobile is untouched.
+   ============================================================ */
+
+@media (min-width: 810px) {
+
+  /* Fix #1: Remove overflow:clip from the section wrapper.
+     Both the property and the CSS variable fallback are cleared. */
+  .framer-WiXf4 .framer-h7qpa4,
+  .framer-h7qpa4 {
+    overflow: visible !important;
+    --overflow-clip-fallback: visible !important;
+  }
+
+  /* Fix #2: Remove will-change:transform from the cards grid.
+     will-change:transform creates a new stacking context which
+     prevents position:sticky from working on the sibling title block.
+     We override the CSS variable Framer uses to set it. */
+  .framer-WiXf4 .framer-1c4x54c,
+  .framer-1c4x54c {
+    will-change: auto !important;
+    --framer-will-change-override: auto !important;
+    overflow: visible !important;
+    --overflow-clip-fallback: visible !important;
+  }
+
+  /* Fix #3: Ensure the container doesn't clip */
+  .framer-WiXf4 .framer-1ozau40,
+  .framer-1ozau40 {
+    overflow: visible !important;
+  }
+
+  /* Fix #4: Reinforce sticky on the title block with correct offset */
+  .framer-WiXf4 .framer-1m8mjmi,
+  .framer-1m8mjmi {
+    position: sticky !important;
+    top: 120px !important;
+    align-self: flex-start !important;
+    overflow: visible !important;
+  }
+}

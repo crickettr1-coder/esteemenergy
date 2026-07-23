@@ -113,8 +113,10 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
   transform: translateY(-1px);
 }
 
-.site-chevron { width: 11px; height: 11px; transition: transform .2s ease; }
-.site-nav-item:hover .site-chevron { transform: translateY(1px); }
+.site-chevron,
+.solaris-chevron { width: 11px; height: 11px; transition: transform .2s ease; }
+.site-nav-item:hover .site-chevron,
+.site-nav-item:hover .solaris-chevron { transform: translateY(1px); }
 
 .site-nav-dropdown { position: relative; }
 .site-nav-dropdown:not(.site-nav-dropdown--mobile) {
@@ -124,7 +126,8 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
 }
 .site-products-link { position: relative; z-index: 2; padding-right: 2px; border-radius: 999px 0 0 999px; pointer-events: auto; }
 .site-nav-dropdown-toggle { display: inline-flex; align-items: center; padding: 10px 9px 10px 2px; pointer-events: none; }
-.site-nav-dropdown-toggle .site-chevron { pointer-events: none; }
+.site-nav-dropdown-toggle .site-chevron,
+.site-nav-dropdown-toggle .solaris-chevron { pointer-events: none; }
 .site-nav-dropdown:not(.site-nav-dropdown--mobile):hover > .site-products-link,
 .site-nav-dropdown:not(.site-nav-dropdown--mobile):focus-within > .site-products-link {
   background: rgba(255, 255, 255, .66);
@@ -162,60 +165,31 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
 .site-products-menu a { padding: 11px 12px; border-radius: 10px; color: #111; font: 14px/1.2 "Geist", "Geist Placeholder", sans-serif; text-decoration: none; white-space: nowrap; }
 .site-products-menu a:hover, .site-products-menu a:focus-visible { background: rgba(200,255,61,.35); outline: none; }
 
-.site-header-cta {
-  position: relative;
-  isolation: isolate;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+/* Header CTA wrapper — keeps the button flush-right in the grid */
+.site-header-cta { display: flex; align-items: center; }
+
+/* Scope the hero-style button to header dimensions */
+.site-header-cta .esteem-primary-cta {
+  min-height: 48px;
   height: 48px;
   padding: 5px 6px 5px 20px;
-  overflow: hidden;
-  border: 0;
+  gap: 12px;
   border-radius: 15px;
-  background: #111;
-  color: #fff;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
   box-shadow: 0 6px 18px rgba(17, 17, 17, .14);
+  white-space: nowrap;
 }
 
-.esteem-cta-fill {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--header-lime);
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform .35s cubic-bezier(.2,.8,.2,1);
-}
-
-.esteem-cta-label { position: relative; transition: color .25s ease; }
-.esteem-cta-arrow {
-  display: grid;
-  place-items: center;
+/* Scope the arrow pill to header dimensions */
+.site-header-cta .esteem-cta-arrow {
   width: 36px;
   height: 36px;
   flex: 0 0 36px;
   border-radius: 11px;
-  background: var(--header-lime);
-  color: #111;
-  transition: transform .25s ease, background-color .25s ease;
 }
-.esteem-cta-arrow svg { width: 18px; height: 18px; }
-.site-header-cta:hover .esteem-cta-fill,
-.site-header-cta:focus-visible .esteem-cta-fill { transform: scaleX(1); }
-.site-header-cta:hover .esteem-cta-label,
-.site-header-cta:focus-visible .esteem-cta-label { color: #111; }
-.site-header-cta:hover .esteem-cta-arrow,
-.site-header-cta:focus-visible .esteem-cta-arrow { transform: translateX(2px); background: rgba(17,17,17,.08); }
-.site-header-cta:focus-visible,
+.site-header-cta .esteem-cta-arrow svg { width: 18px; height: 18px; }
+
+/* Mobile quote button also uses esteem-primary-cta */
 .site-menu-toggle:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
 
 .site-menu-toggle {
@@ -293,22 +267,48 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
   .site-mobile-menu::-webkit-scrollbar { display: none; }
 
   .site-mobile-menu.is-open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+  .site-mobile-menu .site-nav-item:not(.site-products-menu a),
   .site-mobile-menu .site-nav-dropdown-toggle,
   .site-mobile-menu .site-mobile-quote,
   .site-mobile-menu .site-products-menu a { box-sizing: border-box; }
-  .site-nav-dropdown-toggle {
+
+  .site-mobile-menu > * {
+    margin-bottom: 4px;
+  }
+  .site-mobile-menu > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .site-mobile-menu .site-nav-item:not(.site-products-menu a),
+  .site-mobile-menu .site-nav-dropdown-toggle {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
-    padding: 13px 15px;
-    border-radius: 14px;
-    text-align: left;
-    transition: background-color .18s ease;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--header-ink);
+    transition: background-color .18s ease, color .18s ease;
   }
-  .site-nav-dropdown-toggle:hover,
-  .site-nav-dropdown-toggle:focus-visible,
-  .site-nav-dropdown-toggle.is-active { background: rgba(200,255,61,.3); outline: none; }
+
+  .site-mobile-menu .site-nav-dropdown-toggle {
+    justify-content: space-between;
+  }
+
+  .site-mobile-menu .site-nav-item:not(.site-products-menu a):hover,
+  .site-mobile-menu .site-nav-item:not(.site-products-menu a):focus-visible,
+  .site-mobile-menu .site-nav-item:not(.site-products-menu a).is-active,
+  .site-mobile-menu .site-nav-dropdown-toggle:hover,
+  .site-mobile-menu .site-nav-dropdown-toggle:focus-visible,
+  .site-mobile-menu .site-nav-dropdown-toggle.is-active {
+    background: rgba(200, 255, 61, 0.25);
+    outline: none;
+    transform: none;
+  }
+
   .site-nav-dropdown--mobile { display: block; }
   .site-nav-dropdown--mobile .site-nav-dropdown-toggle { width: 100%; }
   .site-nav-dropdown--mobile .site-products-menu {
@@ -333,7 +333,8 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
   }
   .site-nav-dropdown--mobile.is-open .site-products-menu { display: grid; gap: 2px; }
   .site-nav-dropdown--mobile .site-products-menu a { display: block; padding: 11px 15px; }
-  .site-nav-dropdown--mobile.is-open > .site-nav-dropdown-toggle .site-chevron { transform: rotate(180deg); }
+  .site-nav-dropdown--mobile.is-open > .site-nav-dropdown-toggle .site-chevron,
+  .site-nav-dropdown--mobile.is-open > .site-nav-dropdown-toggle .solaris-chevron { transform: rotate(180deg); }
   .site-nav-dropdown--mobile .site-products-menu a { white-space: normal; overflow-wrap: anywhere; }
   .site-mobile-quote { width: 100%; margin-top: 7px; }
   body.site-mobile-menu-open { overflow: hidden; }
@@ -344,14 +345,14 @@ button, input, select, textarea, .site-header, .esteem-home-cta, .esteem-primary
     padding: max(10px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left));
   }
   .site-header-inner { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
-  .site-header-cta { height: 44px; gap: 8px; padding: 4px 5px 4px 14px; font-size: 13px; border-radius: 14px; }
-  .esteem-cta-arrow { width: 34px; height: 34px; flex-basis: 34px; border-radius: 10px; }
+  .site-header-cta .esteem-primary-cta { height: 44px; min-height: 44px; gap: 8px; padding: 4px 5px 4px 14px; font-size: 13px; border-radius: 14px; }
+  .site-header-cta .esteem-cta-arrow { width: 34px; height: 34px; flex-basis: 34px; border-radius: 10px; }
   .site-menu-toggle { width: 46px; height: 46px; }
   .site-mobile-menu {
     width: 100%;
     max-width: 100%;
   }
-  .site-mobile-quote { height: 46px; font-size: 14px; }
+  .site-mobile-quote { height: 46px; min-height: 46px; font-size: 14px; }
 }
 
 @media (max-width: 359px) {

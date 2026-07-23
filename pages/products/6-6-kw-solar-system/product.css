@@ -162,10 +162,10 @@ img, svg { display: block; max-width: 100%; }
 
 /* 11. Final CTA block */
 .prod-final-wrap { padding: 0 0 20px; background: #fdfdfb; }
-.prod-final { display: grid; grid-template-columns: minmax(0, 1.35fr) auto; align-items: end; gap: 48px; padding: clamp(42px, 6vw, 76px); border-radius: 36px; background: var(--prod-lime); }
+.prod-final { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; padding: 42px; border-radius: 24px; background: var(--prod-lime); }
 .prod-final h2 { max-width: 790px; }
 .prod-final p { margin: 24px 0 0; max-width: 610px; color: rgba(16,17,15,.72); font-size: 15px; line-height: 1.4; }
-.prod-final-actions { flex-direction: column; align-items: stretch; min-width: 250px; margin: 0; }
+.prod-final-actions { display: flex; flex-direction: row; align-items: center; gap: 12px; min-width: 0; margin: 12px 0 0; }
 
 /* Reveal transitions */
 [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s ease var(--reveal-delay, 0ms), transform .7s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms); }
@@ -187,8 +187,7 @@ img, svg { display: block; max-width: 100%; }
   .prod-features-grid { grid-template-columns: repeat(2, 1fr); }
   .prod-pricing-split { grid-template-columns: 1fr; gap: 36px; }
   .prod-checklist-grid { grid-template-columns: repeat(2, 1fr); }
-  .prod-final { grid-template-columns: 1fr; gap: 36px; }
-  .prod-final-actions { align-items: flex-start; }
+  /* Tablet final CTA section style matches desktop stacked style */
 }
 
 @media (max-width: 809px) {
@@ -204,8 +203,8 @@ img, svg { display: block; max-width: 100%; }
   .prod-steps-grid { grid-template-columns: 1fr; }
   .prod-features-grid { grid-template-columns: 1fr; }
   .prod-checklist-grid { grid-template-columns: 1fr; }
-  .prod-final { padding: 32px 24px; border-radius: 24px; }
-  .prod-final-actions { width: 100%; }
+  .prod-final { padding: 32px 24px; border-radius: 24px; gap: 24px; }
+  .prod-final-actions { flex-direction: column; width: 100%; }
 }
 
 @media (max-width: 480px) {

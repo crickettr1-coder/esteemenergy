@@ -94,10 +94,10 @@ img, svg { display: block; max-width: 100%; }
 .about-benefit-card > span { display: inline-grid; width: 42px; height: 42px; place-items: center; margin-bottom: 70px; border-radius: 50%; background: var(--about-lime); font-size: 12px; font-weight: 600; }
 
 .about-final-wrap { padding: 0 0 20px; }
-.about-final { display: grid; grid-template-columns: minmax(0, 1.35fr) auto; align-items: end; gap: 48px; padding: clamp(42px, 6vw, 76px); border-radius: 36px; background: var(--about-lime); }
+.about-final { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; padding: 42px; border-radius: 24px; background: var(--about-lime); }
 .about-final h2 { max-width: 790px; }
 .about-final > div > p:not(.about-eyebrow) { color: rgba(16,17,15,.72); }
-.about-final-actions { flex-direction: column; align-items: stretch; min-width: 250px; margin: 0; }
+.about-final-actions { display: flex; flex-direction: row; align-items: center; gap: 12px; min-width: 0; margin: 12px 0 0; }
 
 [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s ease var(--reveal-delay, 0ms), transform .7s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms); }
 [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
@@ -117,8 +117,7 @@ img, svg { display: block; max-width: 100%; }
   .about-photo, .about-photo img { min-height: 430px; }
   .about-purpose-card { min-height: 430px; }
   .about-purpose-card--mint { margin-top: 40px; }
-  .about-final { grid-template-columns: 1fr; align-items: start; }
-  .about-final-actions { flex-direction: row; min-width: 0; }
+  /* Tablet final CTA section style matches desktop stacked style */
 }
 
 @media (max-width: 809px) {
@@ -152,7 +151,7 @@ img, svg { display: block; max-width: 100%; }
   .about-info-card { min-height: 290px; }
   .about-benefit-card { min-height: 240px; }
   .about-benefit-card > span { margin-bottom: 50px; }
-  .about-final { padding: 36px 24px; border-radius: 26px; }
+  .about-final { padding: 36px 24px; border-radius: 26px; gap: 24px; }
   .about-final-actions { flex-direction: column; width: 100%; }
 }
 

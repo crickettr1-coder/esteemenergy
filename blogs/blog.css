@@ -118,10 +118,10 @@ img, svg { display: block; max-width: 100%; }
 
 /* 6. Lead CTA (Consulation CTA) */
 .blog-final-wrap { padding: 0 0 20px; background: #fff; }
-.blog-final { display: grid; grid-template-columns: minmax(0, 1.35fr) auto; align-items: end; gap: 48px; padding: clamp(42px, 6vw, 76px); border-radius: 36px; background: var(--blog-lime); }
+.blog-final { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; padding: 42px; border-radius: 24px; background: var(--blog-lime); }
 .blog-final h2 { max-width: 790px; font-family: var(--blog-heading-font); font-size: 40px; font-weight: 400; letter-spacing: -.04em; line-height: 1.2; margin: 0; }
 .blog-final p { margin: 24px 0 0; max-width: 610px; color: rgba(16,17,15,.72); font-size: 15px; line-height: 1.4; }
-.blog-final-actions { display: flex; flex-direction: column; align-items: stretch; min-width: 250px; margin: 0; gap: 12px; }
+.blog-final-actions { display: flex; flex-direction: row; align-items: center; gap: 12px; min-width: 0; margin: 12px 0 0; }
 
 /* Reveal transitions */
 [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s ease var(--reveal-delay, 0ms), transform .7s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms); }
@@ -133,8 +133,7 @@ img, svg { display: block; max-width: 100%; }
   .blog-featured-visual { aspect-ratio: 1.8; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .blog-guides-grid { grid-template-columns: 1fr; }
-  .blog-final { grid-template-columns: 1fr; gap: 36px; }
-  .blog-final-actions { align-items: flex-start; }
+  /* Tablet final CTA section style matches desktop stacked style */
   .blog-guides-section { margin-inline: 12px; }
 }
 
@@ -143,8 +142,8 @@ img, svg { display: block; max-width: 100%; }
   .blog-hero h1 { font-size: 34px; }
   .blog-featured-visual { aspect-ratio: 1.6; }
   .blog-grid { grid-template-columns: 1fr; }
-  .blog-final { padding: 32px 24px; border-radius: 24px; }
-  .blog-final-actions { width: 100%; }
+  .blog-final { padding: 32px 24px; border-radius: 24px; gap: 24px; }
+  .blog-final-actions { flex-direction: column; width: 100%; }
 }
 
 @media (max-width: 480px) {

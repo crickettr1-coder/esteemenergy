@@ -327,8 +327,8 @@
     </nav>
     
     <div class="site-header-cta">
-      <button class="site-header-cta esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
-        <span class="esteem-cta-label">Get a Free Quote</span>
+      <button class="esteem-primary-cta" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Free Consultation</span>
         <span class="esteem-cta-arrow" aria-hidden="true">→</span>
       </button>
     </div>
@@ -366,8 +366,8 @@
       <a class="site-nav-link site-nav-item" href="/reviews/">Reviews</a>
       <a class="site-nav-link site-nav-item" href="/contact-us/">Contact</a>
       
-      <button class="site-header-cta esteem-primary-cta site-mobile-quote" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
-        <span class="esteem-cta-label">Get a Free Quote</span>
+      <button class="esteem-primary-cta site-mobile-quote" type="button" data-open-quote-modal aria-haspopup="dialog" aria-controls="solar-lead-dialog">
+        <span class="esteem-cta-label">Free Consultation</span>
         <span class="esteem-cta-arrow" aria-hidden="true">→</span>
       </button>
     </nav>
