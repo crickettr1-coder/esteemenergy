@@ -278,9 +278,24 @@
     };
     updateScrollState();
     window.addEventListener("scroll", updateScrollState, { passive: true });
+
+    // Skip-link focus enhancement for cross-browser anchor focus
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest(".skip-link");
+      if (!link) return;
+      const target = document.getElementById(link.getAttribute("href")?.slice(1) || "main");
+      if (target) target.focus();
+    });
   };
 
   const ensureHeaderExists = () => {
+    if (!document.querySelector(".skip-link")) {
+      const skipLink = document.createElement("a");
+      skipLink.className = "skip-link";
+      skipLink.href = "#main";
+      skipLink.textContent = "Skip to main content";
+      document.body.prepend(skipLink);
+    }
     let header = document.querySelector(".site-header");
     if (!header) {
       header = document.createElement("header");
@@ -290,7 +305,7 @@
   <div class="site-header-inner">
     <div class="site-brand">
       <a href="/" aria-label="Esteem Energy home" class="esteem-energy-logo-link">
-        <img class="esteem-energy-logo esteem-energy-logo--header" src="/assests/esteem%20energy%20logo.png" alt="Esteem Energy" decoding="async">
+        <img class="esteem-energy-logo esteem-energy-logo--header" src="/assets/esteem%20energy%20logo.png" alt="Esteem Energy" decoding="async">
       </a>
     </div>
     

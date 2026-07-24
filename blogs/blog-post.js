@@ -89,7 +89,7 @@
   const pool = [
     {
       url: "/why-solar-panels-are-not-worth-it/",
-      img: "/assests/blog-images/why-solar-panels-are-not-worth-it/featured.jpg",
+      img: "/assets/blog-images/why-solar-panels-are-not-worth-it/featured.jpg",
       tag: "Panels and Inverters",
       title: "Why Solar Panels Are Not Worth It: Exploring the Truth Behind the Investment",
       excerpt: "Explore the real costs, maintenance, and return on investment to see if solar panels are truly worth it for your Australian home.",
@@ -97,7 +97,7 @@
     },
     {
       url: "/fronius-inverter-review/",
-      img: "/assests/blog-images/fronius-inverter-review/featured.jpg",
+      img: "/assets/blog-images/fronius-inverter-review/featured.jpg",
       tag: "Panels and Inverters",
       title: "Fronius Inverter Review: Is It Worth the Premium Price?",
       excerpt: "Read our comprehensive Fronius inverter review to learn about performance, durability, costs, and whether it's the right choice.",
@@ -105,7 +105,7 @@
     },
     {
       url: "/solar-inverter-replacement/",
-      img: "/assests/blog-images/solar-inverter-replacement/featured.jpg",
+      img: "/assets/blog-images/solar-inverter-replacement/featured.jpg",
       tag: "Maintenance",
       title: "Solar Inverter Replacement: Cost & When to Replace",
       excerpt: "Find out when to replace your solar inverter, how much it costs, and signs that your current inverter might be failing.",
@@ -113,7 +113,7 @@
     },
     {
       url: "/canadian-solar-panels-review/",
-      img: "/assests/blog-images/canadian-solar-panels-review/featured.avif",
+      img: "/assets/blog-images/canadian-solar-panels-review/featured.avif",
       tag: "Panels and Inverters",
       title: "Canadian Solar Panels Review: Cost vs Value",
       excerpt: "Check out our review of Canadian Solar panels, covering their efficiency, model lines, pricing, and warranty terms in Australia.",
@@ -121,7 +121,7 @@
     },
     {
       url: "/saj-inverter-review/",
-      img: "/assests/blog-images/saj-inverter-review/featured.jpg",
+      img: "/assets/blog-images/saj-inverter-review/featured.jpg",
       tag: "Panels and Inverters",
       title: "SAJ Inverter Review: Budget-Friendly Solar Solution",
       excerpt: "Is SAJ the right budget inverter for your solar system? Read our hands-on review of SAJ inverters' reliability and features.",
@@ -129,7 +129,7 @@
     },
     {
       url: "/advantages-of-solar-energy/",
-      img: "/assests/blog-images/advantages-of-solar-energy/featured.jpg",
+      img: "/assets/blog-images/advantages-of-solar-energy/featured.jpg",
       tag: "Solar Systems",
       title: "Advantages of Solar Energy: Environmental & Financial Benefits",
       excerpt: "Discover the top financial and environmental advantages of switching to solar power for homeowners in Australia.",
@@ -137,7 +137,7 @@
     },
     {
       url: "/solar-panel-cleaning/",
-      img: "/assests/blog-images/solar-panel-cleaning/featured.webp",
+      img: "/assets/blog-images/solar-panel-cleaning/featured.webp",
       tag: "Maintenance",
       title: "Do Solar Panels Need Cleaning? Cost, Benefits & Methods",
       excerpt: "Learn if solar panels need cleaning, how much it costs, and the best methods to maintain maximum solar system efficiency.",
@@ -145,7 +145,7 @@
     },
     {
       url: "/is-a-solar-battery-worth-it/",
-      img: "/assests/blog-images/is-a-solar-battery-worth-it/featured.jpg",
+      img: "/assets/blog-images/is-a-solar-battery-worth-it/featured.jpg",
       tag: "Solar Savings",
       title: "Is a Solar Battery Worth It in Australia?",
       excerpt: "Analyze the costs, payback period, and advantages of adding battery storage to your home solar panel system.",
@@ -153,7 +153,7 @@
     },
     {
       url: "/german-made-solar-panels/",
-      img: "/assests/blog-images/german-made-solar-panels/featured.jpg",
+      img: "/assets/blog-images/german-made-solar-panels/featured.jpg",
       tag: "Panels and Inverters",
       title: "German-Made Solar Panels: Premium Quality & Performance",
       excerpt: "Are German solar panels worth the extra cost? Review the top German solar panel brands, warranties, and efficiency.",
@@ -161,7 +161,7 @@
     },
     {
       url: "/biggest-solar-farm-in-australia/",
-      img: "/assests/blog-images/biggest-solar-farm-in-australia/featured.jpg",
+      img: "/assets/blog-images/biggest-solar-farm-in-australia/featured.jpg",
       tag: "Solar Systems",
       title: "Biggest Solar Farm in Australia: Leading the Renewable Shift",
       excerpt: "Explore the largest solar farms in Australia, their generation capacities, and their impact on the national electricity market.",

@@ -2,7 +2,7 @@
   if (new URLSearchParams(window.location.search).has("lead-bridge")) return;
   const heroCtaSelector = '#hero a[name="Primary Button"]';
   const scriptUrl = document.currentScript?.src || window.location.href;
-  const illustrationUrl = new URL("./assests/wind-power.png", scriptUrl).href;
+  const illustrationUrl = new URL("./assets/wind-power.png", scriptUrl).href;
   const focusableSelector = 'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])';
   let trigger = null;
   let isSubmitting = false;
@@ -58,7 +58,7 @@
                 </div>
                 <div class="solar-lead-field">
                   <label for="solar-property">Property type <span aria-hidden="true">*</span></label>
-                  <select id="solar-property" name="Location" required>
+                  <select id="solar-property" name="PropertyType" required>
                     <option value="">Select property type</option>
                     <option value="Home">Home</option>
                     <option value="Villa">Villa</option>
@@ -144,7 +144,7 @@
     const phone = form.elements.Phone;
     const email = form.elements.Email;
     const address = form.elements.Address;
-    const property = form.elements.Location;
+    const property = form.elements.PropertyType || form.elements.Location;
     const phoneVal = phone.value.trim();
     let phoneOkay = false;
     if (/^\+?[0-9\s\-()]+$/.test(phoneVal)) {
@@ -209,10 +209,11 @@
       Commercial: "Commercial Building",
       Other: "Industrial Facility",
     };
+    const propertyVal = values.get("PropertyType") || values.get("Location") || "";
     const details = [
       `Selected solar package: ${form.dataset.selectedPackage || "Not specified"}`,
       `Property address or area: ${values.get("Address")}`,
-      `Property type: ${values.get("Location")}`,
+      `Property type: ${propertyVal}`,
       `Average monthly electricity bill: ${values.get("Electricity Bill") || "Not provided"}`,
       `Message or project details: ${values.get("Message") || "Not provided"}`,
     ].join("\n");
@@ -220,7 +221,7 @@
     updateLegacyControl(names[0], values.get("Name"));
     updateLegacyControl(names[1], values.get("Phone"));
     updateLegacyControl(email, values.get("Email"));
-    updateLegacyControl(property, propertyMap[values.get("Location")]);
+    updateLegacyControl(property, propertyMap[propertyVal]);
     updateLegacyControl(message, details);
 
     const startedAt = Date.now();
@@ -276,7 +277,7 @@
         phone: values.get("Phone")?.trim() || "",
         email: values.get("Email")?.trim() || "",
         propertyAddress: values.get("Address")?.trim() || "",
-        propertyType: values.get("Location")?.trim() || "",
+        propertyType: (values.get("PropertyType") || values.get("Location"))?.trim() || "",
         monthlyBill: values.get("Electricity Bill")?.trim() || "",
         message: values.get("Message")?.trim() || ""
       };
